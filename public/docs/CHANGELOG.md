@@ -9,7 +9,16 @@ All changes to the taxonomy and structure through the 9-round adversarial refine
 - **v3**: Final taxonomy after second critique and use case expansion
 
 ## v0 (Initial Taxonomy)
-*Status: In progress*
+*Status: Complete*
+
+### Summary
+- **Domains**: 5 (Knowledge & Learning, Creativity & Content, Productivity & Planning, Communication & Collaboration, Problem Solving & Analysis)
+- **Categories**: 8
+- **Capabilities**: 7
+- **Cognitive Skills**: 22
+- **Depth**: 6 layers achieved
+- **Exclusions**: All developer/integration/API capabilities excluded
+- **Focus**: Everyday user tasks in modern AI chat tools
 
 ### Planned Changes for v1
 *To be populated after Round 1 critique*
@@ -26,18 +35,24 @@ All changes to the taxonomy and structure through the 9-round adversarial refine
 
 ### Round 0: Initial Taxonomy (Capability Architect)
 - **Start**: 2026-02-16 02:02 UTC
-- **End**: *In progress*
+- **End**: 2026-02-16 02:17 UTC
 - **Changes**:
-  *To be populated after completion*
+  - Created 5 domains: Knowledge & Learning, Creativity & Content, Productivity & Planning, Communication & Collaboration, Problem Solving & Analysis
+  - Established 8 categories with 7 tactical capabilities
+  - Developed 22 cognitive skills explicitly linked to capabilities
+  - Built 6-layer depth: Domain → Category → Capability → Use Case → Example Prompt → Cognitive Skill
+  - Excluded all developer/integration/API capabilities
+  - Focused on everyday user tasks in modern AI chat tools
 
 ### Round 1: Adversarial Destruction (Skeptical Analyst)
-- **Start**: *Pending*
-- **End**: *Pending*
+- **Start**: 2026-02-16 02:34 UTC
+- **End**: *In progress*
 - **Critique Focus**:
-  - Weak category identification and destruction
+  - Weak category identification and destruction (2-3 categories)
   - Redundancy removal
   - Cognitive integration gaps
   - Everyday usability assessment
+  - 3+ substantive objections minimum
 
 ### Round 2: Taxonomy Revision (Capability Architect)
 - **Start**: *Pending*

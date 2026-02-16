@@ -13,13 +13,14 @@ Web lookups and external references used during the AI Capability Atlas Newspape
   - Investigative Editor: max 1 (current AI literacy discourse)
 
 ## Round 0: Capability Architect
-*Status: In progress*
+*Status: Complete*
 
-### Web Lookup 1 (If used)
-- **URL**: 
-- **Date accessed**: 
-- **Relevance**: Researching current AI capabilities for everyday users
-- **Notes**: 
+### Web Lookup 1 (Used)
+- **URL**: https://www.zdnet.com/article/best-ai-chatbot/
+- **Date accessed**: 2026-02-16
+- **Relevance**: Researching current AI capabilities for everyday users, test categories used by ZDNET for evaluating AI chatbots
+- **Notes**: Article provided categories like summarization, academic concept explanation, math analysis, cultural discussion, literary analysis, travel itinerary, emotional support, translation, coding test, long-form story test, image generation. Informed taxonomy design to focus on everyday user capabilities.
+- **Impact**: Helped ensure taxonomy reflects actual capabilities available in modern AI chat tools rather than theoretical or developer-focused features. 
 
 ## Round 3: Educational Psychologist
 *Pending*
