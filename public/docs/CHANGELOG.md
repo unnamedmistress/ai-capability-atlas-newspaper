@@ -21,7 +21,13 @@ All changes to the taxonomy and structure through the 9-round adversarial refine
 - **Focus**: Everyday user tasks in modern AI chat tools
 
 ### Planned Changes for v1
-*To be populated after Round 1 critique*
+Based on Round 1 adversarial critique:
+1. **Domain consolidation**: Eliminate Communication & Collaboration and Productivity & Planning domains; merge capabilities into remaining domains
+2. **Category redesign**: Rebuild categories around user goals (Learn, Create, Decide, Improve, Solve) rather than AI functions
+3. **Cognitive skill hierarchy**: Group 22 skills into foundational/intermediate/advanced levels with progression pathways
+4. **Depth expansion**: Each capability to have 3–5 use cases, each with 3–5 example prompts
+5. **Missing capabilities**: Add Personal & Wellness, Entertainment & Leisure, Practical Skills, Social & Emotional capabilities
+6. **Cross-referencing**: Implement tags/links to show relationships across domains
 
 ### Planned Changes for v2  
 *To be populated after Round 3 cognitive integration*
@@ -46,22 +52,34 @@ All changes to the taxonomy and structure through the 9-round adversarial refine
 
 ### Round 1: Adversarial Destruction (Skeptical Analyst)
 - **Start**: 2026-02-16 02:34 UTC
-- **End**: *In progress*
+- **End**: 2026-02-16 02:36 UTC
 - **Critique Focus**:
-  - Weak category identification and destruction (2-3 categories)
-  - Redundancy removal
-  - Cognitive integration gaps
-  - Everyday usability assessment
-  - 3+ substantive objections minimum
+  - Weak category identification and destruction (3 categories recommended)
+  - Redundancy removal (mapping table created)
+  - Cognitive integration gaps (flat skill list identified)
+  - Everyday usability assessment (superficial depth noted)
+  - 3+ substantive objections (3 objections with evidence)
+- **Key Findings**:
+  1. Artificial domain fragmentation creates redundancy
+  2. Cognitive skills lack hierarchy and integration
+  3. Depth compliance is superficial (deep but narrow branches)
+- **Destruction Recommendations**:
+  - Eliminate Communication & Collaboration domain entirely
+  - Eliminate Productivity & Planning domain entirely  
+  - Merge Problem Solving & Analysis into Knowledge & Learning
+- **Revision Roadmap**: Consolidate to 3 core domains, rebuild categories around user goals, introduce cognitive skill framework, deepen each branch, add missing capabilities, implement cross-referencing.
 
 ### Round 2: Taxonomy Revision (Capability Architect)
-- **Start**: *Pending*
-- **End**: *Pending*
+- **Start**: 2026-02-16 02:38 UTC
+- **End**: *In progress*
 - **Expected Changes**:
-  - Removal of identified weak categories
-  - Consolidation of redundant capabilities
-  - Strengthening of cognitive links
-  - Improved user-centric organization
+  - Elimination of Communication & Collaboration and Productivity & Planning domains
+  - Merge of Problem Solving & Analysis into Knowledge & Learning
+  - Consolidation to 3 core domains
+  - Category redesign around user goals (Learn, Create, Decide, Improve, Solve)
+  - Cognitive skill hierarchy implementation (foundational/intermediate/advanced)
+  - Depth expansion: 3-5 use cases per capability, 3-5 prompts per use case
+  - Addition of missing capabilities (Personal & Wellness, Entertainment & Leisure, etc.)
 
 ### Round 3: Cognitive Integration (Educational Psychologist)
 - **Start**: *Pending*
