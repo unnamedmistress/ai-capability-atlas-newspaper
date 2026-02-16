@@ -1,62 +1,535 @@
 {
-  "version": "0.1",
-  "created_at": "2026-02-16T02:13:00Z",
-  "description": "AI Capability Atlas Taxonomy v0 - Everyday user capabilities in modern AI chat tools and consumer applications",
+  "version": "2.0",
+  "created_at": "2026-02-16T13:28:16.575577Z",
+  "description": "AI Capability Atlas Taxonomy v2 - Complete taxonomy with cognitive integration",
+  "revision_summary": "Complete 6-layer taxonomy with all domains, categories, capabilities, use cases, example prompts, and hierarchical cognitive skills. Incorporates cognitive framing from COGNITIVE_MODEL.md (thinking lenses, skill ladder, mental models).",
   "domains": [
     {
-      "id": "knowledge",
+      "id": "knowledge_learning",
       "name": "Knowledge & Learning",
-      "description": "Understanding, explaining, and acquiring new information",
+      "description": "Understanding, explaining, and acquiring new information.",
+      "thinking_lens": "Understanding Mode: Approach tasks with curiosity and a focus on breaking down complex ideas into manageable parts. Ask 'What do I need to understand?' and 'How can this be explained simply?'",
+      "skill_ladder_mapping": {
+        "novice": "Follow example prompts verbatim, ask for definitions and simple explanations.",
+        "competent": "Adapt prompts to new topics, request analogies and comparisons, synthesize multiple sources.",
+        "proficient": "Design original learning pathways, evaluate information credibility, teach concepts to others."
+      },
+      "mental_models": [
+        "AI as a Thinking Partner",
+        "Capability Stack",
+        "Prompt-as-Specification",
+        "Iterative Refinement"
+      ],
       "categories": [
         {
-          "id": "explain",
-          "name": "Explain & Understand",
-          "description": "Making complex concepts accessible and comprehensible",
+          "id": "learn_new_things",
+          "name": "Learn New Things",
+          "description": "Explaining, understanding, and answering questions about unfamiliar topics. Cognitive load: high intrinsic load. Support: analogies, chunking, worked examples.",
+          "cognitive_toolkit": [
+            "Abstraction",
+            "Analogy formation",
+            "Simplification",
+            "Pattern recognition"
+          ],
+          "cognitive_load_analysis": "High intrinsic load due to unfamiliar concepts. Reduce by breaking into chunks, using analogies, and providing examples.",
+          "support_strategies": "Provide step\u2011by\u2011step explanations, connect to prior knowledge, offer multiple perspectives.",
           "capabilities": [
             {
-              "id": "explain_concepts",
+              "id": "explain_complex_concepts",
               "name": "Explain complex concepts",
               "what_it_is": "Breaking down complicated topics into understandable parts using analogies and simple language",
               "when_to_use": "When learning something new, teaching others, or encountering unfamiliar terminology",
-              "cognitive_skills": ["Abstraction", "Analogy formation", "Simplification", "Pattern recognition"],
-              "use_cases": [
+              "cognitive_skills": [
                 {
-                  "id": "explain_to_student",
-                  "name": "Explain to a student",
-                  "description": "Making academic or technical concepts accessible to learners",
-                  "example_prompts": [
-                    "Explain quantum computing to a high school student",
-                    "What is blockchain in simple terms?",
-                    "Break down how vaccines work step by step"
+                  "level": "foundational",
+                  "skills": [
+                    "Pattern recognition",
+                    "Information retrieval"
                   ]
                 },
                 {
-                  "id": "explain_for_decision",
-                  "name": "Explain for decision making",
-                  "description": "Understanding complex information to make informed choices",
+                  "level": "intermediate",
+                  "skills": [
+                    "Abstraction",
+                    "Analogy formation",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What analogy would make this clearer?",
+                "How can I chunk this information?",
+                "What prior knowledge does my audience have?"
+              ],
+              "common_pitfalls": [
+                "Over\u2011simplifying to inaccuracy",
+                "Using jargon without explanation",
+                "Assuming too much prior knowledge"
+              ],
+              "metacognitive_checkins": [
+                "Do I really understand this well?",
+                "Is this at the right level?",
+                "What questions might arise?"
+              ],
+              "use_cases": [
+                {
+                  "id": "explain_academic_concept",
+                  "name": "Explain academic concept",
+                  "description": "Understanding school or university topics",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with basic definitions, add layers of complexity. Use analogies to familiar domains.",
+                  "thinking_steps": [
+                    "Identify core concept",
+                    "List key components",
+                    "Find relatable analogies",
+                    "Structure from simple to complex"
+                  ],
                   "example_prompts": [
-                    "Explain the pros and cons of different retirement account types",
-                    "What are the key factors in choosing a mortgage?",
-                    "Break down the arguments for and against universal basic income"
+                    "Explain photosynthesis to a 5th grader",
+                    "What is the theory of relativity in simple terms?",
+                    "Break down how blockchain technology works",
+                    "Explain supply and demand using a lemonade stand",
+                    "Describe quantum computing as if I'm a high school student"
+                  ]
+                },
+                {
+                  "id": "explain_technical_term",
+                  "name": "Explain technical term",
+                  "description": "Understanding specialized or industry terminology",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple definition, provide context and examples. Compare to similar terms.",
+                  "thinking_steps": [
+                    "Define literally",
+                    "Provide context",
+                    "Give examples",
+                    "Differentiate from related"
+                  ],
+                  "example_prompts": [
+                    "What does 'machine learning' mean for non-technical people?",
+                    "Explain 'supply chain management' simply",
+                    "What is 'quantum computing' and why does it matter?",
+                    "Define 'cognitive dissonance' with everyday examples",
+                    "Explain 'blockchain' without technical jargon"
+                  ]
+                },
+                {
+                  "id": "explain_current_event",
+                  "name": "Explain current event",
+                  "description": "Understanding complex news or social issues",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Provide historical background first, present multiple perspectives. Focus on key stakeholders.",
+                  "thinking_steps": [
+                    "Identify core event",
+                    "Provide historical context",
+                    "Explain stakeholders",
+                    "Outline implications"
+                  ],
+                  "example_prompts": [
+                    "Explain the conflict in [region] for someone who hasn't followed the news",
+                    "What are the key arguments in the climate change debate?",
+                    "Break down the economic implications of recent policy changes",
+                    "Explain the debate about AI regulation in simple terms",
+                    "What's happening with cryptocurrency regulation and why does it matter?"
                   ]
                 }
               ]
             },
             {
-              "id": "answer_questions",
+              "id": "answer_factual_questions",
               "name": "Answer factual questions",
               "what_it_is": "Providing accurate information on specific topics",
               "when_to_use": "When you need quick facts, definitions, or specific information",
-              "cognitive_skills": ["Information retrieval", "Verification", "Contextual understanding"],
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Pattern recognition",
+                    "Information retrieval"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Abstraction",
+                    "Analogy formation",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What sources would verify this?",
+                "How recent does this need to be?",
+                "What context might change the answer?"
+              ],
+              "common_pitfalls": [
+                "Accepting AI outputs without verification",
+                "Missing nuance or context",
+                "Confusing similar concepts"
+              ],
+              "metacognitive_checkins": [
+                "Do I need to cross\u2011check this?",
+                "Is this time\u2011sensitive?",
+                "What assumptions is the AI making?"
+              ],
               "use_cases": [
                 {
                   "id": "fact_checking",
                   "name": "Fact checking",
                   "description": "Verifying information or getting accurate data",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple factual queries, then progress to comparative fact\u2011checking.",
+                  "thinking_steps": [
+                    "Formulate precise question",
+                    "Evaluate credibility",
+                    "Cross\u2011reference",
+                    "Note limitations"
+                  ],
                   "example_prompts": [
                     "What's the population of Tokyo?",
                     "When was the Magna Carta signed?",
-                    "What are the symptoms of Lyme disease?"
+                    "What are the symptoms of Lyme disease?",
+                    "How tall is Mount Everest?",
+                    "What's the boiling point of water at sea level?"
+                  ]
+                },
+                {
+                  "id": "definition_lookup",
+                  "name": "Definition lookup",
+                  "description": "Understanding the meaning of terms or concepts",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple dictionary definitions, then explore nuanced or contextual meanings.",
+                  "thinking_steps": [
+                    "Identify the term",
+                    "Request basic definition",
+                    "Ask for context",
+                    "Differentiate from similar"
+                  ],
+                  "example_prompts": [
+                    "What does 'cognitive dissonance' mean?",
+                    "Define 'sustainable development'",
+                    "What is the difference between 'weather' and 'climate'?",
+                    "Define 'algorithm' in simple terms",
+                    "What does 'empathy' mean versus 'sympathy'?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "compare_concepts",
+              "name": "Compare concepts",
+              "what_it_is": "Highlighting similarities and differences between ideas, objects, or approaches",
+              "when_to_use": "When deciding between options, understanding relationships, or clarifying distinctions",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Basic comparison",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Synthesis",
+                    "Pattern extrapolation"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What dimensions are most relevant?",
+                "How are these similar fundamentally?",
+                "What trade\u2011offs exist?"
+              ],
+              "common_pitfalls": [
+                "Over\u2011emphasizing trivial differences",
+                "Ignoring important nuances",
+                "Assuming mutual exclusivity"
+              ],
+              "metacognitive_checkins": [
+                "Have I identified relevant criteria?",
+                "Is my comparison balanced?",
+                "What context might change this?"
+              ],
+              "use_cases": [
+                {
+                  "id": "compare_technologies",
+                  "name": "Compare technologies",
+                  "description": "Evaluating different tools, platforms, or technical approaches",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with basic feature comparisons, then progress to trade\u2011off analysis.",
+                  "thinking_steps": [
+                    "Identify technologies",
+                    "List key features",
+                    "Evaluate advantages/disadvantages",
+                    "Recommend based on use case"
+                  ],
+                  "example_prompts": [
+                    "Compare iOS vs Android for privacy-conscious users",
+                    "What are the differences between electric and hybrid cars?",
+                    "Compare streaming services Netflix, Hulu, and Disney+",
+                    "How does solar power compare to wind power for home use?",
+                    "Compare note-taking apps: Evernote, Notion, and OneNote"
+                  ]
+                },
+                {
+                  "id": "compare_ideas_theories",
+                  "name": "Compare ideas/theories",
+                  "description": "Understanding different philosophical, scientific, or theoretical frameworks",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Begin with simplified summaries, then examine underlying assumptions.",
+                  "thinking_steps": [
+                    "Summarize each theory",
+                    "Identify core assumptions",
+                    "Compare predictions",
+                    "Evaluate evidence"
+                  ],
+                  "example_prompts": [
+                    "Compare capitalism and socialism as economic systems",
+                    "What are the differences between Newtonian and Einsteinian physics?",
+                    "Compare Freudian and Jungian psychology",
+                    "How do learning theories (behaviorism, constructivism) approach education?",
+                    "Compare utilitarianism and deontology as ethical frameworks"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "provide_examples",
+              "name": "Provide examples",
+              "what_it_is": "Illustrating concepts with concrete instances to make abstract ideas tangible",
+              "when_to_use": "When learning abstract concepts, teaching others, or needing illustration for clarity",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Pattern recognition",
+                    "Information retrieval"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Abstraction",
+                    "Analogy formation",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What familiar situations match this?",
+                "Which examples are most relatable?",
+                "What variety of examples helps?"
+              ],
+              "common_pitfalls": [
+                "Using irrelevant examples",
+                "Overloading with too many examples",
+                "Choosing edge cases that confuse"
+              ],
+              "metacognitive_checkins": [
+                "Do these examples actually clarify the concept?",
+                "Are they relatable to my audience?",
+                "What's missing?"
+              ],
+              "use_cases": [
+                {
+                  "id": "illustrate_abstract_concept",
+                  "name": "Illustrate abstract concept",
+                  "description": "Making theoretical ideas concrete through examples",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple, everyday examples, then progress to more nuanced illustrations.",
+                  "thinking_steps": [
+                    "Identify the abstract concept",
+                    "Brainstorm concrete manifestations",
+                    "Select most relatable examples",
+                    "Explain connections"
+                  ],
+                  "example_prompts": [
+                    "Give me real-world examples of Newton's laws",
+                    "Provide everyday examples of cognitive biases",
+                    "What are some practical examples of supply chain principles?",
+                    "Give examples of machine learning in daily life",
+                    "Illustrate the concept of 'opportunity cost' with examples"
+                  ]
+                },
+                {
+                  "id": "provide_case_studies",
+                  "name": "Provide case studies",
+                  "description": "Detailed examples showing how principles apply in specific situations",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with brief case summaries, then progress to detailed analyses.",
+                  "thinking_steps": [
+                    "Identify relevant principle",
+                    "Select appropriate case",
+                    "Describe context and application",
+                    "Extract lessons learned"
+                  ],
+                  "example_prompts": [
+                    "Give me case studies of successful startups",
+                    "Provide examples of companies that failed due to poor leadership",
+                    "What are case studies of cities that implemented effective public transit?",
+                    "Give examples of historical figures who demonstrated resilience",
+                    "Provide case studies of successful environmental policies"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "translate_concepts",
+              "name": "Translate concepts across domains",
+              "what_it_is": "Applying ideas from one field to another to deepen understanding or find new perspectives",
+              "when_to_use": "When exploring interdisciplinary connections, making sense of unfamiliar fields, or finding novel insights",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Basic comparison",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Synthesis",
+                    "Pattern extrapolation"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What does this resemble in another field?",
+                "What frameworks apply across domains?",
+                "What metaphors bridge these areas?"
+              ],
+              "common_pitfalls": [
+                "Forcing inappropriate analogies",
+                "Missing domain-specific nuances",
+                "Oversimplifying complex relationships"
+              ],
+              "metacognitive_checkins": [
+                "Does this translation preserve meaning?",
+                "What gets lost in the translation?",
+                "Is this illuminating or misleading?"
+              ],
+              "use_cases": [
+                {
+                  "id": "apply_cross_domain_analogy",
+                  "name": "Apply cross-domain analogy",
+                  "description": "Using analogies from one field to understand another",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with well-established analogies, then explore creative connections.",
+                  "thinking_steps": [
+                    "Identify source concept",
+                    "Find parallel in other domain",
+                    "Map elements between domains",
+                    "Note differences"
+                  ],
+                  "example_prompts": [
+                    "How is computer memory like human memory?",
+                    "Compare an economy to an ecosystem",
+                    "How is social media like a town square?",
+                    "Compare managing a team to conducting an orchestra",
+                    "How is learning a language like building a house?"
+                  ]
+                },
+                {
+                  "id": "bridge_disciplines",
+                  "name": "Bridge disciplines",
+                  "description": "Finding connections between different academic or professional fields",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with obvious connections, then explore deeper theoretical parallels.",
+                  "thinking_steps": [
+                    "Identify two disciplines",
+                    "Find shared concepts or principles",
+                    "Explore how each approaches similar problems",
+                    "Synthesize insights"
+                  ],
+                  "example_prompts": [
+                    "How does psychology intersect with economics?",
+                    "What are the connections between biology and engineering?",
+                    "How do art and science complement each other?",
+                    "What do history and literature share in common?",
+                    "How does philosophy connect to computer science?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "teach_step_by_step",
+              "name": "Teach step-by-step",
+              "what_it_is": "Guiding through learning processes in sequential stages to build understanding progressively",
+              "when_to_use": "When learning a new skill, procedure, or process that benefits from breaking into stages",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Sequencing",
+                    "Following instructions"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Hierarchical thinking",
+                    "Cause-effect analysis",
+                    "Structure design"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the logical sequence?",
+                "What are the prerequisites for each step?",
+                "Where might people get stuck?"
+              ],
+              "common_pitfalls": [
+                "Skipping essential prerequisites",
+                "Overloading individual steps",
+                "Not checking understanding between steps"
+              ],
+              "metacognitive_checkins": [
+                "Is this sequence logical?",
+                "Are the steps achievable?",
+                "Where should I add checkpoints?"
+              ],
+              "use_cases": [
+                {
+                  "id": "explain_procedure",
+                  "name": "Explain procedure",
+                  "description": "Breaking down how to perform a task or process",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple procedures, then progress to multi-step complex processes.",
+                  "thinking_steps": [
+                    "Identify starting point and goal",
+                    "Break into logical steps",
+                    "Add prerequisites and warnings",
+                    "Verify sequence"
+                  ],
+                  "example_prompts": [
+                    "Explain how to tie a tie step by step",
+                    "How do I change a flat tire?",
+                    "Teach me how to meditate step by step",
+                    "Explain the process of making sourdough bread",
+                    "How do I set up a budget spreadsheet?"
+                  ]
+                },
+                {
+                  "id": "guide_learning_journey",
+                  "name": "Guide learning journey",
+                  "description": "Creating a progressive pathway for learning a new skill or topic",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with single skills, then design comprehensive learning pathways.",
+                  "thinking_steps": [
+                    "Identify learning goal",
+                    "Break into milestones",
+                    "Sequence by prerequisite",
+                    "Add practice opportunities"
+                  ],
+                  "example_prompts": [
+                    "Create a step-by-step plan for learning to code",
+                    "How should I progress from beginner to advanced guitar player?",
+                    "Design a learning path for understanding machine learning",
+                    "What's the best sequence for learning a new language?",
+                    "Create a progression for improving public speaking skills"
                   ]
                 }
               ]
@@ -64,25 +537,544 @@
           ]
         },
         {
-          "id": "research",
-          "name": "Research & Summarize",
-          "description": "Finding, analyzing, and condensing information",
+          "id": "research_analyze",
+          "name": "Research & Analyze",
+          "description": "Finding, analyzing, and synthesizing information. Cognitive load: high extraneous load (information overload). Support: distillation techniques, prioritization heuristics.",
+          "cognitive_toolkit": [
+            "Distillation",
+            "Prioritization",
+            "Synthesis",
+            "Source evaluation"
+          ],
+          "cognitive_load_analysis": "High extraneous load due to information volume. Reduce by filtering, chunking, and using summary frameworks.",
+          "support_strategies": "Provide templates for note\u2011taking, teach skimming techniques, offer frameworks for synthesis.",
           "capabilities": [
             {
-              "id": "summarize_text",
+              "id": "summarize_long_texts",
               "name": "Summarize long texts",
               "what_it_is": "Condensing lengthy articles, reports, or documents into key points",
               "when_to_use": "When you're short on time or need to extract essential information",
-              "cognitive_skills": ["Distillation", "Prioritization", "Synthesis"],
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Distillation",
+                    "Prioritization",
+                    "Synthesis"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Metacognitive regulation"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What are the main questions answered?",
+                "What evidence supports conclusions?",
+                "What would I tell someone in one minute?"
+              ],
+              "common_pitfalls": [
+                "Missing important nuances",
+                "Including too much detail",
+                "Parroting structure rather than synthesizing"
+              ],
+              "metacognitive_checkins": [
+                "Have I captured the core argument?",
+                "Is this balanced and accurate?",
+                "What did I leave out?"
+              ],
               "use_cases": [
                 {
-                  "id": "summarize_article",
+                  "id": "summarize_articles",
                   "name": "Summarize articles",
                   "description": "Getting the gist of news articles or research papers",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with short articles, then progress to technical papers.",
+                  "thinking_steps": [
+                    "Identify main claim",
+                    "Extract evidence",
+                    "Note methodology",
+                    "Summarize conclusions"
+                  ],
                   "example_prompts": [
-                    "Summarize this 10-page article in 3 bullet points",
+                    "Summarize this 10\u2011page article in 3 bullet points",
                     "What are the key takeaways from this research paper?",
-                    "Give me a brief summary of this news story"
+                    "Give me a brief summary of this news story",
+                    "Extract main arguments from this opinion piece",
+                    "Summarize this scientific abstract in plain language"
+                  ]
+                },
+                {
+                  "id": "summarize_meeting_notes",
+                  "name": "Summarize meeting notes",
+                  "description": "Extracting decisions and action items from lengthy notes",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Begin with structured minutes, then progress to transcriptions.",
+                  "thinking_steps": [
+                    "Identify decisions",
+                    "Extract action items",
+                    "Note key points",
+                    "Highlight unresolved issues"
+                  ],
+                  "example_prompts": [
+                    "Summarize these meeting minutes into key decisions",
+                    "What were the main action items from this meeting?",
+                    "Extract important points from these conference notes",
+                    "Create a summary of this workshop with bullet points",
+                    "List decisions made during this team meeting"
+                  ]
+                },
+                {
+                  "id": "summarize_books",
+                  "name": "Summarize books",
+                  "description": "Capturing the essence of books or long reports",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with chapter summaries, then synthesize into whole\u2011book summaries.",
+                  "thinking_steps": [
+                    "Identify central thesis",
+                    "Summarize each chapter",
+                    "Extract key examples",
+                    "Synthesize into overall message"
+                  ],
+                  "example_prompts": [
+                    "Summarize 'Thinking, Fast and Slow' in 5 bullet points",
+                    "Give me a chapter\u2011by\u2011chapter summary of 'The Lean Startup'",
+                    "What are the key lessons from 'Atomic Habits'?",
+                    "Provide a brief overview of 'Sapiens'",
+                    "Summarize the main arguments in 'The Code of Capital'"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "extract_key_points",
+              "name": "Extract key points",
+              "what_it_is": "Identifying and isolating the most important information from content",
+              "when_to_use": "When you need to quickly grasp essential messages without reading full content",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Distillation",
+                    "Prioritization",
+                    "Synthesis"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Metacognitive regulation"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's most important here?",
+                "What can I skip without losing meaning?",
+                "What are the must-know points?"
+              ],
+              "common_pitfalls": [
+                "Missing subtle but important points",
+                "Including too much detail",
+                "Losing context of key points"
+              ],
+              "metacognitive_checkins": [
+                "Are these truly the most important points?",
+                "What would someone miss if they only read these?",
+                "Am I preserving essential context?"
+              ],
+              "use_cases": [
+                {
+                  "id": "pull_highlights",
+                  "name": "Pull highlights",
+                  "description": "Extracting the most significant parts from text",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with obvious highlights, then progress to identifying deeper significance.",
+                  "thinking_steps": [
+                    "Scan for emphasized content",
+                    "Identify main arguments",
+                    "Note supporting evidence",
+                    "Prioritize by importance"
+                  ],
+                  "example_prompts": [
+                    "Extract the 5 most important points from this article",
+                    "What are the highlights from this report?",
+                    "Pull out the key quotes from this speech",
+                    "What are the main takeaways from this presentation?",
+                    "Extract the essential information from this email thread"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "synthesize_multiple_sources",
+              "name": "Synthesize multiple sources",
+              "what_it_is": "Combining information from different references into cohesive insights",
+              "when_to_use": "When you have gathered information from multiple places and need integrated understanding",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Distillation",
+                    "Prioritization",
+                    "Synthesis"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Metacognitive regulation"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What are the common themes?",
+                "Where do sources disagree?",
+                "What emerges from combining them?"
+              ],
+              "common_pitfalls": [
+                "Treating all sources as equally credible",
+                "Missing conflicts between sources",
+                "Creating artificial consistency"
+              ],
+              "metacognitive_checkins": [
+                "Have I acknowledged source differences?",
+                "Is my synthesis fair to all perspectives?",
+                "What's genuinely new from the combination?"
+              ],
+              "use_cases": [
+                {
+                  "id": "combine_research",
+                  "name": "Combine research",
+                  "description": "Integrating findings from multiple studies or articles",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with 2-3 compatible sources, then increase number and complexity.",
+                  "thinking_steps": [
+                    "Review each source",
+                    "Identify themes",
+                    "Note contradictions",
+                    "Synthesize into coherent picture"
+                  ],
+                  "example_prompts": [
+                    "Combine information from these three articles about remote work",
+                    "Synthesize findings from studies on meditation and stress",
+                    "Integrate perspectives from different economic sources about inflation",
+                    "What common themes emerge from these leadership articles?",
+                    "Create a synthesis of these explanations about climate change"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "identify_themes",
+              "name": "Identify themes",
+              "what_it_is": "Recognizing recurring patterns, topics, or ideas across content",
+              "when_to_use": "When analyzing qualitative data, literature, or looking for patterns in information",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Pattern recognition",
+                    "Observation"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Argument evaluation",
+                    "Bias detection"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What keeps coming up?",
+                "What patterns do I see?",
+                "What connects these seemingly different elements?"
+              ],
+              "common_pitfalls": [
+                "Imposing preconceived themes",
+                "Missing subtle connections",
+                "Overgeneralizing from limited data"
+              ],
+              "metacognitive_checkins": [
+                "Are these themes actually present or just my assumptions?",
+                "What evidence supports each theme?",
+                "What am I missing?"
+              ],
+              "use_cases": [
+                {
+                  "id": "find_common_topics",
+                  "name": "Find common topics",
+                  "description": "Discovering what multiple texts or sources have in common",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with obvious topics, then progress to deeper thematic connections.",
+                  "thinking_steps": [
+                    "Scan each source",
+                    "Note recurring ideas",
+                    "Group related topics",
+                    "Verify with evidence"
+                  ],
+                  "example_prompts": [
+                    "What themes do these poems share?",
+                    "Identify common topics across these business articles",
+                    "What recurring issues appear in customer feedback?",
+                    "Find the themes connecting these historical events",
+                    "What are the common elements in these success stories?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "analyze_arguments",
+              "name": "Analyze arguments",
+              "what_it_is": "Evaluating logical structure, evidence, and reasoning in persuasive content",
+              "when_to_use": "When assessing the strength of claims, understanding persuasion, or critical evaluation",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Pattern recognition",
+                    "Observation"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Argument evaluation",
+                    "Bias detection"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the main claim?",
+                "What evidence supports it?",
+                "Are there logical fallacies?"
+              ],
+              "common_pitfalls": [
+                "Missing unstated assumptions",
+                "Overlooking weak evidence",
+                "Confusing persuasion with truth"
+              ],
+              "metacognitive_checkins": [
+                "Have I identified all assumptions?",
+                "Is the evidence actually relevant?",
+                "What alternative explanations exist?"
+              ],
+              "use_cases": [
+                {
+                  "id": "evaluate_opinion_piece",
+                  "name": "Evaluate opinion piece",
+                  "description": "Analyzing the reasoning in opinion articles or essays",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with clear arguments, then progress to complex persuasive pieces.",
+                  "thinking_steps": [
+                    "Identify main claim",
+                    "Extract supporting arguments",
+                    "Evaluate evidence quality",
+                    "Check for fallacies"
+                  ],
+                  "example_prompts": [
+                    "Analyze the argument structure of this op-ed",
+                    "What evidence supports the claims in this essay?",
+                    "Evaluate the reasoning in this political speech",
+                    "Identify logical fallacies in this advertisement",
+                    "Assess the strength of arguments in this debate"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "evaluate_credibility",
+              "name": "Evaluate credibility",
+              "what_it_is": "Assessing reliability, trustworthiness, and authority of sources",
+              "when_to_use": "When determining whether to trust information or sources",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Pattern recognition",
+                    "Observation"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Argument evaluation",
+                    "Bias detection"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Who created this?",
+                "What are their credentials?",
+                "Is there evidence of bias?"
+              ],
+              "common_pitfalls": [
+                "Trusting familiar sources uncritically",
+                "Dismissing unfamiliar sources unfairly",
+                "Over-relying on single criteria"
+              ],
+              "metacognitive_checkins": [
+                "Am I considering multiple credibility factors?",
+                "What might bias my judgment?",
+                "What would strengthen credibility?"
+              ],
+              "use_cases": [
+                {
+                  "id": "assess_source_quality",
+                  "name": "Assess source quality",
+                  "description": "Determining whether a source is trustworthy for a given purpose",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with obvious credible/uncredible examples, then progress to nuanced cases.",
+                  "thinking_steps": [
+                    "Check author credentials",
+                    "Examine publication",
+                    "Look for citations",
+                    "Assess objectivity"
+                  ],
+                  "example_prompts": [
+                    "Is this website a credible source for medical information?",
+                    "Evaluate the reliability of this news outlet",
+                    "How can I tell if this study is trustworthy?",
+                    "Assess the credibility of this expert testimony",
+                    "Is this source appropriate for academic research?"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evaluate_information",
+          "name": "Evaluate Information",
+          "description": "Assessing quality, bias, and reliability of information. Cognitive load: medium intrinsic load. Support: evaluation frameworks, bias awareness.",
+          "cognitive_toolkit": [
+            "Source evaluation",
+            "Bias detection",
+            "Logical reasoning",
+            "Verification"
+          ],
+          "cognitive_load_analysis": "Medium intrinsic load requiring critical thinking. Reduce by using evaluation rubrics.",
+          "support_strategies": "Provide bias checklists, teach lateral reading techniques, offer fact\u2011finding frameworks.",
+          "capabilities": [
+            {
+              "id": "detect_bias",
+              "name": "Detect bias",
+              "what_it_is": "Identifying slanted perspectives, prejudice, or partiality in content",
+              "when_to_use": "When evaluating news, arguments, or representations that may be influenced by hidden assumptions",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What perspective is privileged?",
+                "What's left out?",
+                "Whose interests are served?"
+              ],
+              "common_pitfalls": [
+                "Seeing bias everywhere",
+                "Missing subtle biases",
+                "Ignoring legitimate differences in perspective"
+              ],
+              "metacognitive_checkins": [
+                "What might bias my own judgment?",
+                "Am I being fair to the source?",
+                "What evidence supports my bias claim?"
+              ],
+              "use_cases": [
+                {
+                  "id": "identify_media_bias",
+                  "name": "Identify media bias",
+                  "description": "Recognizing slanted reporting or framing in news media",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with obvious examples, then progress to subtle framing techniques.",
+                  "thinking_steps": [
+                    "Examine language choices",
+                    "Note what's included/excluded",
+                    "Check source context",
+                    "Compare with other coverage"
+                  ],
+                  "example_prompts": [
+                    "What biases are present in this news article?",
+                    "Identify the framing in this political coverage",
+                    "How does this piece portray different groups?",
+                    "What perspectives are missing from this report?",
+                    "Analyze the language choices in this editorial"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "verify_information",
+              "name": "Verify information",
+              "what_it_is": "Checking accuracy and truthfulness of claims or data",
+              "when_to_use": "When encountering surprising claims, important facts, or uncertain information",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Where can I check this?",
+                "What sources would contradict this?",
+                "Is this too good/bad to be true?"
+              ],
+              "common_pitfalls": [
+                "Trusting single verification sources",
+                "Accepting confirmation too readily",
+                "Misinterpreting conflicting information"
+              ],
+              "metacognitive_checkins": [
+                "Have I checked multiple sources?",
+                "What would disprove this claim?",
+                "Am I satisfied with the evidence?"
+              ],
+              "use_cases": [
+                {
+                  "id": "fact_check_claims",
+                  "name": "Fact check claims",
+                  "description": "Verifying the accuracy of specific statements or statistics",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with verifiable facts, then progress to complex claims requiring multiple checks.",
+                  "thinking_steps": [
+                    "Identify specific claim",
+                    "Find primary sources",
+                    "Cross-reference with reliable sources",
+                    "Note any discrepancies"
+                  ],
+                  "example_prompts": [
+                    "Verify this statistic about vaccination rates",
+                    "Check if this historical fact is accurate",
+                    "Is this claim about climate change supported by evidence?",
+                    "Verify the numbers in this financial report",
+                    "Fact check this political statement"
                   ]
                 }
               ]
@@ -92,96 +1084,1023 @@
       ]
     },
     {
-      "id": "creativity",
+      "id": "creativity_content",
       "name": "Creativity & Content",
-      "description": "Generating, refining, and enhancing creative work",
+      "description": "Generating, refining, and enhancing creative work.",
+      "thinking_lens": "Generative Mode: Approach tasks with openness to novelty and a willingness to iterate. Ask 'What can be created?' and 'How can this be improved?'",
+      "skill_ladder_mapping": {
+        "novice": "Use templates and example prompts for simple content creation.",
+        "competent": "Adapt prompts for different formats and audiences, combine creative elements.",
+        "proficient": "Develop original creative concepts, critique and refine outputs, teach creative techniques."
+      },
+      "mental_models": [
+        "AI as a Thinking Partner",
+        "Capability Stack",
+        "Prompt-as-Specification",
+        "Iterative Refinement"
+      ],
       "categories": [
         {
-          "id": "writing",
-          "name": "Writing & Editing",
-          "description": "Creating and improving written content",
+          "id": "create_things",
+          "name": "Create Things",
+          "description": "Generating new content, ideas, and creative works. Cognitive load: high germane load (constructing mental models). Support: brainstorming scaffolds, idea association.",
+          "cognitive_toolkit": [
+            "Association",
+            "Idea generation",
+            "Divergent thinking",
+            "Hierarchical thinking"
+          ],
+          "cognitive_load_analysis": "High germane load from creative construction. Reduce by providing structures, prompts, and examples.",
+          "support_strategies": "Use brainstorming techniques, provide idea starters, offer creative constraints.",
           "capabilities": [
             {
               "id": "brainstorm_ideas",
               "name": "Brainstorm ideas",
-              "what_it_is": "Generating creative concepts, angles, or approaches",
+              "what_it_is": "Generating creative concepts, angles, or approaches without initial judgment",
               "when_to_use": "When starting a project, overcoming writer's block, or exploring possibilities",
-              "cognitive_skills": ["Divergent thinking", "Association", "Idea generation"],
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Association",
+                    "Idea generation"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Divergent thinking",
+                    "Creative problem solving"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's possible here?",
+                "What if anything goes?",
+                "What hasn't been tried?"
+              ],
+              "common_pitfalls": [
+                "Judging ideas too early",
+                "Sticking to familiar territory",
+                "Generating too many similar ideas"
+              ],
+              "metacognitive_checkins": [
+                "Am I being truly open?",
+                "What assumptions am I making?",
+                "What wild ideas should I consider?"
+              ],
               "use_cases": [
                 {
                   "id": "blog_post_ideas",
                   "name": "Blog post ideas",
                   "description": "Coming up with topics for articles or posts",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with topic brainstorming, then progress to angle development.",
+                  "thinking_steps": [
+                    "Identify target audience",
+                    "Brainstorm broad topics",
+                    "Explore specific angles",
+                    "Select most promising"
+                  ],
                   "example_prompts": [
                     "Give me 10 ideas for a blog post about sustainable living",
                     "Brainstorm topics for a technology newsletter",
-                    "Suggest angles for writing about work-life balance"
+                    "Suggest angles for writing about work-life balance",
+                    "What blog topics would appeal to college students?",
+                    "Generate creative ideas for a travel blog"
+                  ]
+                },
+                {
+                  "id": "project_names",
+                  "name": "Project names",
+                  "description": "Generating creative names for projects or products",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with descriptive names, then progress to creative and memorable options.",
+                  "thinking_steps": [
+                    "Identify key qualities",
+                    "Brainstorm word associations",
+                    "Combine and modify",
+                    "Test for memorability"
+                  ],
+                  "example_prompts": [
+                    "Suggest names for a meditation app",
+                    "Brainstorm creative titles for my photography portfolio",
+                    "Generate catchy names for a coffee shop",
+                    "What should I name my fitness coaching business?",
+                    "Come up with names for a podcast about productivity"
+                  ]
+                },
+                {
+                  "id": "creative_concepts",
+                  "name": "Generate creative concepts",
+                  "description": "Developing original ideas for creative projects",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple concepts, then progress to complex creative visions.",
+                  "thinking_steps": [
+                    "Define the creative challenge",
+                    "Gather inspiration",
+                    "Generate multiple concepts",
+                    "Refine most promising"
+                  ],
+                  "example_prompts": [
+                    "Brainstorm concepts for a short film about climate change",
+                    "Generate ideas for an interactive art installation",
+                    "What are some creative concepts for a children's book?",
+                    "Suggest innovative ideas for a community garden",
+                    "Come up with concepts for a new type of social media platform"
                   ]
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "productivity",
-      "name": "Productivity & Planning",
-      "description": "Organizing, scheduling, and optimizing tasks and workflows",
-      "categories": [
-        {
-          "id": "planning",
-          "name": "Planning & Organization",
-          "description": "Structuring projects and managing tasks",
-          "capabilities": [
+            },
             {
               "id": "create_outlines",
               "name": "Create outlines",
               "what_it_is": "Developing structured frameworks for projects, documents, or presentations",
-              "when_to_use": "When starting a complex task that needs organization",
-              "cognitive_skills": ["Hierarchical thinking", "Sequencing", "Structure design"],
+              "when_to_use": "When starting a complex task that needs organization and structure",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Hierarchical thinking",
+                    "Sequencing",
+                    "Structure design"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Creative synthesis"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the logical flow?",
+                "What are the main sections?",
+                "What comes before what?"
+              ],
+              "common_pitfalls": [
+                "Making outlines too detailed or too vague",
+                "Missing important components",
+                "Following rigid structures when flexibility needed"
+              ],
+              "metacognitive_checkins": [
+                "Does this cover everything needed?",
+                "Is the flow logical?",
+                "What's missing or extra?"
+              ],
               "use_cases": [
                 {
                   "id": "presentation_outline",
                   "name": "Presentation outline",
                   "description": "Planning the structure of a talk or slideshow",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple structures, then progress to complex multi-part presentations.",
+                  "thinking_steps": [
+                    "Define audience and goal",
+                    "Identify key points",
+                    "Structure introduction/body/conclusion",
+                    "Add transitions"
+                  ],
                   "example_prompts": [
                     "Create an outline for a 30-minute presentation on climate change",
                     "Outline the structure for a workshop on time management",
-                    "Plan a 5-part webinar series on digital marketing"
+                    "Plan a 5-part webinar series on digital marketing",
+                    "Design a presentation outline for a job interview",
+                    "Create the structure for a TED-style talk"
+                  ]
+                },
+                {
+                  "id": "essay_structure",
+                  "name": "Essay structure",
+                  "description": "Organizing thoughts and arguments for written work",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with basic essay structures, then progress to complex argument organization.",
+                  "thinking_steps": [
+                    "Formulate thesis",
+                    "Identify main arguments",
+                    "Plan supporting evidence",
+                    "Structure with logical flow"
+                  ],
+                  "example_prompts": [
+                    "Outline a persuasive essay about renewable energy",
+                    "Create a structure for a research paper on AI ethics",
+                    "Plan the sections for a business proposal",
+                    "Design the organization of a compare-and-contrast essay",
+                    "Create an outline for a personal narrative essay"
+                  ]
+                },
+                {
+                  "id": "project_plan",
+                  "name": "Project plan outline",
+                  "description": "Structuring the phases and components of a project",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with simple projects, then progress to complex multi-phase initiatives.",
+                  "thinking_steps": [
+                    "Define project scope",
+                    "Identify milestones",
+                    "Plan resources and timeline",
+                    "Structure deliverables"
+                  ],
+                  "example_prompts": [
+                    "Create an outline for launching a podcast",
+                    "Plan the phases of a website redesign project",
+                    "Structure a marketing campaign for a new product",
+                    "Design the steps for writing and publishing a book",
+                    "Create a project plan for organizing a community event"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "generate_stories",
+              "name": "Generate stories",
+              "what_it_is": "Creating narratives with plot, characters, and settings",
+              "when_to_use": "When writing fiction, creating content that needs narrative elements, or storytelling",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Association",
+                    "Idea generation"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Divergent thinking",
+                    "Creative problem solving"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Who are the characters?",
+                "What's the conflict?",
+                "How does it resolve?"
+              ],
+              "common_pitfalls": [
+                "Creating predictable plots",
+                "Developing flat characters",
+                "Losing narrative coherence"
+              ],
+              "metacognitive_checkins": [
+                "Does this story work?",
+                "Are the characters compelling?",
+                "What would improve it?"
+              ],
+              "use_cases": [
+                {
+                  "id": "write_fiction",
+                  "name": "Write fiction",
+                  "description": "Creating fictional narratives in various genres",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with simple scenarios, then progress to complex multi-character stories.",
+                  "thinking_steps": [
+                    "Establish setting and characters",
+                    "Create conflict or challenge",
+                    "Develop plot progression",
+                    "Craft resolution"
+                  ],
+                  "example_prompts": [
+                    "Write a short story about a time traveler",
+                    "Create a mystery story with an unexpected ending",
+                    "Generate a sci-fi story about first contact",
+                    "Write a children's story about learning to share",
+                    "Create a romance story with a twist"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "create_dialogue",
+              "name": "Create dialogue",
+              "what_it_is": "Writing conversational exchanges between characters or for specific purposes",
+              "when_to_use": "When writing scripts, novels, or any content with spoken interaction",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Association",
+                    "Idea generation"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Divergent thinking",
+                    "Creative problem solving"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's each character's voice?",
+                "What are they really saying?",
+                "How does conversation advance the story?"
+              ],
+              "common_pitfalls": [
+                "Making everyone sound the same",
+                "Unnatural phrasing",
+                "Dialogue that doesn't move things forward"
+              ],
+              "metacognitive_checkins": [
+                "Can I tell who's speaking?",
+                "Does this sound real?",
+                "What's the purpose of this exchange?"
+              ],
+              "use_cases": [
+                {
+                  "id": "write_script_dialogue",
+                  "name": "Write script dialogue",
+                  "description": "Creating conversations for film, TV, or theater",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple two-person conversations, then progress to multi-character scenes.",
+                  "thinking_steps": [
+                    "Define character voices",
+                    "Establish scene context",
+                    "Write natural exchanges",
+                    "Check for purpose and conflict"
+                  ],
+                  "example_prompts": [
+                    "Write dialogue between two strangers on a train",
+                    "Create an argument between a parent and teenager",
+                    "Write dialogue for a job interview scene",
+                    "Generate a conversation between old friends reconnecting",
+                    "Create dialogue for a negotiation scene"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "develop_characters",
+              "name": "Develop characters",
+              "what_it_is": "Designing fictional personas with backstories, personalities, and traits",
+              "when_to_use": "When writing fiction, creating avatars, or developing person-based content",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Hierarchical thinking",
+                    "Sequencing",
+                    "Structure design"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Creative synthesis"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What do they want?",
+                "What are they afraid of?",
+                "What makes them interesting?"
+              ],
+              "common_pitfalls": [
+                "Creating stereotypes",
+                "Making characters too perfect or flawed",
+                "Lack of clear motivations"
+              ],
+              "metacognitive_checkins": [
+                "Is this character believable?",
+                "What makes them complex?",
+                "Would readers care about them?"
+              ],
+              "use_cases": [
+                {
+                  "id": "character_profiles",
+                  "name": "Create character profiles",
+                  "description": "Developing detailed descriptions of fictional characters",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with basic traits, then progress to complex psychological profiles.",
+                  "thinking_steps": [
+                    "Define physical appearance",
+                    "Develop personality traits",
+                    "Create backstory",
+                    "Identify motivations and conflicts"
+                  ],
+                  "example_prompts": [
+                    "Create a detailed profile for a protagonist in a thriller",
+                    "Develop a villain with understandable motivations",
+                    "Design a sidekick character with unique traits",
+                    "Create a family of related characters",
+                    "Develop a character who undergoes significant growth"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "design_scenarios",
+              "name": "Design scenarios",
+              "what_it_is": "Inventing hypothetical situations for planning, training, or storytelling",
+              "when_to_use": "When preparing for possibilities, creating exercises, or world-building",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Hierarchical thinking",
+                    "Sequencing",
+                    "Structure design"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Creative synthesis"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What if this happens?",
+                "What would change?",
+                "How would people respond?"
+              ],
+              "common_pitfalls": [
+                "Creating unrealistic scenarios",
+                "Missing important variables",
+                "Focusing on too few possibilities"
+              ],
+              "metacognitive_checkins": [
+                "Is this scenario plausible?",
+                "What does it test or reveal?",
+                "What scenarios am I missing?"
+              ],
+              "use_cases": [
+                {
+                  "id": "what_if_scenarios",
+                  "name": "Create what-if scenarios",
+                  "description": "Exploring hypothetical situations and their implications",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple alternatives, then progress to complex multi-variable scenarios.",
+                  "thinking_steps": [
+                    "Define the change from reality",
+                    "Consider direct effects",
+                    "Explore ripple effects",
+                    "Identify potential responses"
+                  ],
+                  "example_prompts": [
+                    "What if humans lived on Mars?",
+                    "Create scenarios for how AI might change education",
+                    "What would happen if the internet disappeared for a week?",
+                    "Design scenarios for different climate change outcomes",
+                    "Create what-if scenarios for alternative historical events"
                   ]
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "communication",
-      "name": "Communication & Collaboration",
-      "description": "Improving interpersonal communication and teamwork",
-      "categories": [
+        },
         {
-          "id": "writing_improvement",
-          "name": "Writing Improvement",
-          "description": "Enhancing clarity, tone, and effectiveness of written communication",
+          "id": "improve_work",
+          "name": "Improve Work",
+          "description": "Refining, editing, and optimizing existing content. Cognitive load: medium extraneous load (editing). Support: checklists, style guides.",
+          "cognitive_toolkit": [
+            "Precision",
+            "Conciseness",
+            "Audience awareness",
+            "Structure design"
+          ],
+          "cognitive_load_analysis": "Medium extraneous load from juggling multiple improvement dimensions. Reduce by focusing on one type of improvement at a time.",
+          "support_strategies": "Provide clarity checklists, audience awareness guides, style reference materials.",
           "capabilities": [
             {
               "id": "improve_clarity",
               "name": "Improve clarity",
-              "what_it_is": "Making text more understandable and direct",
+              "what_it_is": "Making text more understandable, direct, and unambiguous",
               "when_to_use": "When your writing feels confusing, wordy, or unclear",
-              "cognitive_skills": ["Precision", "Conciseness", "Audience awareness"],
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Precision",
+                    "Conciseness",
+                    "Audience awareness"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What am I actually trying to say?",
+                "What might confuse readers?",
+                "How can I simplify?"
+              ],
+              "common_pitfalls": [
+                "Oversimplifying and losing nuance",
+                "Removing necessary context",
+                "Making everything sound robotic"
+              ],
+              "metacognitive_checkins": [
+                "Is this clearer or just shorter?",
+                "Have I preserved the meaning?",
+                "Would my intended audience understand?"
+              ],
               "use_cases": [
                 {
                   "id": "simplify_language",
                   "name": "Simplify language",
                   "description": "Making complex or technical writing more accessible",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with technical jargon, then progress to complex academic language.",
+                  "thinking_steps": [
+                    "Identify complex terms",
+                    "Replace with simpler language",
+                    "Add context for necessary technical terms",
+                    "Test on non-expert"
+                  ],
                   "example_prompts": [
-                    "Make this paragraph more concise",
-                    "Rewrite this technical explanation for a general audience",
-                    "Simplify this legal language into plain English"
+                    "Rewrite this so a middle schooler can understand it",
+                    "Simplify this technical documentation",
+                    "Make this business report clearer",
+                    "Explain this in plain language",
+                    "Rewrite this academic paper for general readers"
+                  ]
+                },
+                {
+                  "id": "clarify_ambiguity",
+                  "name": "Clarify ambiguity",
+                  "description": "Removing confusing or vague language",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with obviously ambiguous text, then progress to subtle clarity improvements.",
+                  "thinking_steps": [
+                    "Identify unclear references",
+                    "Pinpoint vague terms",
+                    "Add specifics",
+                    "Rephrase for clarity"
+                  ],
+                  "example_prompts": [
+                    "Make this email clearer and more specific",
+                    "Remove ambiguity from these instructions",
+                    "Clarify what I'm asking for in this message",
+                    "Make these requirements less vague",
+                    "Rewrite this to avoid confusion"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "improve_conciseness",
+              "name": "Improve conciseness",
+              "what_it_is": "Removing unnecessary words while preserving meaning",
+              "when_to_use": "When text is too long, wordy, or meandering",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Precision",
+                    "Conciseness",
+                    "Audience awareness"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What can I cut?",
+                "What's redundant?",
+                "What's the core message?"
+              ],
+              "common_pitfalls": [
+                "Cutting too much and losing meaning",
+                "Creating choppy, unnatural flow",
+                "Removing helpful context"
+              ],
+              "metacognitive_checkins": [
+                "Have I preserved the meaning?",
+                "Is the flow still natural?",
+                "What did I lose by cutting?"
+              ],
+              "use_cases": [
+                {
+                  "id": "shorten_text",
+                  "name": "Shorten text",
+                  "description": "Reducing word count while keeping key information",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with obvious fluff removal, then progress to tight editing.",
+                  "thinking_steps": [
+                    "Identify core message",
+                    "Remove redundancy",
+                    "Cut unnecessary words",
+                    "Smooth remaining text"
+                  ],
+                  "example_prompts": [
+                    "Shorten this paragraph by 50%",
+                    "Make this email more concise",
+                    "Reduce the word count of this report",
+                    "Condense this into fewer sentences",
+                    "Make this presentation outline tighter"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "improve_tone",
+              "name": "Improve tone",
+              "what_it_is": "Adjusting language to match desired emotional impact or formality level",
+              "when_to_use": "When the tone doesn't match the intended audience, purpose, or context",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Precision",
+                    "Conciseness",
+                    "Audience awareness"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "How do I want readers to feel?",
+                "Who is my audience?",
+                "Is this too formal or casual?"
+              ],
+              "common_pitfalls": [
+                "Overcorrecting tone",
+                "Creating inconsistency",
+                "Missing the intended effect"
+              ],
+              "metacognitive_checkins": [
+                "Does this hit the right emotional notes?",
+                "Is it appropriate for the audience?",
+                "What tone am I actually conveying?"
+              ],
+              "use_cases": [
+                {
+                  "id": "make_more_professional",
+                  "name": "Make more professional",
+                  "description": "Elevating language for formal or business contexts",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with casual language, then progress to refining semi-formal text.",
+                  "thinking_steps": [
+                    "Identify casual elements",
+                    "Replace with formal alternatives",
+                    "Ensure precision",
+                    "Maintain clarity"
+                  ],
+                  "example_prompts": [
+                    "Make this email sound more professional",
+                    "Rewrite this in a formal business tone",
+                    "Adjust this report to sound more authoritative",
+                    "Make this proposal sound more businesslike",
+                    "Rewrite this feedback more diplomatically"
+                  ]
+                },
+                {
+                  "id": "make_more_casual",
+                  "name": "Make more casual",
+                  "description": "Relaxing language for informal or friendly contexts",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with overly formal language, then progress to softening standard text.",
+                  "thinking_steps": [
+                    "Identify formal language",
+                    "Replace with conversational alternatives",
+                    "Add personality",
+                    "Maintain respect"
+                  ],
+                  "example_prompts": [
+                    "Make this email friendlier",
+                    "Rewrite this in a more casual tone",
+                    "Make this message sound less stiff",
+                    "Adjust this to be more conversational",
+                    "Lighten up the tone of this announcement"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "improve_structure",
+              "name": "Improve structure",
+              "what_it_is": "Reorganizing content for better flow, logic, and readability",
+              "when_to_use": "When ideas are jumbled, transitions are missing, or organization is weak",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Precision",
+                    "Conciseness",
+                    "Audience awareness"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the best order?",
+                "What connects these ideas?",
+                "Where do transitions belong?"
+              ],
+              "common_pitfalls": [
+                "Rearranging without improving logic",
+                "Breaking natural connections",
+                "Creating artificial structures"
+              ],
+              "metacognitive_checkins": [
+                "Does the flow make sense?",
+                "Are connections clear?",
+                "What's still confusing?"
+              ],
+              "use_cases": [
+                {
+                  "id": "reorganize_content",
+                  "name": "Reorganize content",
+                  "description": "Rearranging elements for better logical flow",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple reordering, then progress to structural redesign.",
+                  "thinking_steps": [
+                    "Identify main ideas",
+                    "Group related content",
+                    "Determine logical order",
+                    "Add transitions"
+                  ],
+                  "example_prompts": [
+                    "Reorganize this essay for better flow",
+                    "Restructure this report for clarity",
+                    "Improve the organization of this presentation",
+                    "Rearrange these ideas logically",
+                    "Restructure this article for better readability"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "improve_grammar_spelling",
+              "name": "Improve grammar and spelling",
+              "what_it_is": "Correcting language errors, typos, and mechanical issues",
+              "when_to_use": "When text contains errors that undermine credibility or distract from meaning",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What errors need fixing?",
+                "Are there consistent issues?",
+                "What rules am I unsure about?"
+              ],
+              "common_pitfalls": [
+                "Overcorrecting and introducing new errors",
+                "Missing style-acceptable choices",
+                "Focusing on mechanics over meaning"
+              ],
+              "metacognitive_checkins": [
+                "Did I fix all errors?",
+                "Did I introduce new ones?",
+                "Is the style consistent?"
+              ],
+              "use_cases": [
+                {
+                  "id": "proofread_text",
+                  "name": "Proofread text",
+                  "description": "Correcting errors in written content",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with obvious errors, then progress to subtle corrections.",
+                  "thinking_steps": [
+                    "Scan for obvious errors",
+                    "Check grammar rules",
+                    "Verify spelling",
+                    "Review punctuation"
+                  ],
+                  "example_prompts": [
+                    "Proofread this email for errors",
+                    "Fix the grammar and spelling in this report",
+                    "Correct the mistakes in this essay",
+                    "Polish this document for publication",
+                    "Edit out typos and errors from this text"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "adapt_for_audience",
+              "name": "Adapt for audience",
+              "what_it_is": "Tailoring content to specific reader groups or contexts",
+              "when_to_use": "When content needs to speak effectively to a particular audience",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Divergent thinking",
+                    "Contextual understanding",
+                    "Cross-domain transfer"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Adaptive learning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Who is my audience?",
+                "What do they know?",
+                "What do they care about?"
+              ],
+              "common_pitfalls": [
+                "Stereotyping the audience",
+                "Oversimplifying or overcompensating",
+                "Losing your authentic voice"
+              ],
+              "metacognitive_checkins": [
+                "Is this appropriate for them?",
+                "What assumptions am I making?",
+                "How would this audience receive this?"
+              ],
+              "use_cases": [
+                {
+                  "id": "adapt_for_experts",
+                  "name": "Adapt for experts",
+                  "description": "Writing for subject-matter experts or specialists",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with general audience text, then add technical depth and precision.",
+                  "thinking_steps": [
+                    "Identify audience expertise level",
+                    "Use appropriate terminology",
+                    "Include necessary detail",
+                    "Assume relevant knowledge"
+                  ],
+                  "example_prompts": [
+                    "Rewrite this for medical professionals",
+                    "Adapt this for an audience of engineers",
+                    "Make this appropriate for legal experts",
+                    "Write this for fellow software developers",
+                    "Adjust this for academic specialists"
+                  ]
+                },
+                {
+                  "id": "adapt_for_beginners",
+                  "name": "Adapt for beginners",
+                  "description": "Writing for people new to a topic",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with expert-level text, then simplify and add explanations.",
+                  "thinking_steps": [
+                    "Identify prerequisite knowledge",
+                    "Explain technical terms",
+                    "Use analogies and examples",
+                    "Build understanding gradually"
+                  ],
+                  "example_prompts": [
+                    "Explain this technology to someone non-technical",
+                    "Simplify this for a beginner audience",
+                    "Make this accessible to someone learning the subject",
+                    "Write this introduction for newcomers",
+                    "Adapt this for people unfamiliar with the field"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "transform_content",
+          "name": "Transform Content",
+          "description": "Changing content format, style, or purpose while preserving core meaning. Cognitive load: medium germane load. Support: format templates, style guides.",
+          "cognitive_toolkit": [
+            "Contextual understanding",
+            "Creative problem solving",
+            "Cross-domain transfer",
+            "Synthesis"
+          ],
+          "cognitive_load_analysis": "Medium germane load from adapting to new constraints. Reduce by using format templates.",
+          "support_strategies": "Provide before/after examples, format templates, style reference guides.",
+          "capabilities": [
+            {
+              "id": "translate_language",
+              "name": "Translate language",
+              "what_it_is": "Converting text between languages while preserving meaning and tone",
+              "when_to_use": "When communicating across languages or reaching multilingual audiences",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Divergent thinking",
+                    "Contextual understanding",
+                    "Cross-domain transfer"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Adaptive learning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the essential meaning?",
+                "How would this be said naturally?",
+                "What cultural nuances matter?"
+              ],
+              "common_pitfalls": [
+                "Literal translation that sounds unnatural",
+                "Losing original tone or style",
+                "Missing cultural references"
+              ],
+              "metacognitive_checkins": [
+                "Does this sound natural in the target language?",
+                "Have I preserved the meaning?",
+                "What's different from the original?"
+              ],
+              "use_cases": [
+                {
+                  "id": "translate_to_language",
+                  "name": "Translate to language",
+                  "description": "Converting text to a different language",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple translations, then progress to nuanced content.",
+                  "thinking_steps": [
+                    "Understand source text",
+                    "Capture meaning not just words",
+                    "Express naturally in target language",
+                    "Review for accuracy and flow"
+                  ],
+                  "example_prompts": [
+                    "Translate this email to Spanish",
+                    "Convert this report to French",
+                    "Translate this website content to German",
+                    "Rewrite this in Japanese",
+                    "Translate this message to Portuguese"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "change_format",
+              "name": "Change format",
+              "what_it_is": "Converting content from one format to another (e.g., article to presentation)",
+              "when_to_use": "When repurposing content for different platforms or audiences",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What works in this format?",
+                "What needs to change?",
+                "How can I preserve key ideas?"
+              ],
+              "common_pitfalls": [
+                "Including too much detail from original",
+                "Missing format-specific requirements",
+                "Losing the original's spirit"
+              ],
+              "metacognitive_checkins": [
+                "Does this work in the new format?",
+                "What got lost or added?",
+                "Is this the best version for this format?"
+              ],
+              "use_cases": [
+                {
+                  "id": "article_to_presentation",
+                  "name": "Convert article to presentation",
+                  "description": "Turning written content into slide format",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with short articles, then progress to complex conversions.",
+                  "thinking_steps": [
+                    "Extract key points",
+                    "Structure for slides",
+                    "Create visuals",
+                    "Keep text minimal"
+                  ],
+                  "example_prompts": [
+                    "Turn this blog post into a presentation",
+                    "Convert this article into a slide deck",
+                    "Create a presentation from this report",
+                    "Turn this white paper into slides",
+                    "Make a presentation from this guide"
+                  ]
+                },
+                {
+                  "id": "presentation_to_article",
+                  "name": "Convert presentation to article",
+                  "description": "Expanding slide content into written format",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple decks, then progress to complex content expansion.",
+                  "thinking_steps": [
+                    "Use slide prompts",
+                    "Add detail and context",
+                    "Create narrative flow",
+                    "Provide examples and explanations"
+                  ],
+                  "example_prompts": [
+                    "Turn these slides into a blog post",
+                    "Write an article based on this presentation",
+                    "Expand this deck into a report",
+                    "Convert these slides into a written guide",
+                    "Make an article from this presentation outline"
                   ]
                 }
               ]
@@ -191,30 +2110,1841 @@
       ]
     },
     {
-      "id": "problem_solving",
-      "name": "Problem Solving & Analysis",
-      "description": "Analyzing situations, identifying solutions, and making decisions",
+      "id": "analysis_problem_solving",
+      "name": "Analysis & Problem Solving",
+      "description": "Making decisions, solving problems, and systematic evaluation.",
+      "thinking_lens": "Analytical Mode: Approach tasks with systematic thinking and evidence-based reasoning. Ask 'What are the options?' and 'What is the best solution given constraints?'",
+      "skill_ladder_mapping": {
+        "novice": "Follow step-by-step decision frameworks, compare simple options.",
+        "competent": "Apply analytical frameworks to novel situations, evaluate trade-offs.",
+        "proficient": "Design custom analytical approaches, anticipate unintended consequences, teach problem-solving strategies."
+      },
+      "mental_models": [
+        "AI as a Thinking Partner",
+        "Capability Stack",
+        "Prompt-as-Specification",
+        "Iterative Refinement"
+      ],
       "categories": [
         {
-          "id": "analysis",
-          "name": "Analysis & Decision Making",
-          "description": "Breaking down problems and evaluating options",
+          "id": "make_decisions",
+          "name": "Make Decisions",
+          "description": "Evaluating options and choosing the best course of action. Cognitive load: medium intrinsic load. Support: decision matrices, frameworks.",
+          "cognitive_toolkit": [
+            "Criteria development",
+            "Trade-off evaluation",
+            "Logical reasoning",
+            "Risk assessment"
+          ],
+          "cognitive_load_analysis": "Medium intrinsic load from weighing factors. Reduce by using structured frameworks.",
+          "support_strategies": "Provide decision templates, pros/cons structures, weighted criteria methods.",
           "capabilities": [
             {
               "id": "compare_options",
               "name": "Compare options",
-              "what_it_is": "Systematically evaluating alternatives based on criteria",
-              "when_to_use": "When facing multiple choices or needing to make informed decisions",
-              "cognitive_skills": ["Criteria development", "Comparative analysis", "Trade-off evaluation"],
+              "what_it_is": "Side-by-side evaluation of alternatives across relevant dimensions",
+              "when_to_use": "When facing multiple choices and need systematic comparison",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Basic comparison",
+                    "Simple categorization"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Criteria development",
+                    "Trade-off evaluation",
+                    "Logical reasoning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What matters most?",
+                "How do these options differ?",
+                "What are the trade-offs?"
+              ],
+              "common_pitfalls": [
+                "Comparing on too few dimensions",
+                "Ignoring important factors",
+                "Overweighting minor differences"
+              ],
+              "metacognitive_checkins": [
+                "Have I covered what matters?",
+                "Am I being fair to each option?",
+                "What am I missing?"
+              ],
               "use_cases": [
                 {
-                  "id": "product_comparison",
-                  "name": "Product comparison",
-                  "description": "Evaluating different products or services",
+                  "id": "compare_products",
+                  "name": "Compare products for purchase",
+                  "description": "Evaluating alternatives before buying",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple comparisons, then progress to multi-factor analysis.",
+                  "thinking_steps": [
+                    "Identify key criteria",
+                    "Gather information on each option",
+                    "Compare across criteria",
+                    "Note pros and cons"
+                  ],
                   "example_prompts": [
-                    "Compare iPhone 15 and Samsung Galaxy S24 for photography",
-                    "What are the pros and cons of different project management tools?",
-                    "Compare three approaches to learning a new language"
+                    "Compare these laptops for college students",
+                    "Help me choose between these two phones",
+                    "Compare these cars for a family of four",
+                    "What's the best option for a home gym?",
+                    "Compare these cameras for travel photography"
+                  ]
+                },
+                {
+                  "id": "compare_career_paths",
+                  "name": "Compare career paths",
+                  "description": "Evaluating different job or career options",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with basic comparisons, then progress to comprehensive career analysis.",
+                  "thinking_steps": [
+                    "Identify priorities (salary, growth, lifestyle)",
+                    "Research each option",
+                    "Compare against priorities",
+                    "Consider long-term prospects"
+                  ],
+                  "example_prompts": [
+                    "Compare software engineering vs data science careers",
+                    "Help me choose between marketing and sales careers",
+                    "Compare working at a startup vs a big company",
+                    "What are the pros and cons of freelance vs full-time work?",
+                    "Compare career paths in finance versus consulting"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "evaluate_pros_cons",
+              "name": "Evaluate pros and cons",
+              "what_it_is": "Listing advantages and disadvantages of each choice",
+              "when_to_use": "When you need a clear picture of benefits and drawbacks",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Basic comparison",
+                    "Simple categorization"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Criteria development",
+                    "Trade-off evaluation",
+                    "Logical reasoning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What could go well?",
+                "What could go wrong?",
+                "Who's affected?"
+              ],
+              "common_pitfalls": [
+                "Missing important pros or cons",
+                "Biased listing",
+                "Not weighing importance"
+              ],
+              "metacognitive_checkins": [
+                "Is this list complete?",
+                "Am I being objective?",
+                "What matters most?"
+              ],
+              "use_cases": [
+                {
+                  "id": "decision_pros_cons",
+                  "name": "Analyze decision pros and cons",
+                  "description": "Weighing advantages and disadvantages of a choice",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple decisions, then progress to complex choices with multiple stakeholders.",
+                  "thinking_steps": [
+                    "Identify the decision",
+                    "Brainstorm pros",
+                    "Brainstorm cons",
+                    "Consider importance of each"
+                  ],
+                  "example_prompts": [
+                    "What are the pros and cons of moving to a new city?",
+                    "List advantages and disadvantages of going back to school",
+                    "Help me weigh the pros and cons of this job offer",
+                    "What are the pros and cons of starting a business?",
+                    "Compare the pros and cons of renting vs buying"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "weigh_trade_offs",
+              "name": "Weigh trade-offs",
+              "what_it_is": "Balancing competing benefits and costs in a decision",
+              "when_to_use": "When options involve compromises between desirable but incompatible outcomes",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Basic comparison",
+                    "Simple categorization"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Criteria development",
+                    "Trade-off evaluation",
+                    "Logical reasoning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What am I gaining vs losing?",
+                "What matters most to me?",
+                "What can I live without?"
+              ],
+              "common_pitfalls": [
+                "Ignoring real costs of benefits",
+                "Overvaluing familiar options",
+                "Not acknowledging true trade-offs"
+              ],
+              "metacognitive_checkins": [
+                "Am I being realistic about costs?",
+                "What am I sacrificing?",
+                "Is this trade-off acceptable?"
+              ],
+              "use_cases": [
+                {
+                  "id": "time_money_tradeoff",
+                  "name": "Evaluate time vs money trade-offs",
+                  "description": "Deciding whether to spend time or money on a problem",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple decisions, then progress to complex life trade-offs.",
+                  "thinking_steps": [
+                    "Identify time and money options",
+                    "Calculate true costs",
+                    "Consider opportunity costs",
+                    "Choose based on priorities"
+                  ],
+                  "example_prompts": [
+                    "Should I pay someone to do this or do it myself?",
+                    "Analyze the trade-off between commuting time and housing cost",
+                    "Should I buy pre-made food or cook from scratch?",
+                    "Compare the cost of learning vs hiring an expert",
+                    "Weigh the trade-offs between DIY and professional services"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "prioritize_tasks",
+              "name": "Prioritize tasks",
+              "what_it_is": "Ordering activities by importance, urgency, and impact",
+              "when_to_use": "When you have more to do than time and need to decide what comes first",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's most important?",
+                "What's urgent?",
+                "What has the biggest impact?"
+              ],
+              "common_pitfalls": [
+                "Focusing on urgent over important",
+                "Not considering long-term impact",
+                "Trying to do too much"
+              ],
+              "metacognitive_checkins": [
+                "Am I working on what matters?",
+                "What should I say no to?",
+                "What's the right sequence?"
+              ],
+              "use_cases": [
+                {
+                  "id": "prioritize_work",
+                  "name": "Prioritize work tasks",
+                  "description": "Deciding what to work on first in your job or projects",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple prioritization, then progress to complex multi-project prioritization.",
+                  "thinking_steps": [
+                    "List all tasks",
+                    "Assess importance and urgency",
+                    "Estimate effort and impact",
+                    "Create ranked list"
+                  ],
+                  "example_prompts": [
+                    "Help me prioritize my to-do list for today",
+                    "What should I work on first this week?",
+                    "Prioritize these tasks by impact and effort",
+                    "Help me decide between competing priorities",
+                    "What should I focus on to make the most progress?"
+                  ]
+                },
+                {
+                  "id": "prioritize_personal",
+                  "name": "Prioritize personal activities",
+                  "description": "Choosing how to spend personal time and energy",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with daily decisions, then progress to life priority alignment.",
+                  "thinking_steps": [
+                    "Identify options",
+                    "Consider values and goals",
+                    "Assess energy and time",
+                    "Choose aligned activities"
+                  ],
+                  "example_prompts": [
+                    "How should I prioritize my weekend activities?",
+                    "Help me decide between these personal commitments",
+                    "What should I focus on for self-improvement first?",
+                    "Prioritize these hobbies based on my interests and goals",
+                    "Help me balance work and personal priorities"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "apply_decision_frameworks",
+              "name": "Apply decision frameworks",
+              "what_it_is": "Using structured models (SWOT, cost-benefit, etc.) to guide choices",
+              "when_to_use": "When facing important, complex decisions that benefit from structured analysis",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Pattern extrapolation",
+                    "Hypothesis generation"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Risk assessment",
+                    "Scenario planning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What framework fits this decision?",
+                "What does this framework reveal?",
+                "Am I using it correctly?"
+              ],
+              "common_pitfalls": [
+                "Choosing the wrong framework",
+                "Going through motions without real analysis",
+                "Overlooking framework limitations"
+              ],
+              "metacognitive_checkins": [
+                "Is this framework helping?",
+                "What insights am I getting?",
+                "What's missing from this approach?"
+              ],
+              "use_cases": [
+                {
+                  "id": "swot_analysis",
+                  "name": "Conduct SWOT analysis",
+                  "description": "Evaluating strengths, weaknesses, opportunities, and threats",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with personal situations, then progress to business or organizational analysis.",
+                  "thinking_steps": [
+                    "Identify strengths",
+                    "Identify weaknesses",
+                    "Identify opportunities",
+                    "Identify threats"
+                  ],
+                  "example_prompts": [
+                    "Help me do a SWOT analysis for my career",
+                    "Conduct a SWOT analysis for this business idea",
+                    "What's the SWOT of moving to a new city?",
+                    "Analyze my strengths and weaknesses for this job application",
+                    "Do a SWOT analysis for starting a podcast"
+                  ]
+                },
+                {
+                  "id": "cost_benefit",
+                  "name": "Perform cost-benefit analysis",
+                  "description": "Comparing costs and benefits of a decision",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple financial decisions, then progress to complex multi-factor analysis.",
+                  "thinking_steps": [
+                    "List all costs",
+                    "List all benefits",
+                    "Quantify where possible",
+                    "Compare totals"
+                  ],
+                  "example_prompts": [
+                    "Help me do a cost-benefit analysis of graduate school",
+                    "Analyze the costs and benefits of this purchase",
+                    "Compare the ROI of these marketing strategies",
+                    "What's the cost-benefit of hiring vs outsourcing?",
+                    "Analyze whether this business investment makes sense"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "predict_outcomes",
+              "name": "Predict outcomes",
+              "what_it_is": "Forecasting likely results of decisions or actions",
+              "when_to_use": "When trying to anticipate consequences before making a choice",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Pattern extrapolation",
+                    "Hypothesis generation"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Risk assessment",
+                    "Scenario planning"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's likely to happen?",
+                "What could go wrong?",
+                "What are the ripple effects?"
+              ],
+              "common_pitfalls": [
+                "Overconfidence in predictions",
+                "Considering only one scenario",
+                "Ignoring external factors"
+              ],
+              "metacognitive_checkins": [
+                "How certain am I?",
+                "What scenarios am I missing?",
+                "What would change my prediction?"
+              ],
+              "use_cases": [
+                {
+                  "id": "decision_consequences",
+                  "name": "Analyze decision consequences",
+                  "description": "Exploring what might result from a choice",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with obvious consequences, then progress to multi-stage impact analysis.",
+                  "thinking_steps": [
+                    "Identify immediate effects",
+                    "Consider secondary effects",
+                    "Think about long-term impact",
+                    "Assess likelihood of each"
+                  ],
+                  "example_prompts": [
+                    "What are the likely consequences of quitting my job?",
+                    "Help me predict the outcomes of this business decision",
+                    "What might happen if I move to a new city?",
+                    "Analyze the potential results of this policy change",
+                    "What are the consequences of this financial decision?"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "solve_problems",
+          "name": "Solve Problems",
+          "description": "Identifying issues and developing solutions. Cognitive load: high germane load. Support: root cause analysis, solution brainstorming.",
+          "cognitive_toolkit": [
+            "Cause-effect analysis",
+            "Creative problem solving",
+            "Systems thinking",
+            "Complex problem decomposition"
+          ],
+          "cognitive_load_analysis": "High germane load from constructing solutions. Reduce by using structured problem-solving frameworks.",
+          "support_strategies": "Provide problem decomposition templates, solution brainstorming techniques, iteration guidance.",
+          "capabilities": [
+            {
+              "id": "identify_root_causes",
+              "name": "Identify root causes",
+              "what_it_is": "Finding underlying reasons for problems rather than treating symptoms",
+              "when_to_use": "When problems keep recurring or when you want lasting solutions",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Cause-effect analysis",
+                    "Creative problem solving",
+                    "Logical reasoning"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Complex problem decomposition",
+                    "Strategic thinking"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Why is this happening?",
+                "What's beneath the surface?",
+                "What keeps causing this?"
+              ],
+              "common_pitfalls": [
+                "Stopping at surface causes",
+                "Blaming individuals instead of systems",
+                "Missing systemic factors"
+              ],
+              "metacognitive_checkins": [
+                "Have I dug deep enough?",
+                "What evidence supports this cause?",
+                "What if I'm wrong?"
+              ],
+              "use_cases": [
+                {
+                  "id": "analyze_problem",
+                  "name": "Analyze recurring problems",
+                  "description": "Understanding why problems keep happening",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with simple cause-effect, then progress to complex systems analysis.",
+                  "thinking_steps": [
+                    "Describe the problem",
+                    "Ask 'why' repeatedly",
+                    "Identify contributing factors",
+                    "Distinguish symptoms from causes"
+                  ],
+                  "example_prompts": [
+                    "Help me understand why I keep procrastinating",
+                    "Why does this problem keep happening at work?",
+                    "Analyze why I'm always running late",
+                    "What's causing the conflict in my team?",
+                    "Why does this project keep getting delayed?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "generate_solutions",
+              "name": "Generate solutions",
+              "what_it_is": "Creating potential fixes or improvements for identified problems",
+              "when_to_use": "When you understand the problem and need options for addressing it",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Cause-effect analysis",
+                    "Creative problem solving",
+                    "Logical reasoning"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Complex problem decomposition",
+                    "Strategic thinking"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What could work?",
+                "What haven't we tried?",
+                "What would a fresh perspective suggest?"
+              ],
+              "common_pitfalls": [
+                "Fixating on familiar solutions",
+                "Rejecting ideas too early",
+                "Generating impractical options"
+              ],
+              "metacognitive_checkins": [
+                "Are these truly different solutions?",
+                "What's promising about each?",
+                "What am I missing?"
+              ],
+              "use_cases": [
+                {
+                  "id": "brainstorm_solutions",
+                  "name": "Brainstorm problem solutions",
+                  "description": "Generating multiple approaches to a problem",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with obvious solutions, then progress to creative approaches.",
+                  "thinking_steps": [
+                    "Define problem clearly",
+                    "Generate many ideas without judging",
+                    "Cluster related solutions",
+                    "Select most promising"
+                  ],
+                  "example_prompts": [
+                    "Brainstorm solutions for my time management problems",
+                    "What are different ways to handle this conflict?",
+                    "Generate ideas for reducing my stress levels",
+                    "Help me find solutions for improving my sleep",
+                    "What are ways to solve this communication issue?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "evaluate_solutions",
+              "name": "Evaluate solutions",
+              "what_it_is": "Assessing feasibility, effectiveness, and appropriateness of potential solutions",
+              "when_to_use": "When you have multiple solution options and need to choose the best approach",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Cause-effect analysis",
+                    "Creative problem solving",
+                    "Logical reasoning"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Complex problem decomposition",
+                    "Strategic thinking"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Will this actually work?",
+                "What resources are needed?",
+                "What could go wrong?"
+              ],
+              "common_pitfalls": [
+                "Optimism bias (underestimating difficulties)",
+                "Not considering practical constraints",
+                "Choosing based on preference not merit"
+              ],
+              "metacognitive_checkins": [
+                "Am I being realistic?",
+                "What assumptions am I making?",
+                "What's the real cost of this?"
+              ],
+              "use_cases": [
+                {
+                  "id": "assess_solution_feasibility",
+                  "name": "Assess solution feasibility",
+                  "description": "Evaluating whether solutions are practical and viable",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple feasibility checks, then progress to complex multi-factor evaluation.",
+                  "thinking_steps": [
+                    "Assess resource requirements",
+                    "Consider implementation complexity",
+                    "Evaluate risks",
+                    "Check alignment with goals"
+                  ],
+                  "example_prompts": [
+                    "How feasible is this solution realistically?",
+                    "What would it take to implement this idea?",
+                    "Evaluate the practicality of these options",
+                    "What are the barriers to this solution?",
+                    "Assess whether this plan is achievable"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "plan_implementation",
+              "name": "Plan implementation",
+              "what_it_is": "Developing step-by-step action plans for chosen solutions",
+              "when_to_use": "When you've decided on a solution and need to make it happen",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the first step?",
+                "What needs to happen when?",
+                "What could go wrong?"
+              ],
+              "common_pitfalls": [
+                "Planning without doing",
+                "Missing dependencies",
+                "Not building in flexibility"
+              ],
+              "metacognitive_checkins": [
+                "Is this plan actionable?",
+                "What's missing?",
+                "How will I adjust if things change?"
+              ],
+              "use_cases": [
+                {
+                  "id": "create_action_plan",
+                  "name": "Create action plan",
+                  "description": "Developing concrete steps to execute a solution",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple plans, then progress to complex multi-phase implementations.",
+                  "thinking_steps": [
+                    "Identify key milestones",
+                    "Break into actionable steps",
+                    "Assign timelines and resources",
+                    "Plan for contingencies"
+                  ],
+                  "example_prompts": [
+                    "Help me create an action plan to improve my productivity",
+                    "What steps do I need to take to launch this project?",
+                    "Create an implementation plan for my career change",
+                    "Plan the steps to achieve this goal",
+                    "Help me break this down into actionable items"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "troubleshoot_issues",
+              "name": "Troubleshoot issues",
+              "what_it_is": "Diagnosing and resolving malfunctions, errors, or unexpected behaviors",
+              "when_to_use": "When something isn't working as expected and you need to fix it",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Creative problem solving",
+                    "Sequencing"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Systems thinking",
+                    "Model building"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What changed?",
+                "What's different from expected?",
+                "What does this symptom tell me?"
+              ],
+              "common_pitfalls": [
+                "Jumping to solutions too quickly",
+                "Not gathering enough information",
+                "Fixing symptoms not causes"
+              ],
+              "metacognitive_checkins": [
+                "Do I understand the problem?",
+                "What have I ruled out?",
+                "What's my evidence?"
+              ],
+              "use_cases": [
+                {
+                  "id": "technical_troubleshooting",
+                  "name": "Troubleshoot technical problems",
+                  "description": "Diagnosing and fixing technology or process issues",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with common issues, then progress to unusual or complex problems.",
+                  "thinking_steps": [
+                    "Describe the problem",
+                    "Identify when it started",
+                    "Test possible causes",
+                    "Try solutions systematically"
+                  ],
+                  "example_prompts": [
+                    "Help me troubleshoot why my computer is slow",
+                    "What's wrong with this software and how do I fix it?",
+                    "Diagnose why my internet isn't working",
+                    "Troubleshoot this issue with my phone",
+                    "Help me figure out why this tool isn't working as expected"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "optimize_systems",
+              "name": "Optimize systems",
+              "what_it_is": "Improving efficiency and performance of processes, routines, or systems",
+              "when_to_use": "When things work but could work better, faster, or with less effort",
+              "cognitive_skills": [
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Logical reasoning",
+                    "Creative problem solving",
+                    "Sequencing"
+                  ]
+                },
+                {
+                  "level": "advanced",
+                  "skills": [
+                    "Systems thinking",
+                    "Model building"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the bottleneck?",
+                "What's wasting time?",
+                "How could this be smoother?"
+              ],
+              "common_pitfalls": [
+                "Optimizing the wrong things",
+                "Over-optimizing for metrics that don't matter",
+                "Ignoring human factors"
+              ],
+              "metacognitive_checkins": [
+                "What's actually being improved?",
+                "Is this worth the effort?",
+                "What could get worse?"
+              ],
+              "use_cases": [
+                {
+                  "id": "optimize_workflow",
+                  "name": "Optimize workflow",
+                  "description": "Improving efficiency of work processes",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with simple improvements, then progress to systemic workflow redesign.",
+                  "thinking_steps": [
+                    "Map current process",
+                    "Identify inefficiencies",
+                    "Design improvements",
+                    "Test and iterate"
+                  ],
+                  "example_prompts": [
+                    "Help me optimize my daily workflow",
+                    "How can I make this process more efficient?",
+                    "Streamline this work routine",
+                    "What's the best way to organize my tasks?",
+                    "Optimize how I manage my email"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "analyze_systems",
+          "name": "Analyze Systems",
+          "description": "Understanding complex systems and how their components interact. Cognitive load: high germane load. Support: system thinking tools.",
+          "cognitive_toolkit": [
+            "Systems thinking",
+            "Pattern recognition",
+            "Logical reasoning",
+            "Hypothesis generation"
+          ],
+          "cognitive_load_analysis": "High germane load from grasping complex interactions. Reduce by using systems thinking frameworks.",
+          "support_strategies": "Provide system mapping tools, feedback loop analysis guides, mental model templates.",
+          "capabilities": [
+            {
+              "id": "map_systems",
+              "name": "Map systems",
+              "what_it_is": "Visualizing or describing how components of a system relate and interact",
+              "when_to_use": "When trying to understand complex situations, organizations, or processes",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What are the parts?",
+                "How do they connect?",
+                "What flows between them?"
+              ],
+              "common_pitfalls": [
+                "Missing important components",
+                "Oversimplifying relationships",
+                "Not showing dynamic interactions"
+              ],
+              "metacognitive_checkins": [
+                "Have I captured the key elements?",
+                "What relationships am I missing?",
+                "How would this map change?"
+              ],
+              "use_cases": [
+                {
+                  "id": "organizational_mapping",
+                  "name": "Map organization systems",
+                  "description": "Understanding how an organization works as a system",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Start with simple structures, then progress to complex organizational systems.",
+                  "thinking_steps": [
+                    "Identify key components",
+                    "Map relationships",
+                    "Show information flows",
+                    "Note feedback loops"
+                  ],
+                  "example_prompts": [
+                    "Help me understand how my company works as a system",
+                    "Map the systems involved in this project",
+                    "Analyze how this team functions as a system",
+                    "What are the key systems in this organization?",
+                    "Map the processes that affect customer experience"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "everyday_life",
+      "name": "Everyday Life",
+      "description": "Personal, practical, social, and leisure applications of AI.",
+      "thinking_lens": "Practical Mode: Approach tasks with focus on real-world utility and personal relevance. Ask 'How can this help me right now?' and 'What makes this enjoyable or useful?'",
+      "skill_ladder_mapping": {
+        "novice": "Use AI for simple queries, entertainment, and basic advice.",
+        "competent": "Combine AI capabilities for complex personal projects, customize outputs.",
+        "proficient": "Integrate AI into daily routines, create personalized systems, share insights with others."
+      },
+      "mental_models": [
+        "AI as a Thinking Partner",
+        "Capability Stack",
+        "Prompt-as-Specification",
+        "Iterative Refinement"
+      ],
+      "categories": [
+        {
+          "id": "personal_wellness",
+          "name": "Personal & Wellness",
+          "description": "Health, fitness, mental well-being, and personal development. Cognitive load: low to medium. Support: goal setting, habit tracking.",
+          "cognitive_toolkit": [
+            "Contextual understanding",
+            "Simplification",
+            "Pattern recognition",
+            "Self-reflection"
+          ],
+          "cognitive_load_analysis": "Low to medium intrinsic load. Main challenge is motivation, not complexity.",
+          "support_strategies": "Provide goal-setting frameworks, habit formation strategies, motivation techniques.",
+          "capabilities": [
+            {
+              "id": "provide_health_information",
+              "name": "Provide health information",
+              "what_it_is": "Offering general knowledge about medical conditions, wellness, and healthy habits",
+              "when_to_use": "When seeking to understand health topics or improve well-being (not for medical emergencies)",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What do I need to know?",
+                "What's evidence-based?",
+                "What should I check with a doctor?"
+              ],
+              "common_pitfalls": [
+                "Taking medical advice too literally",
+                "Ignoring individual differences",
+                "Not consulting professionals for serious concerns"
+              ],
+              "metacognitive_checkins": [
+                "Is this general information or specific advice?",
+                "What applies to me specifically?",
+                "When should I see a doctor?"
+              ],
+              "use_cases": [
+                {
+                  "id": "general_health_info",
+                  "name": "Get general health information",
+                  "description": "Learning about health topics and wellness practices",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with basic wellness topics, then progress to understanding specific conditions.",
+                  "thinking_steps": [
+                    "Identify topic of interest",
+                    "Get general information",
+                    "Note important caveats",
+                    "Consult professional for personal advice"
+                  ],
+                  "example_prompts": [
+                    "What are the basics of good sleep hygiene?",
+                    "Explain how stress affects the body",
+                    "What are the benefits of regular exercise?",
+                    "How does nutrition affect mental health?",
+                    "What are the principles of a healthy diet?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "suggest_exercises",
+              "name": "Suggest exercises",
+              "what_it_is": "Recommending physical activities for fitness goals and ability levels",
+              "when_to_use": "When starting or varying a fitness routine, or targeting specific goals",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's my fitness level?",
+                "What equipment do I have?",
+                "What's my goal?"
+              ],
+              "common_pitfalls": [
+                "Choosing exercises beyond ability",
+                "Not considering physical limitations",
+                "Lack of variety leading to boredom"
+              ],
+              "metacognitive_checkins": [
+                "Can I actually do these?",
+                "Am I progressing safely?",
+                "Is this sustainable?"
+              ],
+              "use_cases": [
+                {
+                  "id": "fitness_routines",
+                  "name": "Create fitness routines",
+                  "description": "Developing exercise plans for different goals",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple routines, then progress to targeted fitness programs.",
+                  "thinking_steps": [
+                    "Assess current fitness level",
+                    "Identify goals",
+                    "Select appropriate exercises",
+                    "Plan progression"
+                  ],
+                  "example_prompts": [
+                    "Create a beginner workout routine I can do at home",
+                    "Suggest exercises to improve my posture",
+                    "What's a good workout schedule for weight loss?",
+                    "Design a stretching routine for office workers",
+                    "Create a quick morning exercise routine"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mental_health_support",
+              "name": "Mental health support",
+              "what_it_is": "Providing coping strategies, mindfulness techniques, and emotional support resources",
+              "when_to_use": "When dealing with stress, anxiety, or seeking to improve mental well-being (not for crises)",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "How am I feeling?",
+                "What would help?",
+                "What resources are available?"
+              ],
+              "common_pitfalls": [
+                "Expecting AI to replace professional help",
+                "Not taking symptoms seriously",
+                "Relying solely on AI for serious concerns"
+              ],
+              "metacognitive_checkins": [
+                "Is this helping?",
+                "Do I need professional support?",
+                "What self-care practices work for me?"
+              ],
+              "use_cases": [
+                {
+                  "id": "stress_management",
+                  "name": "Manage stress",
+                  "description": "Learning techniques to handle and reduce stress",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple breathing techniques, then progress to comprehensive stress management.",
+                  "thinking_steps": [
+                    "Identify stressors",
+                    "Learn coping techniques",
+                    "Practice regularly",
+                    "Build stress-reduction habits"
+                  ],
+                  "example_prompts": [
+                    "Teach me some breathing exercises for stress",
+                    "How can I manage work-related stress?",
+                    "What are quick ways to reduce anxiety?",
+                    "Suggest relaxation techniques I can do anywhere",
+                    "How do I create a more balanced lifestyle?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "habit_formation",
+              "name": "Habit formation",
+              "what_it_is": "Designing routines and strategies to build and maintain new positive behaviors",
+              "when_to_use": "When trying to create lasting changes in daily life or behavior",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What trigger will remind me?",
+                "What's the smallest step?",
+                "How will I track progress?"
+              ],
+              "common_pitfalls": [
+                "Trying to change too much at once",
+                "Not planning for obstacles",
+                "Giving up after a slip-up"
+              ],
+              "metacognitive_checkins": [
+                "Is this habit realistic?",
+                "What's blocking me?",
+                "How can I adjust?"
+              ],
+              "use_cases": [
+                {
+                  "id": "build_habits",
+                  "name": "Build new habits",
+                  "description": "Creating routines to establish positive behaviors",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple habits, then progress to complex behavior changes.",
+                  "thinking_steps": [
+                    "Choose one habit to focus on",
+                    "Start small",
+                    "Attach to existing routine",
+                    "Track and celebrate progress"
+                  ],
+                  "example_prompts": [
+                    "Help me build a daily meditation habit",
+                    "What's the best way to start exercising regularly?",
+                    "How do I create a habit of reading every day?",
+                    "Help me build a better morning routine",
+                    "Design a habit to reduce screen time"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "goal_setting",
+              "name": "Goal setting",
+              "what_it_is": "Helping define, plan, and achieve personal objectives",
+              "when_to_use": "When you want to accomplish something but need structure and planning",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What do I actually want?",
+                "What's realistic?",
+                "What's my timeline?"
+              ],
+              "common_pitfalls": [
+                "Setting vague or unrealistic goals",
+                "Not breaking goals into steps",
+                "Not tracking progress"
+              ],
+              "metacognitive_checkins": [
+                "Are these goals aligned with my values?",
+                "Is this achievable?",
+                "What's my next step?"
+              ],
+              "use_cases": [
+                {
+                  "id": "personal_goals",
+                  "name": "Set personal goals",
+                  "description": "Defining and planning personal objectives",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with short-term goals, then progress to long-term life planning.",
+                  "thinking_steps": [
+                    "Identify desired outcomes",
+                    "Make goals SMART",
+                    "Break into milestones",
+                    "Create action plan"
+                  ],
+                  "example_prompts": [
+                    "Help me set realistic goals for this year",
+                    "What should my career goals be for the next 5 years?",
+                    "Help me create a personal development plan",
+                    "Set goals for improving my relationships",
+                    "What are good learning goals for me?"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "entertainment_leisure",
+          "name": "Entertainment & Leisure",
+          "description": "Fun, games, stories, and recreational activities. Cognitive load: low. Support: creative prompts, interactive storytelling.",
+          "cognitive_toolkit": [
+            "Association",
+            "Idea generation",
+            "Creative problem solving",
+            "Divergent thinking"
+          ],
+          "cognitive_load_analysis": "Low intrinsic load. Focus is on enjoyment rather than cognitive challenge.",
+          "support_strategies": "Provide variety of options, encourage experimentation, support creative play.",
+          "capabilities": [
+            {
+              "id": "tell_stories",
+              "name": "Tell stories",
+              "what_it_is": "Narrating fictional or personalized tales for entertainment",
+              "when_to_use": "When you want to be entertained, practice storytelling, or enjoy creative narratives",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the story?",
+                "Who's in it?",
+                "Where does it go?"
+              ],
+              "common_pitfalls": [
+                "Rushing to the ending",
+                "Underdeveloped characters",
+                "Predictable plots"
+              ],
+              "metacognitive_checkins": [
+                "Is this engaging?",
+                "What would make it better?",
+                "Do I like where it's going?"
+              ],
+              "use_cases": [
+                {
+                  "id": "bedtime_stories",
+                  "name": "Bedtime stories",
+                  "description": "Creating calming stories for relaxation",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple tales, then progress to imaginative stories.",
+                  "thinking_steps": [
+                    "Choose a peaceful theme",
+                    "Create gentle characters",
+                    "Develop soothing plot",
+                    "End calmly"
+                  ],
+                  "example_prompts": [
+                    "Tell me a bedtime story about a magical forest",
+                    "Create a calming story about a quiet beach",
+                    "Tell a story about a friendly animal",
+                    "Make up a story about a cozy cabin",
+                    "Tell a story about finding a secret garden"
+                  ]
+                },
+                {
+                  "id": "interactive_stories",
+                  "name": "Interactive stories",
+                  "description": "Creating stories where the listener can make choices",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple choices, then progress to branching narratives.",
+                  "thinking_steps": [
+                    "Set up the world",
+                    "Present clear choices",
+                    "Develop each path",
+                    "Create engaging consequences"
+                  ],
+                  "example_prompts": [
+                    "Tell an interactive story where I make choices",
+                    "Create a choose-your-own-adventure story",
+                    "Tell a story where I can decide what happens next",
+                    "Create an adventure story with decision points",
+                    "Make up a story where I can choose the ending"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "generate_jokes",
+              "name": "Generate jokes",
+              "what_it_is": "Creating humorous one-liners, puns, or funny content",
+              "when_to_use": "When you want to lighten the mood, practice humor, or entertain yourself",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's unexpected?",
+                "What words can play together?",
+                "What's relatable?"
+              ],
+              "common_pitfalls": [
+                "Offensive or insensitive humor",
+                "Confusing rather than funny",
+                "Overexplaining jokes"
+              ],
+              "metacognitive_checkins": [
+                "Is this actually funny?",
+                "Is it appropriate?",
+                "Who would appreciate this?"
+              ],
+              "use_cases": [
+                {
+                  "id": "dad_jokes",
+                  "name": "Dad jokes",
+                  "description": "Creating classic groan-worthy puns and one-liners",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Enjoy the simple wordplay and don't take too seriously.",
+                  "example_prompts": [
+                    "Tell me some dad jokes",
+                    "Give me your worst puns",
+                    "What are some classic corny jokes?",
+                    "Share some family-friendly jokes",
+                    "Make me groan with terrible puns"
+                  ]
+                },
+                {
+                  "id": "themed_humor",
+                  "name": "Themed humor",
+                  "description": "Creating jokes about specific topics or themes",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with safe topics, then progress to clever thematic humor.",
+                  "example_prompts": [
+                    "Tell me jokes about cats",
+                    "What are some programmer jokes?",
+                    "Make jokes about being a student",
+                    "Create funny observations about coffee culture",
+                    "Tell me some jokes about technology"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "suggest_games",
+              "name": "Suggest games",
+              "what_it_is": "Recommending play activities, board games, or party games",
+              "when_to_use": "When you're looking for entertainment activities for yourself or groups",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "Who's playing?",
+                "How much time?",
+                "What's the setting?"
+              ],
+              "common_pitfalls": [
+                "Suggesting games wrong for the group",
+                "Ignoring time or space constraints",
+                "Not considering player preferences"
+              ],
+              "metacognitive_checkins": [
+                "Is this right for the situation?",
+                "Will everyone enjoy this?",
+                "What could go wrong?"
+              ],
+              "use_cases": [
+                {
+                  "id": "party_games",
+                  "name": "Party games",
+                  "description": "Finding games for social gatherings",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Consider group size, age, and energy level when suggesting.",
+                  "example_prompts": [
+                    "Suggest fun games for a group of 8 adults",
+                    "What are good icebreaker games for a party?",
+                    "Recommend games for a family gathering",
+                    "What games work well for a mixed-age group?",
+                    "Suggest activities for a small dinner party"
+                  ]
+                },
+                {
+                  "id": "solo_games",
+                  "name": "Solo activities",
+                  "description": "Finding entertainment for one person",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Consider interests, available time, and resources when suggesting.",
+                  "example_prompts": [
+                    "Suggest games I can play alone",
+                    "What are good hobbies for someone living alone?",
+                    "Recommend ways to entertain myself on a weekend",
+                    "What solo activities help with boredom?",
+                    "Suggest games for rainy days at home"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "practical_skills",
+          "name": "Practical Skills",
+          "description": "DIY, cooking, repairs, planning, and organizational tasks. Cognitive load: medium. Support: step-by-step instructions.",
+          "cognitive_toolkit": [
+            "Sequencing",
+            "Structure design",
+            "Hierarchical thinking",
+            "Pattern recognition"
+          ],
+          "cognitive_load_analysis": "Medium intrinsic load from procedural complexity. Reduce by clear step-by-step guidance.",
+          "support_strategies": "Provide numbered instructions, troubleshooting tips, safety warnings.",
+          "capabilities": [
+            {
+              "id": "cooking_recipes",
+              "name": "Cooking recipes",
+              "what_it_is": "Providing ingredient lists and preparation steps for meals",
+              "when_to_use": "When planning meals, learning to cook, or looking for cooking inspiration",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What ingredients do I have?",
+                "What do I want to eat?",
+                "How much time do I have?"
+              ],
+              "common_pitfalls": [
+                "Underestimating prep time",
+                "Not reading full recipe first",
+                "Missing key ingredients"
+              ],
+              "metacognitive_checkins": [
+                "Do I have everything?",
+                "Do I understand each step?",
+                "What could go wrong?"
+              ],
+              "use_cases": [
+                {
+                  "id": "simple_recipes",
+                  "name": "Simple recipes",
+                  "description": "Easy meals for beginners or quick cooking",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with very simple recipes, then progress to more complex dishes.",
+                  "example_prompts": [
+                    "Give me an easy recipe for dinner",
+                    "What can I cook with eggs and bread?",
+                    "Suggest a simple pasta recipe",
+                    "What's a quick 15-minute meal?",
+                    "Easy recipes for cooking beginners"
+                  ]
+                },
+                {
+                  "id": "ingredient_based",
+                  "name": "Recipes by ingredients",
+                  "description": "Finding what to cook with available ingredients",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Describe what you have and any restrictions for best suggestions.",
+                  "example_prompts": [
+                    "What can I make with chicken and rice?",
+                    "I have tomatoes, cheese, and pasta - what can I cook?",
+                    "Recipes using ingredients I have in my fridge",
+                    "What can I make with these leftovers?",
+                    "Suggest meals using only pantry staples"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "diy_instructions",
+              "name": "DIY instructions",
+              "what_it_is": "Guiding through home improvement, crafting, or repair projects",
+              "when_to_use": "When tackling hands-on projects, making things, or fixing items",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What tools do I need?",
+                "What are the safety concerns?",
+                "What's the sequence?"
+              ],
+              "common_pitfalls": [
+                "Skipping safety steps",
+                "Not having right tools",
+                "Underestimating difficulty"
+              ],
+              "metacognitive_checkins": [
+                "Do I understand each step?",
+                "Is this safe to do?",
+                "What would I do if something goes wrong?"
+              ],
+              "use_cases": [
+                {
+                  "id": "home_projects",
+                  "name": "Home DIY projects",
+                  "description": "Instructions for home improvement tasks",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple projects, then progress to complex renovations.",
+                  "example_prompts": [
+                    "How do I paint a room?",
+                    "Teach me to fix a leaky faucet",
+                    "Instructions for hanging shelves",
+                    "How do I assemble IKEA furniture?",
+                    "Guide me through basic plumbing repairs"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "budget_planning",
+              "name": "Budget planning",
+              "what_it_is": "Helping allocate finances and track expenses",
+              "when_to_use": "When managing money, saving for goals, or controlling spending",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "How much comes in?",
+                "Where does it go?",
+                "What are my priorities?"
+              ],
+              "common_pitfalls": [
+                "Being too restrictive",
+                "Not tracking expenses",
+                "Forgetting irregular costs"
+              ],
+              "metacognitive_checkins": [
+                "Is this realistic?",
+                "What did I forget?",
+                "How can I stick to this?"
+              ],
+              "use_cases": [
+                {
+                  "id": "create_budget",
+                  "name": "Create personal budget",
+                  "description": "Setting up a system to manage income and expenses",
+                  "cognitive_load_rating": "medium",
+                  "zpd_guidance": "Start with simple tracking, then progress to detailed budgeting.",
+                  "example_prompts": [
+                    "Help me create a monthly budget",
+                    "How do I start tracking my expenses?",
+                    "Set up a budget for a college student",
+                    "Create a budget that includes savings goals",
+                    "Help me plan my finances for the year"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "social_emotional",
+          "name": "Social & Emotional",
+          "description": "Communication, relationships, empathy, and social skills. Cognitive load: medium. Support: conversation starters, empathy prompts.",
+          "cognitive_toolkit": [
+            "Contextual understanding",
+            "Empathy",
+            "Precision",
+            "Audience awareness"
+          ],
+          "cognitive_load_analysis": "Medium intrinsic load from social nuance. Main challenge is emotional intelligence, not cognitive complexity.",
+          "support_strategies": "Provide phrase templates, empathy examples, perspective-taking exercises.",
+          "capabilities": [
+            {
+              "id": "draft_messages",
+              "name": "Draft messages",
+              "what_it_is": "Composing emails, texts, or social media communications",
+              "when_to_use": "When sending digital communications and want to strike the right tone",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What's the main point?",
+                "How should this sound?",
+                "What do I need to include?"
+              ],
+              "common_pitfalls": [
+                "Being too wordy",
+                "Wrong tone for the situation",
+                "Missing important details"
+              ],
+              "metacognitive_checkins": [
+                "Would I send this?",
+                "How might it be received?",
+                "What would I change?"
+              ],
+              "use_cases": [
+                {
+                  "id": "professional_email",
+                  "name": "Draft professional emails",
+                  "description": "Writing business or formal communications",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Start with simple emails, then progress to complex professional correspondence.",
+                  "example_prompts": [
+                    "Help me write an email to my boss",
+                    "Draft a message to a coworker",
+                    "Write a professional follow-up email",
+                    "Compose a request for a meeting",
+                    "Help me write an apology email at work"
+                  ]
+                },
+                {
+                  "id": "casual_message",
+                  "name": "Draft casual messages",
+                  "description": "Writing texts or informal messages",
+                  "cognitive_load_rating": "low",
+                  "zpd_guidance": "Consider relationship and context when adjusting tone.",
+                  "example_prompts": [
+                    "Help me text a friend I haven't seen in a while",
+                    "Write a message to invite someone to hang out",
+                    "Draft a funny text for my partner",
+                    "Help me respond to a friend's text",
+                    "Write a casual invitation for a party"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "respond_to_messages",
+              "name": "Respond to messages",
+              "what_it_is": "Formulating replies to incoming communications",
+              "when_to_use": "When you've received a message and need to craft an appropriate response",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What are they asking?",
+                "What do I want to convey?",
+                "How should I respond?"
+              ],
+              "common_pitfalls": [
+                "Misinterpreting the message",
+                "Responding emotionally",
+                "Not addressing the key points"
+              ],
+              "metacognitive_checkins": [
+                "Did I understand their message?",
+                "Is my response appropriate?",
+                "What's the goal of my reply?"
+              ],
+              "use_cases": [
+                {
+                  "id": "difficult_responses",
+                  "name": "Handle difficult messages",
+                  "description": "Crafting responses to challenging or sensitive communications",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Take time to understand, stay calm, focus on constructive response.",
+                  "example_prompts": [
+                    "How should I respond to this angry message?",
+                    "Help me reply to a disappointing email",
+                    "What do I say when someone cancels plans?",
+                    "Respond to someone who misunderstood me",
+                    "How do I politely decline a request?"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "practice_conversations",
+              "name": "Practice conversations",
+              "what_it_is": "Simulating dialogues for skill development or preparation",
+              "when_to_use": "When preparing for difficult conversations, practicing social skills, or rehearsing interactions",
+              "cognitive_skills": [
+                {
+                  "level": "foundational",
+                  "skills": [
+                    "Information retrieval",
+                    "Association"
+                  ]
+                },
+                {
+                  "level": "intermediate",
+                  "skills": [
+                    "Contextual understanding",
+                    "Simplification"
+                  ]
+                }
+              ],
+              "thinking_prompts": [
+                "What do I want to say?",
+                "How might they respond?",
+                "What's my goal?"
+              ],
+              "common_pitfalls": "Not preparing for different responses, being too rigid, overthinking",
+              "metacognitive_checkins": [
+                "Am I ready for different outcomes?",
+                "What's my fallback position?",
+                "How can I stay calm?"
+              ],
+              "use_cases": [
+                {
+                  "id": "job_interview",
+                  "name": "Practice job interview",
+                  "description": "Rehearsing answers for interview questions",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Practice common questions, then prepare for curveballs.",
+                  "example_prompts": [
+                    "Conduct a mock job interview with me",
+                    "Practice answering 'tell me about yourself'",
+                    "Roleplay salary negotiation",
+                    "Practice answering difficult interview questions",
+                    "Help me prepare for a job interview conversation"
+                  ]
+                },
+                {
+                  "id": "difficult_discussions",
+                  "name": "Practice difficult discussions",
+                  "description": "Preparing for challenging conversations in relationships",
+                  "cognitive_load_rating": "high",
+                  "zpd_guidance": "Identify key points, practice staying calm, prepare for reactions.",
+                  "example_prompts": [
+                    "Practice telling my roommate they need to clean up more",
+                    "Roleplay a conversation about boundaries",
+                    "Practice discussing a relationship issue",
+                    "Help me prepare for a difficult conversation with my boss",
+                    "Practice asking for what I need"
                   ]
                 }
               ]

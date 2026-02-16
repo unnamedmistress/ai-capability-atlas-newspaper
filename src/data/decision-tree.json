@@ -1,79 +1,1808 @@
 {
-  "version": "0.1",
-  "created_at": "2026-02-16T02:21:00Z",
-  "description": "Decision tree for AI Capability Atlas - maps user problems to capabilities",
-  "entry_question": "What are you trying to do?",
-  "options": [
-    {
-      "id": "learn",
-      "text": "Learn or understand something",
-      "next_question": "What do you want to learn?",
+  "version": "2.0",
+  "created_at": "2026-02-16T14:00:00Z",
+  "description": "AI Capability Atlas Decision Engine - Optimized for 3-click maximum",
+  "root_node_id": "root",
+  "nodes": {
+    "root": {
+      "id": "root",
+      "type": "question",
+      "question": "What are you trying to do?",
+      "description": "Start by choosing the most relevant high-level goal",
       "options": [
         {
-          "id": "explain_concept",
-          "text": "Explain a complex concept",
-          "capability_id": "explain_concepts",
-          "description": "Get help breaking down complicated topics"
+          "id": "opt_learn",
+          "label": "Learn or understand something",
+          "next_node_id": "cat_learn"
         },
         {
-          "id": "answer_question",
-          "text": "Answer a factual question",
-          "capability_id": "answer_questions",
-          "description": "Get accurate information quickly"
+          "id": "opt_create",
+          "label": "Create something new",
+          "next_node_id": "cat_create"
         },
         {
-          "id": "summarize",
-          "text": "Summarize long text",
-          "capability_id": "summarize_text",
-          "description": "Condense articles or documents"
+          "id": "opt_decide",
+          "label": "Make a decision or solve a problem",
+          "next_node_id": "cat_decide"
+        },
+        {
+          "id": "opt_improve",
+          "label": "Improve or refine existing work",
+          "next_node_id": "capselect_improve_improve_work"
+        },
+        {
+          "id": "opt_practical",
+          "label": "Get practical help with daily tasks",
+          "next_node_id": "capselect_practical_practical_skills"
+        },
+        {
+          "id": "opt_entertain",
+          "label": "Have fun or be entertained",
+          "next_node_id": "capselect_entertain_entertainment_leisure"
+        },
+        {
+          "id": "opt_personal",
+          "label": "Work on personal development",
+          "next_node_id": "capselect_personal_personal_wellness"
+        },
+        {
+          "id": "opt_communicate",
+          "label": "Communicate or interact with others",
+          "next_node_id": "capselect_communicate_social_emotional"
+        },
+        {
+          "id": "opt_not_sure",
+          "label": "Not sure / Explore capabilities",
+          "next_node_id": "guided_discovery"
         }
       ]
     },
-    {
-      "id": "create",
-      "text": "Create or write something",
-      "next_question": "What type of creation?",
+    "cat_learn": {
+      "id": "cat_learn",
+      "type": "question",
+      "question": "What kind of learn or understand something task do you have?",
+      "description": "Choose the type of learn or understand something work",
       "options": [
         {
-          "id": "brainstorm",
-          "text": "Brainstorm ideas",
-          "capability_id": "brainstorm_ideas",
-          "description": "Generate creative concepts"
+          "id": "opt_learn_learn_new_things",
+          "label": "Learn New Things",
+          "next_node_id": "capselect_learn_learn_new_things"
         },
         {
-          "id": "outline",
-          "text": "Create an outline",
-          "capability_id": "create_outlines",
-          "description": "Structure projects or documents"
+          "id": "opt_learn_research_analyze",
+          "label": "Research & Analyze",
+          "next_node_id": "capselect_learn_research_analyze"
+        },
+        {
+          "id": "opt_learn_evaluate_information",
+          "label": "Evaluate Information",
+          "next_node_id": "capselect_learn_evaluate_information"
         }
       ]
     },
-    {
-      "id": "improve",
-      "text": "Improve or refine something",
-      "next_question": "What needs improvement?",
+    "capselect_learn_learn_new_things": {
+      "id": "capselect_learn_learn_new_things",
+      "type": "question",
+      "question": "What specific learn new things capability do you need?",
+      "description": "Capabilities for Learn New Things",
       "options": [
         {
-          "id": "clarity",
-          "text": "Improve clarity of writing",
-          "capability_id": "improve_clarity",
-          "description": "Make text more understandable"
+          "id": "opt_explain_complex_concepts",
+          "label": "Explain complex concepts",
+          "next_node_id": "cap_explain_complex_concepts"
+        },
+        {
+          "id": "opt_answer_factual_questions",
+          "label": "Answer factual questions",
+          "next_node_id": "cap_answer_factual_questions"
+        },
+        {
+          "id": "opt_compare_concepts",
+          "label": "Compare concepts",
+          "next_node_id": "cap_compare_concepts"
+        },
+        {
+          "id": "opt_provide_examples",
+          "label": "Provide examples",
+          "next_node_id": "cap_provide_examples"
+        },
+        {
+          "id": "opt_translate_concepts",
+          "label": "Translate concepts across domains",
+          "next_node_id": "cap_translate_concepts"
+        },
+        {
+          "id": "opt_teach_step_by_step",
+          "label": "Teach step-by-step",
+          "next_node_id": "cap_teach_step_by_step"
         }
       ]
     },
-    {
-      "id": "decide",
-      "text": "Make a decision or analyze",
-      "next_question": "What type of analysis?",
+    "cap_explain_complex_concepts": {
+      "id": "cap_explain_complex_concepts",
+      "type": "terminal",
+      "capability_id": "explain_complex_concepts",
+      "capability_name": "Explain complex concepts",
+      "category_id": "learn_new_things",
+      "category_name": "Learn New Things",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Explain complex concepts' capability",
+      "description": "Breaking down complicated topics into understandable parts using analogies and simple language",
+      "when_to_use": "When learning something new, teaching others, or encountering unfamiliar terminology",
+      "thinking_prompts": [
+        "What analogy would make this clearer?",
+        "How can I chunk this information?",
+        "What prior knowledge does my audience have?"
+      ],
+      "use_case_ids": [
+        "explain_academic_concept",
+        "explain_technical_term",
+        "explain_current_event"
+      ]
+    },
+    "cap_answer_factual_questions": {
+      "id": "cap_answer_factual_questions",
+      "type": "terminal",
+      "capability_id": "answer_factual_questions",
+      "capability_name": "Answer factual questions",
+      "category_id": "learn_new_things",
+      "category_name": "Learn New Things",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Answer factual questions' capability",
+      "description": "Providing accurate information on specific topics",
+      "when_to_use": "When you need quick facts, definitions, or specific information",
+      "thinking_prompts": [
+        "What sources would verify this?",
+        "How recent does this need to be?",
+        "What context might change the answer?"
+      ],
+      "use_case_ids": [
+        "fact_checking",
+        "definition_lookup"
+      ]
+    },
+    "cap_compare_concepts": {
+      "id": "cap_compare_concepts",
+      "type": "terminal",
+      "capability_id": "compare_concepts",
+      "capability_name": "Compare concepts",
+      "category_id": "learn_new_things",
+      "category_name": "Learn New Things",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Compare concepts' capability",
+      "description": "Highlighting similarities and differences between ideas, objects, or approaches",
+      "when_to_use": "When deciding between options, understanding relationships, or clarifying distinctions",
+      "thinking_prompts": [
+        "What dimensions are most relevant?",
+        "How are these similar fundamentally?",
+        "What trade\u2011offs exist?"
+      ],
+      "use_case_ids": [
+        "compare_technologies",
+        "compare_ideas_theories"
+      ]
+    },
+    "cap_provide_examples": {
+      "id": "cap_provide_examples",
+      "type": "terminal",
+      "capability_id": "provide_examples",
+      "capability_name": "Provide examples",
+      "category_id": "learn_new_things",
+      "category_name": "Learn New Things",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Provide examples' capability",
+      "description": "Illustrating concepts with concrete instances to make abstract ideas tangible",
+      "when_to_use": "When learning abstract concepts, teaching others, or needing illustration for clarity",
+      "thinking_prompts": [
+        "What familiar situations match this?",
+        "Which examples are most relatable?",
+        "What variety of examples helps?"
+      ],
+      "use_case_ids": [
+        "illustrate_abstract_concept",
+        "provide_case_studies"
+      ]
+    },
+    "cap_translate_concepts": {
+      "id": "cap_translate_concepts",
+      "type": "terminal",
+      "capability_id": "translate_concepts",
+      "capability_name": "Translate concepts across domains",
+      "category_id": "learn_new_things",
+      "category_name": "Learn New Things",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Translate concepts across domains' capability",
+      "description": "Applying ideas from one field to another to deepen understanding or find new perspectives",
+      "when_to_use": "When exploring interdisciplinary connections, making sense of unfamiliar fields, or finding novel insights",
+      "thinking_prompts": [
+        "What does this resemble in another field?",
+        "What frameworks apply across domains?",
+        "What metaphors bridge these areas?"
+      ],
+      "use_case_ids": [
+        "apply_cross_domain_analogy",
+        "bridge_disciplines"
+      ]
+    },
+    "cap_teach_step_by_step": {
+      "id": "cap_teach_step_by_step",
+      "type": "terminal",
+      "capability_id": "teach_step_by_step",
+      "capability_name": "Teach step-by-step",
+      "category_id": "learn_new_things",
+      "category_name": "Learn New Things",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Teach step-by-step' capability",
+      "description": "Guiding through learning processes in sequential stages to build understanding progressively",
+      "when_to_use": "When learning a new skill, procedure, or process that benefits from breaking into stages",
+      "thinking_prompts": [
+        "What's the logical sequence?",
+        "What are the prerequisites for each step?",
+        "Where might people get stuck?"
+      ],
+      "use_case_ids": [
+        "explain_procedure",
+        "guide_learning_journey"
+      ]
+    },
+    "capselect_learn_research_analyze": {
+      "id": "capselect_learn_research_analyze",
+      "type": "question",
+      "question": "What specific research & analyze capability do you need?",
+      "description": "Capabilities for Research & Analyze",
       "options": [
         {
-          "id": "compare",
-          "text": "Compare options",
-          "capability_id": "compare_options",
-          "description": "Evaluate alternatives systematically"
+          "id": "opt_summarize_long_texts",
+          "label": "Summarize long texts",
+          "next_node_id": "cap_summarize_long_texts"
+        },
+        {
+          "id": "opt_extract_key_points",
+          "label": "Extract key points",
+          "next_node_id": "cap_extract_key_points"
+        },
+        {
+          "id": "opt_synthesize_multiple_sources",
+          "label": "Synthesize multiple sources",
+          "next_node_id": "cap_synthesize_multiple_sources"
+        },
+        {
+          "id": "opt_identify_themes",
+          "label": "Identify themes",
+          "next_node_id": "cap_identify_themes"
+        },
+        {
+          "id": "opt_analyze_arguments",
+          "label": "Analyze arguments",
+          "next_node_id": "cap_analyze_arguments"
+        },
+        {
+          "id": "opt_evaluate_credibility",
+          "label": "Evaluate credibility",
+          "next_node_id": "cap_evaluate_credibility"
+        }
+      ]
+    },
+    "cap_summarize_long_texts": {
+      "id": "cap_summarize_long_texts",
+      "type": "terminal",
+      "capability_id": "summarize_long_texts",
+      "capability_name": "Summarize long texts",
+      "category_id": "research_analyze",
+      "category_name": "Research & Analyze",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Summarize long texts' capability",
+      "description": "Condensing lengthy articles, reports, or documents into key points",
+      "when_to_use": "When you're short on time or need to extract essential information",
+      "thinking_prompts": [
+        "What are the main questions answered?",
+        "What evidence supports conclusions?",
+        "What would I tell someone in one minute?"
+      ],
+      "use_case_ids": [
+        "summarize_articles",
+        "summarize_meeting_notes",
+        "summarize_books"
+      ]
+    },
+    "cap_extract_key_points": {
+      "id": "cap_extract_key_points",
+      "type": "terminal",
+      "capability_id": "extract_key_points",
+      "capability_name": "Extract key points",
+      "category_id": "research_analyze",
+      "category_name": "Research & Analyze",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Extract key points' capability",
+      "description": "Identifying and isolating the most important information from content",
+      "when_to_use": "When you need to quickly grasp essential messages without reading full content",
+      "thinking_prompts": [
+        "What's most important here?",
+        "What can I skip without losing meaning?",
+        "What are the must-know points?"
+      ],
+      "use_case_ids": [
+        "pull_highlights"
+      ]
+    },
+    "cap_synthesize_multiple_sources": {
+      "id": "cap_synthesize_multiple_sources",
+      "type": "terminal",
+      "capability_id": "synthesize_multiple_sources",
+      "capability_name": "Synthesize multiple sources",
+      "category_id": "research_analyze",
+      "category_name": "Research & Analyze",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Synthesize multiple sources' capability",
+      "description": "Combining information from different references into cohesive insights",
+      "when_to_use": "When you have gathered information from multiple places and need integrated understanding",
+      "thinking_prompts": [
+        "What are the common themes?",
+        "Where do sources disagree?",
+        "What emerges from combining them?"
+      ],
+      "use_case_ids": [
+        "combine_research"
+      ]
+    },
+    "cap_identify_themes": {
+      "id": "cap_identify_themes",
+      "type": "terminal",
+      "capability_id": "identify_themes",
+      "capability_name": "Identify themes",
+      "category_id": "research_analyze",
+      "category_name": "Research & Analyze",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Identify themes' capability",
+      "description": "Recognizing recurring patterns, topics, or ideas across content",
+      "when_to_use": "When analyzing qualitative data, literature, or looking for patterns in information",
+      "thinking_prompts": [
+        "What keeps coming up?",
+        "What patterns do I see?",
+        "What connects these seemingly different elements?"
+      ],
+      "use_case_ids": [
+        "find_common_topics"
+      ]
+    },
+    "cap_analyze_arguments": {
+      "id": "cap_analyze_arguments",
+      "type": "terminal",
+      "capability_id": "analyze_arguments",
+      "capability_name": "Analyze arguments",
+      "category_id": "research_analyze",
+      "category_name": "Research & Analyze",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Analyze arguments' capability",
+      "description": "Evaluating logical structure, evidence, and reasoning in persuasive content",
+      "when_to_use": "When assessing the strength of claims, understanding persuasion, or critical evaluation",
+      "thinking_prompts": [
+        "What's the main claim?",
+        "What evidence supports it?",
+        "Are there logical fallacies?"
+      ],
+      "use_case_ids": [
+        "evaluate_opinion_piece"
+      ]
+    },
+    "cap_evaluate_credibility": {
+      "id": "cap_evaluate_credibility",
+      "type": "terminal",
+      "capability_id": "evaluate_credibility",
+      "capability_name": "Evaluate credibility",
+      "category_id": "research_analyze",
+      "category_name": "Research & Analyze",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Evaluate credibility' capability",
+      "description": "Assessing reliability, trustworthiness, and authority of sources",
+      "when_to_use": "When determining whether to trust information or sources",
+      "thinking_prompts": [
+        "Who created this?",
+        "What are their credentials?",
+        "Is there evidence of bias?"
+      ],
+      "use_case_ids": [
+        "assess_source_quality"
+      ]
+    },
+    "capselect_learn_evaluate_information": {
+      "id": "capselect_learn_evaluate_information",
+      "type": "question",
+      "question": "What specific evaluate information capability do you need?",
+      "description": "Capabilities for Evaluate Information",
+      "options": [
+        {
+          "id": "opt_detect_bias",
+          "label": "Detect bias",
+          "next_node_id": "cap_detect_bias"
+        },
+        {
+          "id": "opt_verify_information",
+          "label": "Verify information",
+          "next_node_id": "cap_verify_information"
+        }
+      ]
+    },
+    "cap_detect_bias": {
+      "id": "cap_detect_bias",
+      "type": "terminal",
+      "capability_id": "detect_bias",
+      "capability_name": "Detect bias",
+      "category_id": "evaluate_information",
+      "category_name": "Evaluate Information",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Detect bias' capability",
+      "description": "Identifying slanted perspectives, prejudice, or partiality in content",
+      "when_to_use": "When evaluating news, arguments, or representations that may be influenced by hidden assumptions",
+      "thinking_prompts": [
+        "What perspective is privileged?",
+        "What's left out?",
+        "Whose interests are served?"
+      ],
+      "use_case_ids": [
+        "identify_media_bias"
+      ]
+    },
+    "cap_verify_information": {
+      "id": "cap_verify_information",
+      "type": "terminal",
+      "capability_id": "verify_information",
+      "capability_name": "Verify information",
+      "category_id": "evaluate_information",
+      "category_name": "Evaluate Information",
+      "domain_id": "knowledge_learning",
+      "domain_name": "Knowledge & Learning",
+      "recommendation": "Use the 'Verify information' capability",
+      "description": "Checking accuracy and truthfulness of claims or data",
+      "when_to_use": "When encountering surprising claims, important facts, or uncertain information",
+      "thinking_prompts": [
+        "Where can I check this?",
+        "What sources would contradict this?",
+        "Is this too good/bad to be true?"
+      ],
+      "use_case_ids": [
+        "fact_check_claims"
+      ]
+    },
+    "cat_create": {
+      "id": "cat_create",
+      "type": "question",
+      "question": "What kind of create something new task do you have?",
+      "description": "Choose the type of create something new work",
+      "options": [
+        {
+          "id": "opt_create_create_things",
+          "label": "Create Things",
+          "next_node_id": "capselect_create_create_things"
+        },
+        {
+          "id": "opt_create_transform_content",
+          "label": "Transform Content",
+          "next_node_id": "capselect_create_transform_content"
+        }
+      ]
+    },
+    "capselect_create_create_things": {
+      "id": "capselect_create_create_things",
+      "type": "question",
+      "question": "What specific create things capability do you need?",
+      "description": "Capabilities for Create Things",
+      "options": [
+        {
+          "id": "opt_brainstorm_ideas",
+          "label": "Brainstorm ideas",
+          "next_node_id": "cap_brainstorm_ideas"
+        },
+        {
+          "id": "opt_create_outlines",
+          "label": "Create outlines",
+          "next_node_id": "cap_create_outlines"
+        },
+        {
+          "id": "opt_generate_stories",
+          "label": "Generate stories",
+          "next_node_id": "cap_generate_stories"
+        },
+        {
+          "id": "opt_create_dialogue",
+          "label": "Create dialogue",
+          "next_node_id": "cap_create_dialogue"
+        },
+        {
+          "id": "opt_develop_characters",
+          "label": "Develop characters",
+          "next_node_id": "cap_develop_characters"
+        },
+        {
+          "id": "opt_design_scenarios",
+          "label": "Design scenarios",
+          "next_node_id": "cap_design_scenarios"
+        }
+      ]
+    },
+    "cap_brainstorm_ideas": {
+      "id": "cap_brainstorm_ideas",
+      "type": "terminal",
+      "capability_id": "brainstorm_ideas",
+      "capability_name": "Brainstorm ideas",
+      "category_id": "create_things",
+      "category_name": "Create Things",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Brainstorm ideas' capability",
+      "description": "Generating creative concepts, angles, or approaches without initial judgment",
+      "when_to_use": "When starting a project, overcoming writer's block, or exploring possibilities",
+      "thinking_prompts": [
+        "What's possible here?",
+        "What if anything goes?",
+        "What hasn't been tried?"
+      ],
+      "use_case_ids": [
+        "blog_post_ideas",
+        "project_names",
+        "creative_concepts"
+      ]
+    },
+    "cap_create_outlines": {
+      "id": "cap_create_outlines",
+      "type": "terminal",
+      "capability_id": "create_outlines",
+      "capability_name": "Create outlines",
+      "category_id": "create_things",
+      "category_name": "Create Things",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Create outlines' capability",
+      "description": "Developing structured frameworks for projects, documents, or presentations",
+      "when_to_use": "When starting a complex task that needs organization and structure",
+      "thinking_prompts": [
+        "What's the logical flow?",
+        "What are the main sections?",
+        "What comes before what?"
+      ],
+      "use_case_ids": [
+        "presentation_outline",
+        "essay_structure",
+        "project_plan"
+      ]
+    },
+    "cap_generate_stories": {
+      "id": "cap_generate_stories",
+      "type": "terminal",
+      "capability_id": "generate_stories",
+      "capability_name": "Generate stories",
+      "category_id": "create_things",
+      "category_name": "Create Things",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Generate stories' capability",
+      "description": "Creating narratives with plot, characters, and settings",
+      "when_to_use": "When writing fiction, creating content that needs narrative elements, or storytelling",
+      "thinking_prompts": [
+        "Who are the characters?",
+        "What's the conflict?",
+        "How does it resolve?"
+      ],
+      "use_case_ids": [
+        "write_fiction"
+      ]
+    },
+    "cap_create_dialogue": {
+      "id": "cap_create_dialogue",
+      "type": "terminal",
+      "capability_id": "create_dialogue",
+      "capability_name": "Create dialogue",
+      "category_id": "create_things",
+      "category_name": "Create Things",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Create dialogue' capability",
+      "description": "Writing conversational exchanges between characters or for specific purposes",
+      "when_to_use": "When writing scripts, novels, or any content with spoken interaction",
+      "thinking_prompts": [
+        "What's each character's voice?",
+        "What are they really saying?",
+        "How does conversation advance the story?"
+      ],
+      "use_case_ids": [
+        "write_script_dialogue"
+      ]
+    },
+    "cap_develop_characters": {
+      "id": "cap_develop_characters",
+      "type": "terminal",
+      "capability_id": "develop_characters",
+      "capability_name": "Develop characters",
+      "category_id": "create_things",
+      "category_name": "Create Things",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Develop characters' capability",
+      "description": "Designing fictional personas with backstories, personalities, and traits",
+      "when_to_use": "When writing fiction, creating avatars, or developing person-based content",
+      "thinking_prompts": [
+        "What do they want?",
+        "What are they afraid of?",
+        "What makes them interesting?"
+      ],
+      "use_case_ids": [
+        "character_profiles"
+      ]
+    },
+    "cap_design_scenarios": {
+      "id": "cap_design_scenarios",
+      "type": "terminal",
+      "capability_id": "design_scenarios",
+      "capability_name": "Design scenarios",
+      "category_id": "create_things",
+      "category_name": "Create Things",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Design scenarios' capability",
+      "description": "Inventing hypothetical situations for planning, training, or storytelling",
+      "when_to_use": "When preparing for possibilities, creating exercises, or world-building",
+      "thinking_prompts": [
+        "What if this happens?",
+        "What would change?",
+        "How would people respond?"
+      ],
+      "use_case_ids": [
+        "what_if_scenarios"
+      ]
+    },
+    "capselect_create_transform_content": {
+      "id": "capselect_create_transform_content",
+      "type": "question",
+      "question": "What specific transform content capability do you need?",
+      "description": "Capabilities for Transform Content",
+      "options": [
+        {
+          "id": "opt_translate_language",
+          "label": "Translate language",
+          "next_node_id": "cap_translate_language"
+        },
+        {
+          "id": "opt_change_format",
+          "label": "Change format",
+          "next_node_id": "cap_change_format"
+        }
+      ]
+    },
+    "cap_translate_language": {
+      "id": "cap_translate_language",
+      "type": "terminal",
+      "capability_id": "translate_language",
+      "capability_name": "Translate language",
+      "category_id": "transform_content",
+      "category_name": "Transform Content",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Translate language' capability",
+      "description": "Converting text between languages while preserving meaning and tone",
+      "when_to_use": "When communicating across languages or reaching multilingual audiences",
+      "thinking_prompts": [
+        "What's the essential meaning?",
+        "How would this be said naturally?",
+        "What cultural nuances matter?"
+      ],
+      "use_case_ids": [
+        "translate_to_language"
+      ]
+    },
+    "cap_change_format": {
+      "id": "cap_change_format",
+      "type": "terminal",
+      "capability_id": "change_format",
+      "capability_name": "Change format",
+      "category_id": "transform_content",
+      "category_name": "Transform Content",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Change format' capability",
+      "description": "Converting content from one format to another (e.g., article to presentation)",
+      "when_to_use": "When repurposing content for different platforms or audiences",
+      "thinking_prompts": [
+        "What works in this format?",
+        "What needs to change?",
+        "How can I preserve key ideas?"
+      ],
+      "use_case_ids": [
+        "article_to_presentation",
+        "presentation_to_article"
+      ]
+    },
+    "cat_decide": {
+      "id": "cat_decide",
+      "type": "question",
+      "question": "What kind of make a decision or solve a problem task do you have?",
+      "description": "Choose the type of make a decision or solve a problem work",
+      "options": [
+        {
+          "id": "opt_decide_make_decisions",
+          "label": "Make Decisions",
+          "next_node_id": "capselect_decide_make_decisions"
+        },
+        {
+          "id": "opt_decide_solve_problems",
+          "label": "Solve Problems",
+          "next_node_id": "capselect_decide_solve_problems"
+        },
+        {
+          "id": "opt_decide_analyze_systems",
+          "label": "Analyze Systems",
+          "next_node_id": "capselect_decide_analyze_systems"
+        }
+      ]
+    },
+    "capselect_decide_make_decisions": {
+      "id": "capselect_decide_make_decisions",
+      "type": "question",
+      "question": "What specific make decisions capability do you need?",
+      "description": "Capabilities for Make Decisions",
+      "options": [
+        {
+          "id": "opt_compare_options",
+          "label": "Compare options",
+          "next_node_id": "cap_compare_options"
+        },
+        {
+          "id": "opt_evaluate_pros_cons",
+          "label": "Evaluate pros and cons",
+          "next_node_id": "cap_evaluate_pros_cons"
+        },
+        {
+          "id": "opt_weigh_trade_offs",
+          "label": "Weigh trade-offs",
+          "next_node_id": "cap_weigh_trade_offs"
+        },
+        {
+          "id": "opt_prioritize_tasks",
+          "label": "Prioritize tasks",
+          "next_node_id": "cap_prioritize_tasks"
+        },
+        {
+          "id": "opt_apply_decision_frameworks",
+          "label": "Apply decision frameworks",
+          "next_node_id": "cap_apply_decision_frameworks"
+        },
+        {
+          "id": "opt_predict_outcomes",
+          "label": "Predict outcomes",
+          "next_node_id": "cap_predict_outcomes"
+        }
+      ]
+    },
+    "cap_compare_options": {
+      "id": "cap_compare_options",
+      "type": "terminal",
+      "capability_id": "compare_options",
+      "capability_name": "Compare options",
+      "category_id": "make_decisions",
+      "category_name": "Make Decisions",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Compare options' capability",
+      "description": "Side-by-side evaluation of alternatives across relevant dimensions",
+      "when_to_use": "When facing multiple choices and need systematic comparison",
+      "thinking_prompts": [
+        "What matters most?",
+        "How do these options differ?",
+        "What are the trade-offs?"
+      ],
+      "use_case_ids": [
+        "compare_products",
+        "compare_career_paths"
+      ]
+    },
+    "cap_evaluate_pros_cons": {
+      "id": "cap_evaluate_pros_cons",
+      "type": "terminal",
+      "capability_id": "evaluate_pros_cons",
+      "capability_name": "Evaluate pros and cons",
+      "category_id": "make_decisions",
+      "category_name": "Make Decisions",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Evaluate pros and cons' capability",
+      "description": "Listing advantages and disadvantages of each choice",
+      "when_to_use": "When you need a clear picture of benefits and drawbacks",
+      "thinking_prompts": [
+        "What could go well?",
+        "What could go wrong?",
+        "Who's affected?"
+      ],
+      "use_case_ids": [
+        "decision_pros_cons"
+      ]
+    },
+    "cap_weigh_trade_offs": {
+      "id": "cap_weigh_trade_offs",
+      "type": "terminal",
+      "capability_id": "weigh_trade_offs",
+      "capability_name": "Weigh trade-offs",
+      "category_id": "make_decisions",
+      "category_name": "Make Decisions",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Weigh trade-offs' capability",
+      "description": "Balancing competing benefits and costs in a decision",
+      "when_to_use": "When options involve compromises between desirable but incompatible outcomes",
+      "thinking_prompts": [
+        "What am I gaining vs losing?",
+        "What matters most to me?",
+        "What can I live without?"
+      ],
+      "use_case_ids": [
+        "time_money_tradeoff"
+      ]
+    },
+    "cap_prioritize_tasks": {
+      "id": "cap_prioritize_tasks",
+      "type": "terminal",
+      "capability_id": "prioritize_tasks",
+      "capability_name": "Prioritize tasks",
+      "category_id": "make_decisions",
+      "category_name": "Make Decisions",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Prioritize tasks' capability",
+      "description": "Ordering activities by importance, urgency, and impact",
+      "when_to_use": "When you have more to do than time and need to decide what comes first",
+      "thinking_prompts": [
+        "What's most important?",
+        "What's urgent?",
+        "What has the biggest impact?"
+      ],
+      "use_case_ids": [
+        "prioritize_work",
+        "prioritize_personal"
+      ]
+    },
+    "cap_apply_decision_frameworks": {
+      "id": "cap_apply_decision_frameworks",
+      "type": "terminal",
+      "capability_id": "apply_decision_frameworks",
+      "capability_name": "Apply decision frameworks",
+      "category_id": "make_decisions",
+      "category_name": "Make Decisions",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Apply decision frameworks' capability",
+      "description": "Using structured models (SWOT, cost-benefit, etc.) to guide choices",
+      "when_to_use": "When facing important, complex decisions that benefit from structured analysis",
+      "thinking_prompts": [
+        "What framework fits this decision?",
+        "What does this framework reveal?",
+        "Am I using it correctly?"
+      ],
+      "use_case_ids": [
+        "swot_analysis",
+        "cost_benefit"
+      ]
+    },
+    "cap_predict_outcomes": {
+      "id": "cap_predict_outcomes",
+      "type": "terminal",
+      "capability_id": "predict_outcomes",
+      "capability_name": "Predict outcomes",
+      "category_id": "make_decisions",
+      "category_name": "Make Decisions",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Predict outcomes' capability",
+      "description": "Forecasting likely results of decisions or actions",
+      "when_to_use": "When trying to anticipate consequences before making a choice",
+      "thinking_prompts": [
+        "What's likely to happen?",
+        "What could go wrong?",
+        "What are the ripple effects?"
+      ],
+      "use_case_ids": [
+        "decision_consequences"
+      ]
+    },
+    "capselect_decide_solve_problems": {
+      "id": "capselect_decide_solve_problems",
+      "type": "question",
+      "question": "What specific solve problems capability do you need?",
+      "description": "Capabilities for Solve Problems",
+      "options": [
+        {
+          "id": "opt_identify_root_causes",
+          "label": "Identify root causes",
+          "next_node_id": "cap_identify_root_causes"
+        },
+        {
+          "id": "opt_generate_solutions",
+          "label": "Generate solutions",
+          "next_node_id": "cap_generate_solutions"
+        },
+        {
+          "id": "opt_evaluate_solutions",
+          "label": "Evaluate solutions",
+          "next_node_id": "cap_evaluate_solutions"
+        },
+        {
+          "id": "opt_plan_implementation",
+          "label": "Plan implementation",
+          "next_node_id": "cap_plan_implementation"
+        },
+        {
+          "id": "opt_troubleshoot_issues",
+          "label": "Troubleshoot issues",
+          "next_node_id": "cap_troubleshoot_issues"
+        },
+        {
+          "id": "opt_optimize_systems",
+          "label": "Optimize systems",
+          "next_node_id": "cap_optimize_systems"
+        }
+      ]
+    },
+    "cap_identify_root_causes": {
+      "id": "cap_identify_root_causes",
+      "type": "terminal",
+      "capability_id": "identify_root_causes",
+      "capability_name": "Identify root causes",
+      "category_id": "solve_problems",
+      "category_name": "Solve Problems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Identify root causes' capability",
+      "description": "Finding underlying reasons for problems rather than treating symptoms",
+      "when_to_use": "When problems keep recurring or when you want lasting solutions",
+      "thinking_prompts": [
+        "Why is this happening?",
+        "What's beneath the surface?",
+        "What keeps causing this?"
+      ],
+      "use_case_ids": [
+        "analyze_problem"
+      ]
+    },
+    "cap_generate_solutions": {
+      "id": "cap_generate_solutions",
+      "type": "terminal",
+      "capability_id": "generate_solutions",
+      "capability_name": "Generate solutions",
+      "category_id": "solve_problems",
+      "category_name": "Solve Problems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Generate solutions' capability",
+      "description": "Creating potential fixes or improvements for identified problems",
+      "when_to_use": "When you understand the problem and need options for addressing it",
+      "thinking_prompts": [
+        "What could work?",
+        "What haven't we tried?",
+        "What would a fresh perspective suggest?"
+      ],
+      "use_case_ids": [
+        "brainstorm_solutions"
+      ]
+    },
+    "cap_evaluate_solutions": {
+      "id": "cap_evaluate_solutions",
+      "type": "terminal",
+      "capability_id": "evaluate_solutions",
+      "capability_name": "Evaluate solutions",
+      "category_id": "solve_problems",
+      "category_name": "Solve Problems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Evaluate solutions' capability",
+      "description": "Assessing feasibility, effectiveness, and appropriateness of potential solutions",
+      "when_to_use": "When you have multiple solution options and need to choose the best approach",
+      "thinking_prompts": [
+        "Will this actually work?",
+        "What resources are needed?",
+        "What could go wrong?"
+      ],
+      "use_case_ids": [
+        "assess_solution_feasibility"
+      ]
+    },
+    "cap_plan_implementation": {
+      "id": "cap_plan_implementation",
+      "type": "terminal",
+      "capability_id": "plan_implementation",
+      "capability_name": "Plan implementation",
+      "category_id": "solve_problems",
+      "category_name": "Solve Problems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Plan implementation' capability",
+      "description": "Developing step-by-step action plans for chosen solutions",
+      "when_to_use": "When you've decided on a solution and need to make it happen",
+      "thinking_prompts": [
+        "What's the first step?",
+        "What needs to happen when?",
+        "What could go wrong?"
+      ],
+      "use_case_ids": [
+        "create_action_plan"
+      ]
+    },
+    "cap_troubleshoot_issues": {
+      "id": "cap_troubleshoot_issues",
+      "type": "terminal",
+      "capability_id": "troubleshoot_issues",
+      "capability_name": "Troubleshoot issues",
+      "category_id": "solve_problems",
+      "category_name": "Solve Problems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Troubleshoot issues' capability",
+      "description": "Diagnosing and resolving malfunctions, errors, or unexpected behaviors",
+      "when_to_use": "When something isn't working as expected and you need to fix it",
+      "thinking_prompts": [
+        "What changed?",
+        "What's different from expected?",
+        "What does this symptom tell me?"
+      ],
+      "use_case_ids": [
+        "technical_troubleshooting"
+      ]
+    },
+    "cap_optimize_systems": {
+      "id": "cap_optimize_systems",
+      "type": "terminal",
+      "capability_id": "optimize_systems",
+      "capability_name": "Optimize systems",
+      "category_id": "solve_problems",
+      "category_name": "Solve Problems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Optimize systems' capability",
+      "description": "Improving efficiency and performance of processes, routines, or systems",
+      "when_to_use": "When things work but could work better, faster, or with less effort",
+      "thinking_prompts": [
+        "What's the bottleneck?",
+        "What's wasting time?",
+        "How could this be smoother?"
+      ],
+      "use_case_ids": [
+        "optimize_workflow"
+      ]
+    },
+    "capselect_decide_analyze_systems": {
+      "id": "capselect_decide_analyze_systems",
+      "type": "question",
+      "question": "What specific analyze systems capability do you need?",
+      "description": "Capabilities for Analyze Systems",
+      "options": [
+        {
+          "id": "opt_map_systems",
+          "label": "Map systems",
+          "next_node_id": "cap_map_systems"
+        }
+      ]
+    },
+    "cap_map_systems": {
+      "id": "cap_map_systems",
+      "type": "terminal",
+      "capability_id": "map_systems",
+      "capability_name": "Map systems",
+      "category_id": "analyze_systems",
+      "category_name": "Analyze Systems",
+      "domain_id": "analysis_problem_solving",
+      "domain_name": "Analysis & Problem Solving",
+      "recommendation": "Use the 'Map systems' capability",
+      "description": "Visualizing or describing how components of a system relate and interact",
+      "when_to_use": "When trying to understand complex situations, organizations, or processes",
+      "thinking_prompts": [
+        "What are the parts?",
+        "How do they connect?",
+        "What flows between them?"
+      ],
+      "use_case_ids": [
+        "organizational_mapping"
+      ]
+    },
+    "cat_improve": {
+      "id": "cat_improve",
+      "type": "question",
+      "question": "What kind of improve or refine existing work task do you have?",
+      "description": "Choose the type of improve or refine existing work work",
+      "options": [
+        {
+          "id": "opt_improve_improve_work",
+          "label": "Improve Work",
+          "next_node_id": "capselect_improve_improve_work"
+        }
+      ]
+    },
+    "capselect_improve_improve_work": {
+      "id": "capselect_improve_improve_work",
+      "type": "question",
+      "question": "What specific improve or refine existing work capability do you need?",
+      "description": "Capabilities for Improve or refine existing work",
+      "options": [
+        {
+          "id": "opt_improve_clarity",
+          "label": "Improve clarity",
+          "next_node_id": "cap_improve_clarity"
+        },
+        {
+          "id": "opt_improve_conciseness",
+          "label": "Improve conciseness",
+          "next_node_id": "cap_improve_conciseness"
+        },
+        {
+          "id": "opt_improve_tone",
+          "label": "Improve tone",
+          "next_node_id": "cap_improve_tone"
+        },
+        {
+          "id": "opt_improve_structure",
+          "label": "Improve structure",
+          "next_node_id": "cap_improve_structure"
+        },
+        {
+          "id": "opt_improve_grammar_spelling",
+          "label": "Improve grammar and spelling",
+          "next_node_id": "cap_improve_grammar_spelling"
+        },
+        {
+          "id": "opt_adapt_for_audience",
+          "label": "Adapt for audience",
+          "next_node_id": "cap_adapt_for_audience"
+        }
+      ]
+    },
+    "cap_improve_clarity": {
+      "id": "cap_improve_clarity",
+      "type": "terminal",
+      "capability_id": "improve_clarity",
+      "capability_name": "Improve clarity",
+      "category_id": "improve_work",
+      "category_name": "Improve Work",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Improve clarity' capability",
+      "description": "Making text more understandable, direct, and unambiguous",
+      "when_to_use": "When your writing feels confusing, wordy, or unclear",
+      "thinking_prompts": [
+        "What am I actually trying to say?",
+        "What might confuse readers?",
+        "How can I simplify?"
+      ],
+      "use_case_ids": [
+        "simplify_language",
+        "clarify_ambiguity"
+      ]
+    },
+    "cap_improve_conciseness": {
+      "id": "cap_improve_conciseness",
+      "type": "terminal",
+      "capability_id": "improve_conciseness",
+      "capability_name": "Improve conciseness",
+      "category_id": "improve_work",
+      "category_name": "Improve Work",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Improve conciseness' capability",
+      "description": "Removing unnecessary words while preserving meaning",
+      "when_to_use": "When text is too long, wordy, or meandering",
+      "thinking_prompts": [
+        "What can I cut?",
+        "What's redundant?",
+        "What's the core message?"
+      ],
+      "use_case_ids": [
+        "shorten_text"
+      ]
+    },
+    "cap_improve_tone": {
+      "id": "cap_improve_tone",
+      "type": "terminal",
+      "capability_id": "improve_tone",
+      "capability_name": "Improve tone",
+      "category_id": "improve_work",
+      "category_name": "Improve Work",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Improve tone' capability",
+      "description": "Adjusting language to match desired emotional impact or formality level",
+      "when_to_use": "When the tone doesn't match the intended audience, purpose, or context",
+      "thinking_prompts": [
+        "How do I want readers to feel?",
+        "Who is my audience?",
+        "Is this too formal or casual?"
+      ],
+      "use_case_ids": [
+        "make_more_professional",
+        "make_more_casual"
+      ]
+    },
+    "cap_improve_structure": {
+      "id": "cap_improve_structure",
+      "type": "terminal",
+      "capability_id": "improve_structure",
+      "capability_name": "Improve structure",
+      "category_id": "improve_work",
+      "category_name": "Improve Work",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Improve structure' capability",
+      "description": "Reorganizing content for better flow, logic, and readability",
+      "when_to_use": "When ideas are jumbled, transitions are missing, or organization is weak",
+      "thinking_prompts": [
+        "What's the best order?",
+        "What connects these ideas?",
+        "Where do transitions belong?"
+      ],
+      "use_case_ids": [
+        "reorganize_content"
+      ]
+    },
+    "cap_improve_grammar_spelling": {
+      "id": "cap_improve_grammar_spelling",
+      "type": "terminal",
+      "capability_id": "improve_grammar_spelling",
+      "capability_name": "Improve grammar and spelling",
+      "category_id": "improve_work",
+      "category_name": "Improve Work",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Improve grammar and spelling' capability",
+      "description": "Correcting language errors, typos, and mechanical issues",
+      "when_to_use": "When text contains errors that undermine credibility or distract from meaning",
+      "thinking_prompts": [
+        "What errors need fixing?",
+        "Are there consistent issues?",
+        "What rules am I unsure about?"
+      ],
+      "use_case_ids": [
+        "proofread_text"
+      ]
+    },
+    "cap_adapt_for_audience": {
+      "id": "cap_adapt_for_audience",
+      "type": "terminal",
+      "capability_id": "adapt_for_audience",
+      "capability_name": "Adapt for audience",
+      "category_id": "improve_work",
+      "category_name": "Improve Work",
+      "domain_id": "creativity_content",
+      "domain_name": "Creativity & Content",
+      "recommendation": "Use the 'Adapt for audience' capability",
+      "description": "Tailoring content to specific reader groups or contexts",
+      "when_to_use": "When content needs to speak effectively to a particular audience",
+      "thinking_prompts": [
+        "Who is my audience?",
+        "What do they know?",
+        "What do they care about?"
+      ],
+      "use_case_ids": [
+        "adapt_for_experts",
+        "adapt_for_beginners"
+      ]
+    },
+    "cat_practical": {
+      "id": "cat_practical",
+      "type": "question",
+      "question": "What kind of get practical help with daily tasks task do you have?",
+      "description": "Choose the type of get practical help with daily tasks work",
+      "options": [
+        {
+          "id": "opt_practical_practical_skills",
+          "label": "Practical Skills",
+          "next_node_id": "capselect_practical_practical_skills"
+        }
+      ]
+    },
+    "capselect_practical_practical_skills": {
+      "id": "capselect_practical_practical_skills",
+      "type": "question",
+      "question": "What specific get practical help with daily tasks capability do you need?",
+      "description": "Capabilities for Get practical help with daily tasks",
+      "options": [
+        {
+          "id": "opt_cooking_recipes",
+          "label": "Cooking recipes",
+          "next_node_id": "cap_cooking_recipes"
+        },
+        {
+          "id": "opt_diy_instructions",
+          "label": "DIY instructions",
+          "next_node_id": "cap_diy_instructions"
+        },
+        {
+          "id": "opt_budget_planning",
+          "label": "Budget planning",
+          "next_node_id": "cap_budget_planning"
+        }
+      ]
+    },
+    "cap_cooking_recipes": {
+      "id": "cap_cooking_recipes",
+      "type": "terminal",
+      "capability_id": "cooking_recipes",
+      "capability_name": "Cooking recipes",
+      "category_id": "practical_skills",
+      "category_name": "Practical Skills",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Cooking recipes' capability",
+      "description": "Providing ingredient lists and preparation steps for meals",
+      "when_to_use": "When planning meals, learning to cook, or looking for cooking inspiration",
+      "thinking_prompts": [
+        "What ingredients do I have?",
+        "What do I want to eat?",
+        "How much time do I have?"
+      ],
+      "use_case_ids": [
+        "simple_recipes",
+        "ingredient_based"
+      ]
+    },
+    "cap_diy_instructions": {
+      "id": "cap_diy_instructions",
+      "type": "terminal",
+      "capability_id": "diy_instructions",
+      "capability_name": "DIY instructions",
+      "category_id": "practical_skills",
+      "category_name": "Practical Skills",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'DIY instructions' capability",
+      "description": "Guiding through home improvement, crafting, or repair projects",
+      "when_to_use": "When tackling hands-on projects, making things, or fixing items",
+      "thinking_prompts": [
+        "What tools do I need?",
+        "What are the safety concerns?",
+        "What's the sequence?"
+      ],
+      "use_case_ids": [
+        "home_projects"
+      ]
+    },
+    "cap_budget_planning": {
+      "id": "cap_budget_planning",
+      "type": "terminal",
+      "capability_id": "budget_planning",
+      "capability_name": "Budget planning",
+      "category_id": "practical_skills",
+      "category_name": "Practical Skills",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Budget planning' capability",
+      "description": "Helping allocate finances and track expenses",
+      "when_to_use": "When managing money, saving for goals, or controlling spending",
+      "thinking_prompts": [
+        "How much comes in?",
+        "Where does it go?",
+        "What are my priorities?"
+      ],
+      "use_case_ids": [
+        "create_budget"
+      ]
+    },
+    "cat_entertain": {
+      "id": "cat_entertain",
+      "type": "question",
+      "question": "What kind of have fun or be entertained task do you have?",
+      "description": "Choose the type of have fun or be entertained work",
+      "options": [
+        {
+          "id": "opt_entertain_entertainment_leisure",
+          "label": "Entertainment & Leisure",
+          "next_node_id": "capselect_entertain_entertainment_leisure"
+        }
+      ]
+    },
+    "capselect_entertain_entertainment_leisure": {
+      "id": "capselect_entertain_entertainment_leisure",
+      "type": "question",
+      "question": "What specific have fun or be entertained capability do you need?",
+      "description": "Capabilities for Have fun or be entertained",
+      "options": [
+        {
+          "id": "opt_tell_stories",
+          "label": "Tell stories",
+          "next_node_id": "cap_tell_stories"
+        },
+        {
+          "id": "opt_generate_jokes",
+          "label": "Generate jokes",
+          "next_node_id": "cap_generate_jokes"
+        },
+        {
+          "id": "opt_suggest_games",
+          "label": "Suggest games",
+          "next_node_id": "cap_suggest_games"
+        }
+      ]
+    },
+    "cap_tell_stories": {
+      "id": "cap_tell_stories",
+      "type": "terminal",
+      "capability_id": "tell_stories",
+      "capability_name": "Tell stories",
+      "category_id": "entertainment_leisure",
+      "category_name": "Entertainment & Leisure",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Tell stories' capability",
+      "description": "Narrating fictional or personalized tales for entertainment",
+      "when_to_use": "When you want to be entertained, practice storytelling, or enjoy creative narratives",
+      "thinking_prompts": [
+        "What's the story?",
+        "Who's in it?",
+        "Where does it go?"
+      ],
+      "use_case_ids": [
+        "bedtime_stories",
+        "interactive_stories"
+      ]
+    },
+    "cap_generate_jokes": {
+      "id": "cap_generate_jokes",
+      "type": "terminal",
+      "capability_id": "generate_jokes",
+      "capability_name": "Generate jokes",
+      "category_id": "entertainment_leisure",
+      "category_name": "Entertainment & Leisure",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Generate jokes' capability",
+      "description": "Creating humorous one-liners, puns, or funny content",
+      "when_to_use": "When you want to lighten the mood, practice humor, or entertain yourself",
+      "thinking_prompts": [
+        "What's unexpected?",
+        "What words can play together?",
+        "What's relatable?"
+      ],
+      "use_case_ids": [
+        "dad_jokes",
+        "themed_humor"
+      ]
+    },
+    "cap_suggest_games": {
+      "id": "cap_suggest_games",
+      "type": "terminal",
+      "capability_id": "suggest_games",
+      "capability_name": "Suggest games",
+      "category_id": "entertainment_leisure",
+      "category_name": "Entertainment & Leisure",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Suggest games' capability",
+      "description": "Recommending play activities, board games, or party games",
+      "when_to_use": "When you're looking for entertainment activities for yourself or groups",
+      "thinking_prompts": [
+        "Who's playing?",
+        "How much time?",
+        "What's the setting?"
+      ],
+      "use_case_ids": [
+        "party_games",
+        "solo_games"
+      ]
+    },
+    "cat_personal": {
+      "id": "cat_personal",
+      "type": "question",
+      "question": "What kind of work on personal development task do you have?",
+      "description": "Choose the type of work on personal development work",
+      "options": [
+        {
+          "id": "opt_personal_personal_wellness",
+          "label": "Personal & Wellness",
+          "next_node_id": "capselect_personal_personal_wellness"
+        }
+      ]
+    },
+    "capselect_personal_personal_wellness": {
+      "id": "capselect_personal_personal_wellness",
+      "type": "question",
+      "question": "What specific work on personal development capability do you need?",
+      "description": "Capabilities for Work on personal development",
+      "options": [
+        {
+          "id": "opt_provide_health_information",
+          "label": "Provide health information",
+          "next_node_id": "cap_provide_health_information"
+        },
+        {
+          "id": "opt_suggest_exercises",
+          "label": "Suggest exercises",
+          "next_node_id": "cap_suggest_exercises"
+        },
+        {
+          "id": "opt_mental_health_support",
+          "label": "Mental health support",
+          "next_node_id": "cap_mental_health_support"
+        },
+        {
+          "id": "opt_habit_formation",
+          "label": "Habit formation",
+          "next_node_id": "cap_habit_formation"
+        },
+        {
+          "id": "opt_goal_setting",
+          "label": "Goal setting",
+          "next_node_id": "cap_goal_setting"
+        }
+      ]
+    },
+    "cap_provide_health_information": {
+      "id": "cap_provide_health_information",
+      "type": "terminal",
+      "capability_id": "provide_health_information",
+      "capability_name": "Provide health information",
+      "category_id": "personal_wellness",
+      "category_name": "Personal & Wellness",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Provide health information' capability",
+      "description": "Offering general knowledge about medical conditions, wellness, and healthy habits",
+      "when_to_use": "When seeking to understand health topics or improve well-being (not for medical emergencies)",
+      "thinking_prompts": [
+        "What do I need to know?",
+        "What's evidence-based?",
+        "What should I check with a doctor?"
+      ],
+      "use_case_ids": [
+        "general_health_info"
+      ]
+    },
+    "cap_suggest_exercises": {
+      "id": "cap_suggest_exercises",
+      "type": "terminal",
+      "capability_id": "suggest_exercises",
+      "capability_name": "Suggest exercises",
+      "category_id": "personal_wellness",
+      "category_name": "Personal & Wellness",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Suggest exercises' capability",
+      "description": "Recommending physical activities for fitness goals and ability levels",
+      "when_to_use": "When starting or varying a fitness routine, or targeting specific goals",
+      "thinking_prompts": [
+        "What's my fitness level?",
+        "What equipment do I have?",
+        "What's my goal?"
+      ],
+      "use_case_ids": [
+        "fitness_routines"
+      ]
+    },
+    "cap_mental_health_support": {
+      "id": "cap_mental_health_support",
+      "type": "terminal",
+      "capability_id": "mental_health_support",
+      "capability_name": "Mental health support",
+      "category_id": "personal_wellness",
+      "category_name": "Personal & Wellness",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Mental health support' capability",
+      "description": "Providing coping strategies, mindfulness techniques, and emotional support resources",
+      "when_to_use": "When dealing with stress, anxiety, or seeking to improve mental well-being (not for crises)",
+      "thinking_prompts": [
+        "How am I feeling?",
+        "What would help?",
+        "What resources are available?"
+      ],
+      "use_case_ids": [
+        "stress_management"
+      ]
+    },
+    "cap_habit_formation": {
+      "id": "cap_habit_formation",
+      "type": "terminal",
+      "capability_id": "habit_formation",
+      "capability_name": "Habit formation",
+      "category_id": "personal_wellness",
+      "category_name": "Personal & Wellness",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Habit formation' capability",
+      "description": "Designing routines and strategies to build and maintain new positive behaviors",
+      "when_to_use": "When trying to create lasting changes in daily life or behavior",
+      "thinking_prompts": [
+        "What trigger will remind me?",
+        "What's the smallest step?",
+        "How will I track progress?"
+      ],
+      "use_case_ids": [
+        "build_habits"
+      ]
+    },
+    "cap_goal_setting": {
+      "id": "cap_goal_setting",
+      "type": "terminal",
+      "capability_id": "goal_setting",
+      "capability_name": "Goal setting",
+      "category_id": "personal_wellness",
+      "category_name": "Personal & Wellness",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Goal setting' capability",
+      "description": "Helping define, plan, and achieve personal objectives",
+      "when_to_use": "When you want to accomplish something but need structure and planning",
+      "thinking_prompts": [
+        "What do I actually want?",
+        "What's realistic?",
+        "What's my timeline?"
+      ],
+      "use_case_ids": [
+        "personal_goals"
+      ]
+    },
+    "cat_communicate": {
+      "id": "cat_communicate",
+      "type": "question",
+      "question": "What kind of communicate or interact with others task do you have?",
+      "description": "Choose the type of communicate or interact with others work",
+      "options": [
+        {
+          "id": "opt_communicate_social_emotional",
+          "label": "Social & Emotional",
+          "next_node_id": "capselect_communicate_social_emotional"
+        }
+      ]
+    },
+    "capselect_communicate_social_emotional": {
+      "id": "capselect_communicate_social_emotional",
+      "type": "question",
+      "question": "What specific communicate or interact with others capability do you need?",
+      "description": "Capabilities for Communicate or interact with others",
+      "options": [
+        {
+          "id": "opt_draft_messages",
+          "label": "Draft messages",
+          "next_node_id": "cap_draft_messages"
+        },
+        {
+          "id": "opt_respond_to_messages",
+          "label": "Respond to messages",
+          "next_node_id": "cap_respond_to_messages"
+        },
+        {
+          "id": "opt_practice_conversations",
+          "label": "Practice conversations",
+          "next_node_id": "cap_practice_conversations"
+        }
+      ]
+    },
+    "cap_draft_messages": {
+      "id": "cap_draft_messages",
+      "type": "terminal",
+      "capability_id": "draft_messages",
+      "capability_name": "Draft messages",
+      "category_id": "social_emotional",
+      "category_name": "Social & Emotional",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Draft messages' capability",
+      "description": "Composing emails, texts, or social media communications",
+      "when_to_use": "When sending digital communications and want to strike the right tone",
+      "thinking_prompts": [
+        "What's the main point?",
+        "How should this sound?",
+        "What do I need to include?"
+      ],
+      "use_case_ids": [
+        "professional_email",
+        "casual_message"
+      ]
+    },
+    "cap_respond_to_messages": {
+      "id": "cap_respond_to_messages",
+      "type": "terminal",
+      "capability_id": "respond_to_messages",
+      "capability_name": "Respond to messages",
+      "category_id": "social_emotional",
+      "category_name": "Social & Emotional",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Respond to messages' capability",
+      "description": "Formulating replies to incoming communications",
+      "when_to_use": "When you've received a message and need to craft an appropriate response",
+      "thinking_prompts": [
+        "What are they asking?",
+        "What do I want to convey?",
+        "How should I respond?"
+      ],
+      "use_case_ids": [
+        "difficult_responses"
+      ]
+    },
+    "cap_practice_conversations": {
+      "id": "cap_practice_conversations",
+      "type": "terminal",
+      "capability_id": "practice_conversations",
+      "capability_name": "Practice conversations",
+      "category_id": "social_emotional",
+      "category_name": "Social & Emotional",
+      "domain_id": "everyday_life",
+      "domain_name": "Everyday Life",
+      "recommendation": "Use the 'Practice conversations' capability",
+      "description": "Simulating dialogues for skill development or preparation",
+      "when_to_use": "When preparing for difficult conversations, practicing social skills, or rehearsing interactions",
+      "thinking_prompts": [
+        "What do I want to say?",
+        "How might they respond?",
+        "What's my goal?"
+      ],
+      "use_case_ids": [
+        "job_interview",
+        "difficult_discussions"
+      ]
+    },
+    "guided_discovery": {
+      "id": "guided_discovery",
+      "type": "question",
+      "question": "What's your current situation or interest?",
+      "description": "Choose the statement that best describes what you're looking for",
+      "options": [
+        {
+          "id": "opt_curious",
+          "label": "I'm curious about a topic and want to understand it better",
+          "next_node_id": "cap_explain_complex_concepts"
+        },
+        {
+          "id": "opt_choice",
+          "label": "I need to make a decision or choose between options",
+          "next_node_id": "cap_compare_options"
+        },
+        {
+          "id": "opt_create",
+          "label": "I want to create something new (writing, ideas, stories)",
+          "next_node_id": "cap_brainstorm_ideas"
+        },
+        {
+          "id": "opt_improve",
+          "label": "I want to improve something I've already written or created",
+          "next_node_id": "cap_improve_clarity"
+        },
+        {
+          "id": "opt_solve",
+          "label": "I need to solve a problem or fix something that's not working",
+          "next_node_id": "cap_troubleshoot_issues"
+        },
+        {
+          "id": "opt_practical",
+          "label": "I need help with a practical daily task (cooking, DIY, budgeting)",
+          "next_node_id": "cap_cooking_recipes"
+        },
+        {
+          "id": "opt_fun",
+          "label": "I want to have fun or be entertained",
+          "next_node_id": "cap_tell_stories"
+        },
+        {
+          "id": "opt_personal",
+          "label": "I want to work on personal growth or wellness",
+          "next_node_id": "cap_goal_setting"
+        },
+        {
+          "id": "opt_communicate",
+          "label": "I need help communicating with others",
+          "next_node_id": "cap_draft_messages"
+        },
+        {
+          "id": "opt_explore",
+          "label": "I just want to explore all capabilities",
+          "next_node_id": "root"
         }
       ]
     }
-  ],
-  "note": "This is a preliminary decision tree. Will be expanded after cognitive integration rounds."
+  }
 }
