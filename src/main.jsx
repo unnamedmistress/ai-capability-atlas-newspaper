@@ -6,7 +6,7 @@ import './styles/globals.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/ai-capability-atlas-newspaper">
       <App />
     </BrowserRouter>
   </React.StrictMode>
