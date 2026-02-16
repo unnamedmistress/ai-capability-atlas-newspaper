@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "created_at": "2026-02-16T02:21:00Z",
+  "description": "Cognitive model for AI literacy - skills, mental models, and progression",
+  "mental_models": [
+    {
+      "id": "pattern_amplifier",
+      "name": "AI as Pattern Amplifier",
+      "description": "AI excels at recognizing and extending patterns in data",
+      "strengths": ["Text patterns", "Image patterns", "Numerical patterns", "Sequence patterns"],
+      "limitations": ["Truly novel thinking", "Understanding context beyond training data"],
+      "when_to_use": ["Tasks involving existing patterns (writing, analysis, design)"],
+      "when_not_to_use": ["Tasks requiring genuine creativity or novel insight"]
+    },
+    {
+      "id": "cognitive_mirror",
+      "name": "AI as Cognitive Mirror",
+      "description": "AI reflects and extends human thinking patterns",
+      "strengths": ["Clarifying thoughts", "Exploring alternatives", "Seeing blind spots"],
+      "limitations": ["Limited to patterns in its training", "No genuine perspective"],
+      "when_to_use": ["Thinking through problems", "Examining assumptions"],
+      "when_not_to_use": ["Replacing human judgment", "Ethical decisions"]
+    }
+  ],
+  "skill_ladder": {
+    "novice": {
+      "goal": "Overcome initial intimidation, achieve first successes",
+      "skills": ["Basic prompt structure", "Recognizing appropriate AI tasks", "Simple iteration", "Basic verification"],
+      "capabilities": ["Simple explanations", "Basic brainstorming", "Text improvement", "Answering factual questions"]
+    },
+    "competent": {
+      "goal": "Systematic application across domains",
+      "skills": ["Problem decomposition", "Capability matching", "Intermediate prompting", "Output synthesis"],
+      "capabilities": ["Complex analysis", "Creative generation", "Process design", "Learning support"]
+    },
+    "proficient": {
+      "goal": "Strategic, creative, and critical AI use",
+      "skills": ["Advanced problem framing", "Meta-cognitive awareness", "Teaching others", "Ethical consideration"],
+      "capabilities": ["Multi-step project planning", "Critical evaluation of limitations", "Adaptation to new tools"]
+    }
+  },
+  "note": "This is a preliminary cognitive model. Will be expanded by Educational Psychologist agent."
+}

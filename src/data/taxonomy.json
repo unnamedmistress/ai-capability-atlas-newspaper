@@ -1,0 +1,227 @@
+{
+  "version": "0.1",
+  "created_at": "2026-02-16T02:13:00Z",
+  "description": "AI Capability Atlas Taxonomy v0 - Everyday user capabilities in modern AI chat tools and consumer applications",
+  "domains": [
+    {
+      "id": "knowledge",
+      "name": "Knowledge & Learning",
+      "description": "Understanding, explaining, and acquiring new information",
+      "categories": [
+        {
+          "id": "explain",
+          "name": "Explain & Understand",
+          "description": "Making complex concepts accessible and comprehensible",
+          "capabilities": [
+            {
+              "id": "explain_concepts",
+              "name": "Explain complex concepts",
+              "what_it_is": "Breaking down complicated topics into understandable parts using analogies and simple language",
+              "when_to_use": "When learning something new, teaching others, or encountering unfamiliar terminology",
+              "cognitive_skills": ["Abstraction", "Analogy formation", "Simplification", "Pattern recognition"],
+              "use_cases": [
+                {
+                  "id": "explain_to_student",
+                  "name": "Explain to a student",
+                  "description": "Making academic or technical concepts accessible to learners",
+                  "example_prompts": [
+                    "Explain quantum computing to a high school student",
+                    "What is blockchain in simple terms?",
+                    "Break down how vaccines work step by step"
+                  ]
+                },
+                {
+                  "id": "explain_for_decision",
+                  "name": "Explain for decision making",
+                  "description": "Understanding complex information to make informed choices",
+                  "example_prompts": [
+                    "Explain the pros and cons of different retirement account types",
+                    "What are the key factors in choosing a mortgage?",
+                    "Break down the arguments for and against universal basic income"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "answer_questions",
+              "name": "Answer factual questions",
+              "what_it_is": "Providing accurate information on specific topics",
+              "when_to_use": "When you need quick facts, definitions, or specific information",
+              "cognitive_skills": ["Information retrieval", "Verification", "Contextual understanding"],
+              "use_cases": [
+                {
+                  "id": "fact_checking",
+                  "name": "Fact checking",
+                  "description": "Verifying information or getting accurate data",
+                  "example_prompts": [
+                    "What's the population of Tokyo?",
+                    "When was the Magna Carta signed?",
+                    "What are the symptoms of Lyme disease?"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "research",
+          "name": "Research & Summarize",
+          "description": "Finding, analyzing, and condensing information",
+          "capabilities": [
+            {
+              "id": "summarize_text",
+              "name": "Summarize long texts",
+              "what_it_is": "Condensing lengthy articles, reports, or documents into key points",
+              "when_to_use": "When you're short on time or need to extract essential information",
+              "cognitive_skills": ["Distillation", "Prioritization", "Synthesis"],
+              "use_cases": [
+                {
+                  "id": "summarize_article",
+                  "name": "Summarize articles",
+                  "description": "Getting the gist of news articles or research papers",
+                  "example_prompts": [
+                    "Summarize this 10-page article in 3 bullet points",
+                    "What are the key takeaways from this research paper?",
+                    "Give me a brief summary of this news story"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creativity",
+      "name": "Creativity & Content",
+      "description": "Generating, refining, and enhancing creative work",
+      "categories": [
+        {
+          "id": "writing",
+          "name": "Writing & Editing",
+          "description": "Creating and improving written content",
+          "capabilities": [
+            {
+              "id": "brainstorm_ideas",
+              "name": "Brainstorm ideas",
+              "what_it_is": "Generating creative concepts, angles, or approaches",
+              "when_to_use": "When starting a project, overcoming writer's block, or exploring possibilities",
+              "cognitive_skills": ["Divergent thinking", "Association", "Idea generation"],
+              "use_cases": [
+                {
+                  "id": "blog_post_ideas",
+                  "name": "Blog post ideas",
+                  "description": "Coming up with topics for articles or posts",
+                  "example_prompts": [
+                    "Give me 10 ideas for a blog post about sustainable living",
+                    "Brainstorm topics for a technology newsletter",
+                    "Suggest angles for writing about work-life balance"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity & Planning",
+      "description": "Organizing, scheduling, and optimizing tasks and workflows",
+      "categories": [
+        {
+          "id": "planning",
+          "name": "Planning & Organization",
+          "description": "Structuring projects and managing tasks",
+          "capabilities": [
+            {
+              "id": "create_outlines",
+              "name": "Create outlines",
+              "what_it_is": "Developing structured frameworks for projects, documents, or presentations",
+              "when_to_use": "When starting a complex task that needs organization",
+              "cognitive_skills": ["Hierarchical thinking", "Sequencing", "Structure design"],
+              "use_cases": [
+                {
+                  "id": "presentation_outline",
+                  "name": "Presentation outline",
+                  "description": "Planning the structure of a talk or slideshow",
+                  "example_prompts": [
+                    "Create an outline for a 30-minute presentation on climate change",
+                    "Outline the structure for a workshop on time management",
+                    "Plan a 5-part webinar series on digital marketing"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication & Collaboration",
+      "description": "Improving interpersonal communication and teamwork",
+      "categories": [
+        {
+          "id": "writing_improvement",
+          "name": "Writing Improvement",
+          "description": "Enhancing clarity, tone, and effectiveness of written communication",
+          "capabilities": [
+            {
+              "id": "improve_clarity",
+              "name": "Improve clarity",
+              "what_it_is": "Making text more understandable and direct",
+              "when_to_use": "When your writing feels confusing, wordy, or unclear",
+              "cognitive_skills": ["Precision", "Conciseness", "Audience awareness"],
+              "use_cases": [
+                {
+                  "id": "simplify_language",
+                  "name": "Simplify language",
+                  "description": "Making complex or technical writing more accessible",
+                  "example_prompts": [
+                    "Make this paragraph more concise",
+                    "Rewrite this technical explanation for a general audience",
+                    "Simplify this legal language into plain English"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "problem_solving",
+      "name": "Problem Solving & Analysis",
+      "description": "Analyzing situations, identifying solutions, and making decisions",
+      "categories": [
+        {
+          "id": "analysis",
+          "name": "Analysis & Decision Making",
+          "description": "Breaking down problems and evaluating options",
+          "capabilities": [
+            {
+              "id": "compare_options",
+              "name": "Compare options",
+              "what_it_is": "Systematically evaluating alternatives based on criteria",
+              "when_to_use": "When facing multiple choices or needing to make informed decisions",
+              "cognitive_skills": ["Criteria development", "Comparative analysis", "Trade-off evaluation"],
+              "use_cases": [
+                {
+                  "id": "product_comparison",
+                  "name": "Product comparison",
+                  "description": "Evaluating different products or services",
+                  "example_prompts": [
+                    "Compare iPhone 15 and Samsung Galaxy S24 for photography",
+                    "What are the pros and cons of different project management tools?",
+                    "Compare three approaches to learning a new language"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

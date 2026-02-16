@@ -1,0 +1,79 @@
+{
+  "version": "0.1",
+  "created_at": "2026-02-16T02:21:00Z",
+  "description": "Decision tree for AI Capability Atlas - maps user problems to capabilities",
+  "entry_question": "What are you trying to do?",
+  "options": [
+    {
+      "id": "learn",
+      "text": "Learn or understand something",
+      "next_question": "What do you want to learn?",
+      "options": [
+        {
+          "id": "explain_concept",
+          "text": "Explain a complex concept",
+          "capability_id": "explain_concepts",
+          "description": "Get help breaking down complicated topics"
+        },
+        {
+          "id": "answer_question",
+          "text": "Answer a factual question",
+          "capability_id": "answer_questions",
+          "description": "Get accurate information quickly"
+        },
+        {
+          "id": "summarize",
+          "text": "Summarize long text",
+          "capability_id": "summarize_text",
+          "description": "Condense articles or documents"
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "text": "Create or write something",
+      "next_question": "What type of creation?",
+      "options": [
+        {
+          "id": "brainstorm",
+          "text": "Brainstorm ideas",
+          "capability_id": "brainstorm_ideas",
+          "description": "Generate creative concepts"
+        },
+        {
+          "id": "outline",
+          "text": "Create an outline",
+          "capability_id": "create_outlines",
+          "description": "Structure projects or documents"
+        }
+      ]
+    },
+    {
+      "id": "improve",
+      "text": "Improve or refine something",
+      "next_question": "What needs improvement?",
+      "options": [
+        {
+          "id": "clarity",
+          "text": "Improve clarity of writing",
+          "capability_id": "improve_clarity",
+          "description": "Make text more understandable"
+        }
+      ]
+    },
+    {
+      "id": "decide",
+      "text": "Make a decision or analyze",
+      "next_question": "What type of analysis?",
+      "options": [
+        {
+          "id": "compare",
+          "text": "Compare options",
+          "capability_id": "compare_options",
+          "description": "Evaluate alternatives systematically"
+        }
+      ]
+    }
+  ],
+  "note": "This is a preliminary decision tree. Will be expanded after cognitive integration rounds."
+}
