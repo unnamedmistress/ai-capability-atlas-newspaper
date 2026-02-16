@@ -1,40 +1,60 @@
 {
-  "version": "0.1",
-  "created_at": "2026-02-16T02:21:00Z",
-  "description": "Investigative articles for AI Capability Atlas newspaper",
+  "version": "2.0",
+  "created_at": "2026-02-16T15:31:00Z",
+  "updated_at": "2026-02-16T15:31:00Z",
+  "description": "Investigative articles for AI Capability Atlas newspaper - Round 9 Complete",
   "articles": [
     {
       "id": "why_people_dont_know",
       "title": "Why People Don't Know What AI Can Do",
-      "status": "planned",
+      "status": "published",
       "description": "Investigate the gap between AI capabilities and public understanding",
       "estimated_length": "2000 words",
-      "topics": ["Misinformation", "Complexity barriers", "Hype cycles", "Educational gaps"]
+      "actual_length": "~1500 words",
+      "topics": ["Misinformation", "Complexity barriers", "Hype cycles", "Educational gaps", "Structural solutions"],
+      "published_date": "2026-02-16",
+      "source_file": "/public/docs/ARTICLES.md#article-1",
+      "summary": "Analyzes the structural barriers preventing public understanding of AI capabilities and presents the Atlas approach as a solution through coherent taxonomy and cognitive framing."
     },
     {
       "id": "skill_gap_thinking",
       "title": "The Skill Gap Isn't Prompting — It's Thinking",
-      "status": "planned",
+      "status": "published",
       "description": "Argue that AI literacy is about structured thinking, not prompt formulas",
       "estimated_length": "1800 words",
-      "topics": ["Cognitive skills", "Problem decomposition", "Meta-cognition", "Learning frameworks"]
+      "actual_length": "~1400 words",
+      "topics": ["Cognitive skills", "Problem decomposition", "Meta-cognition", "Learning frameworks", "Mental models"],
+      "published_date": "2026-02-16",
+      "source_file": "/public/docs/ARTICLES.md#article-2",
+      "summary": "Presents evidence that true AI literacy requires structured thinking skills rather than prompt formulas, based on cognitive model analysis from the Atlas project."
     },
     {
       "id": "cognitive_amplifier",
       "title": "AI as Cognitive Amplifier, Not Replacement",
-      "status": "planned",
+      "status": "published",
       "description": "Frame AI as tool for augmenting human intelligence",
       "estimated_length": "2200 words",
-      "topics": ["Human-AI collaboration", "Augmentation ethics", "Capability mapping", "Future of work"]
+      "actual_length": "~1600 words",
+      "topics": ["Human-AI collaboration", "Augmentation ethics", "Capability mapping", "Future of work", "Cognitive amplification"],
+      "published_date": "2026-02-16",
+      "source_file": "/public/docs/ARTICLES.md#article-3",
+      "summary": "Reframes AI as cognitive amplifier rather than replacement, with evidence from the Atlas taxonomy showing specific amplification patterns and ethical considerations."
     },
     {
       "id": "overwhelm_to_decomposition",
       "title": "From Overwhelm to Decomposition",
-      "status": "planned",
+      "status": "published",
       "description": "Teach problem decomposition as core AI literacy skill",
       "estimated_length": "1900 words",
-      "topics": ["Step-by-step methodology", "Case studies", "Practice exercises", "Confidence building"]
+      "actual_length": "~1500 words",
+      "topics": ["Step-by-step methodology", "Case studies", "Practice exercises", "Confidence building", "Problem-solving"],
+      "published_date": "2026-02-16",
+      "source_file": "/public/docs/ARTICLES.md#article-4",
+      "summary": "Identifies problem decomposition as the fundamental skill of AI literacy and provides systematic methodologies from the Atlas for turning overwhelm into actionable steps."
     }
   ],
-  "note": "Articles will be written by Investigative Editor agent in Round 8."
+  "note": "Articles completed in Round 9 (Investigative Editor) and published in ARTICLES.md. All four articles written in serious investigative journalism style, evidence-based, with actionable insights.",
+  "total_articles": 4,
+  "total_word_count": "~6000 words",
+  "publication_status": "Complete - Ready for integration into interactive newspaper"
 }

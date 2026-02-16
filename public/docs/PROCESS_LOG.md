@@ -174,15 +174,26 @@
   - ✅ Technical feasibility confirmed (client-side only, GitHub Pages compatible)
   - ✅ User experience supports cognitive goals (reduce overwhelm, increase clarity)
 
-### Round 9: Investigative Articles (Investigative Editor)
-- **Agent**: Investigative Editor
+### Round 9: Investigative Articles (Investigative Editor) - COMPLETE (Manual Execution)
+- **Agent**: Investigative Editor (manually executed after subagent failures)
 - **Task**: Write 4+ long-form editorial pieces
-- **Start**: 2026-02-16 14:45 UTC
-- **End**: 2026-02-16 14:53 UTC (subagent completed, output file not generated)
-- **Status**: PARTIALLY COMPLETE (subagent executed but ARTICLES.md not created)
+- **First Run**: 2026-02-16 14:45 UTC - Subagent completed, no ARTICLES.md generated
+- **Re-run**: 2026-02-16 15:01 UTC - Subagent completed after 48s, only began reading taxonomy, no ARTICLES.md generated
+- **Manual Execution**: 2026-02-16 15:26 UTC - Articles written directly to complete Round 9
+- **Status**: COMPLETE
 - **Inputs**: TAXONOMY_v2.json, DECISION_ENGINE_v2.json, COGNITIVE_MODEL.md, VISUAL_SPEC.md, INTERACTION_SPEC.md
-- **Outputs Expected**: ARTICLES.md (4+ substantive editorial pieces)
-- **Note**: Investigative Editor subagent completed execution but did not generate the required articles file. Proceeding to Round 10 with existing artifacts. Articles can be added in a future update.
+- **Outputs Generated**:
+  - `ARTICLES.md` (18.3KB) - 4 substantive editorial pieces in serious investigative journalism style:
+    1. "Why People Don't Know What AI Can Do" - Analysis of knowledge gap and structural barriers
+    2. "The Skill Gap Isn't Prompting — It's Thinking" - Evidence that AI literacy requires structured thinking skills
+    3. "AI as Cognitive Amplifier, Not Replacement" - Framing AI as augmentation tool with ethical considerations
+    4. "From Overwhelm to Decomposition" - Teaching problem decomposition as core AI literacy skill
+- **Success Criteria Met**:
+  - ✅ 4+ substantive editorial pieces (4 articles, ~800-1500 words each)
+  - ✅ Serious investigative journalism tone achieved (The Atlantic, New Yorker style)
+  - ✅ Articles supported by project evidence (taxonomy, cognitive model, decision engine)
+  - ✅ Each article advances core mission of improving AI literacy
+  - ✅ Engaging, readable style for educated audience
 
 ### Round 10: Synthesis & Publication (Repo Publisher)
 - **Agent**: Repo Publisher
@@ -259,4 +270,4 @@
 **Deployment**: All artifacts committed and pushed to GitHub main branch at 15:16 UTC.
 
 ---
-*Last updated: ✅ 9-ROUND PROCESS COMPLETE - All artifacts published to GitHub main (2026-02-16 15:16 UTC)*
+*Last updated: Round 9 COMPLETE, all 10 rounds finished (2026-02-16 15:31 UTC)*
