@@ -1,0 +1,251 @@
+.page.taxonomy {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page.taxonomy h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.taxonomy-overview {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #f0f7ff;
+  border-radius: 8px;
+  border-left: 4px solid #0056b3;
+}
+
+.overview-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.taxonomy-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.taxonomy-stats .stat {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.taxonomy-stats .stat h3 {
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+  color: #0056b3;
+  font-weight: 700;
+}
+
+.taxonomy-stats .stat p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.domains-section {
+  margin-bottom: 3rem;
+}
+
+.domains-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  font-size: 2rem;
+}
+
+.domain-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.domain-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-top: 3px solid #0056b3;
+}
+
+.domain-card:nth-child(2) {
+  border-top-color: #2b8a3e;
+}
+
+.domain-card:nth-child(3) {
+  border-top-color: #c92a2a;
+}
+
+.domain-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0056b3;
+  font-size: 1.5rem;
+}
+
+.domain-card:nth-child(2) h3 {
+  color: #2b8a3e;
+}
+
+.domain-card:nth-child(3) h3 {
+  color: #c92a2a;
+}
+
+.domain-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.thinking-lens {
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #ff9800;
+}
+
+.thinking-lens strong {
+  color: #e65100;
+}
+
+.domain-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-tag {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.examples {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.examples strong {
+  color: #333;
+}
+
+.taxonomy-notes {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.taxonomy-notes h2 {
+  margin-top: 0;
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.taxonomy-notes p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.taxonomy-notes ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.taxonomy-notes li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.data-notes {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 3px solid #28a745;
+  margin: 1.5rem 0;
+}
+
+.repo-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.repo-link a {
+  display: inline-block;
+  background: #0056b3;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.repo-link a:hover {
+  background: #003d82;
+  text-decoration: none;
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background: #f0f7ff;
+  border-color: #0056b3;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .domain-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .taxonomy-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .page.taxonomy h1 {
+    font-size: 2.2rem;
+  }
+}

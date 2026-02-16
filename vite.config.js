@@ -7,6 +7,6 @@ export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/ai-capability-atlas-newspaper/' : '/',
   build: {
     outDir: 'dist',
-    emptyOutDir: True
+    emptyOutDir: true
   }
 })
