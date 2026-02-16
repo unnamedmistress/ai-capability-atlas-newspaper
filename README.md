@@ -6,6 +6,28 @@ An investigative interactive digital newspaper answering: **What can AI actually
 
 This is a serious digital publication built through adversarial multi-agent refinement. It explores AI capabilities from a human-centered, non-technical perspective, focusing on structured thinking skills rather than prompt formulas.
 
+## Current Status (Round 0 Complete)
+
+**Version**: 0.1.0  
+**Last Updated**: 2026-02-16  
+**Progress**: Round 0 of 9 completed
+
+### What's Included:
+- ✅ Initial 4+ layer capability taxonomy (5 domains, 7 capabilities)
+- ✅ Decision tree for problem-to-capability mapping
+- ✅ Cognitive model with mental models and skill ladder
+- ✅ React static site with newspaper aesthetic
+- ✅ Documentation (process log, changelog, sources)
+- ✅ GitHub repository with automatic deployment setup
+
+### Next Rounds (Planned):
+1. **Adversarial critique** - Identify weak categories and redundancies
+2. **Cognitive integration** - Educational psychology framing
+3. **Decision engine refinement** - Interactive branching logic
+4. **Visual design** - Newspaper infographics and styling
+5. **Investigative articles** - Long-form editorial content
+6. **Final publication** - Enhanced interactivity and deployment
+
 ## Core Sections
 
 1. **Front Page** - Introduction and overview
