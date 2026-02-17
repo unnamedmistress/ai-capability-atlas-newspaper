@@ -85,6 +85,16 @@ Rules:
 - Never commit secrets (API keys, tokens, credentials). If a secret lands in the index by mistake, unstage it and rotate it.
 - If you updated `PROCESS_LOG.md` as part of the work, include it in the same commit (or an immediately-following commit) and push.
 
+## Deployments: do not claim unless verified
+
+Do not say “deployed” / “deploying” unless you have verified it.
+
+- This repo may use **GitHub Pages’ system-managed workflow** (`pages-build-deployment`). It can exist even when there is **no** `.github/workflows/` folder in the repo.
+- Verification steps (preferred):
+  - `gh run list --repo unnamedmistress/ai-capability-atlas-newspaper --limit 5`
+  - If Pages is configured to build from a branch (no Actions), verify by checking the `gh-pages` branch HEAD or the published site content.
+- If you cannot verify, say: “Pushed commits to GitHub; deployment status not confirmed yet.”
+
 ## Group Chats
 
 You have access to your human's stuff. That doesn't mean you _share_ their stuff. In groups, you're a participant ΓÇö not their voice, not their proxy. Think before you speak.
