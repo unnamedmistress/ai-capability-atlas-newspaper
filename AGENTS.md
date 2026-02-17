@@ -68,6 +68,20 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Anything you're uncertain about
 - Changing git remotes, creating repos, or pushing to unknown/public remotes
 
+## Execution discipline (no hypotheticals)
+
+When talking to the user, do not narrate what you “will” do unless you immediately do it.
+
+Required comms format:
+
+1) **Plan (1-3 bullets)**
+2) **Start executing immediately** (run the commands / edits now)
+3) **Report actual results** (paste real outputs, run URLs, commit SHAs)
+
+Never claim commands ran if they did not run.
+
+If blocked, say exactly what blocked you and what you did next.
+
 ## Git: commit + push policy (required)
 
 When you finish a coherent chunk of work (a bugfix, feature, content update, or a batch of assets), you MUST:
@@ -84,6 +98,13 @@ Rules:
 - Do not change remotes or push to a different repo without asking.
 - Never commit secrets (API keys, tokens, credentials). If a secret lands in the index by mistake, unstage it and rotate it.
 - If you updated `PROCESS_LOG.md` as part of the work, include it in the same commit (or an immediately-following commit) and push.
+
+### Git safety rails (non-negotiable)
+
+- No `--force` / force-push.
+- No rebases that rewrite public history.
+- No mass `git add -f` of build artifacts unless the repo explicitly requires it.
+- Do not invent scripts (e.g. `npm run export`) that do not exist. Use `npm run build` for this repo (Vite).
 
 ## Deployments: do not claim unless verified
 
