@@ -1,2 +1,9 @@
 dist/
 node_modules/
+
+# Secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
