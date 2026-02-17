@@ -95,6 +95,43 @@ Do not say “deployed” / “deploying” unless you have verified it.
   - If Pages is configured to build from a branch (no Actions), verify by checking the `gh-pages` branch HEAD or the published site content.
 - If you cannot verify, say: “Pushed commits to GitHub; deployment status not confirmed yet.”
 
+### Deployment is REQUIRED, and should be self-healing
+
+This repo is configured for GitHub Pages **legacy** deploys from the `gh-pages` branch.
+
+- On every push to `main`, the workflow Deploy (legacy Pages via gh-pages branch) should:
+  1) `npm ci`
+  2) `npm run build` (produces `dist/`)
+  3) publish `dist/` to `gh-pages`
+  4) which then triggers the system workflow `pages-build-deployment`
+
+Do not stop and wait after pushing.
+
+After each push that affects the site, you MUST:
+
+1) Watch the deploy workflow and confirm success:
+   - `gh run list --repo unnamedmistress/ai-capability-atlas-newspaper --workflow "Deploy (legacy Pages via gh-pages branch)" --limit 3`
+   - `gh run watch <run_id> --repo unnamedmistress/ai-capability-atlas-newspaper`
+2) Confirm Pages finished deploying:
+   - `gh run list --repo unnamedmistress/ai-capability-atlas-newspaper --workflow pages-build-deployment --limit 3`
+   - and/or `curl -I https://unnamedmistress.github.io/ai-capability-atlas-newspaper/`
+
+If a deploy fails:
+
+- Do NOT ask “should I retry?”. Retry automatically.
+- Gather details and send them back to the user (include the run URL):
+  - `gh run view <run_id> --repo unnamedmistress/ai-capability-atlas-newspaper --log-failed`
+- Then fix the root cause and re-attempt by making a new commit (forward-only; no rebase/force-push).
+
+Retry policy:
+- Try up to 2 automatic fix+retry cycles for build/deploy issues.
+- If still failing or blocked by missing permissions/settings, message the user with:
+  - run URL
+  - the exact failing step name
+  - the last ~3 lines of failing logs
+  - what you already tried
+  - what the user must do (if anything)
+
 ## Group Chats
 
 You have access to your human's stuff. That doesn't mean you _share_ their stuff. In groups, you're a participant ΓÇö not their voice, not their proxy. Think before you speak.
