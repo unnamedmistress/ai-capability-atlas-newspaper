@@ -159,15 +159,15 @@ You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it
 
 - Multiple checks can batch together (inbox + calendar + notifications in one turn)
 - You need conversational context from recent messages
-- Timing can drift slightly (every ~30 min is fine, not exact)
+- Timing can drift slightly (every ~3 min is fine, not exact)
 - You want to reduce API calls by combining periodic checks
 
 **Use cron when:**
 
-- Exact timing matters ("9:00 AM sharp every Monday")
+- Exact timing matters ("9: AM sharp every Monday")
 - Task needs isolation from main session history
 - You want a different model or thinking level for the task
-- One-shot reminders ("remind me in 20 minutes")
+- One-shot reminders ("remind me in 2 minutes")
 - Output should deliver directly to a channel without main session involvement
 
 **Tip:** Batch similar periodic checks into `HEARTBEAT.md` instead of creating multiple cron jobs. Use cron for precise schedules and standalone tasks.
@@ -184,8 +184,8 @@ You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it
 ```json
 {
   "lastChecks": {
-    "email": 1703275200,
-    "calendar": 1703260800,
+    "email": 1732752,
+    "calendar": 173268,
     "weather": null
   }
 }
@@ -200,10 +200,10 @@ You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it
 
 **When to stay quiet (HEARTBEAT_OK):**
 
-- Late night (23:00-08:00) unless urgent
+- Late night (23:-8:) unless urgent
 - Human is clearly busy
 - Nothing new since last check
-- You just checked &lt;30 minutes ago
+- You just checked &lt;3 minutes ago
 
 **Proactive work you can do without asking:**
 
