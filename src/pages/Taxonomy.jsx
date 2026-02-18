@@ -70,7 +70,7 @@ const Taxonomy = () => {
       <div className="page taxonomy">
         <h1>AI Capability Taxonomy</h1>
         <p className="taxonomy-intro">
-          A comprehensive 6-layer hierarchical mapping of {totalCapabilities} AI capabilities for everyday users. 
+          A comprehensive 6-layer hierarchical mapping of {totalCapabilities} AI capabilities for everyday users with {totalPrompts} copy-to-clipboard example prompts. 
           Navigate through domains, categories, capabilities, use cases, and example prompts—all 
           integrated with cognitive frameworks and thinking lenses.
         </p>

@@ -43,7 +43,7 @@ const Home = () => {
             <p>Investigative Articles</p>
           </div>
           <div className="stat">
-            <h3>500+</h3>
+            <h3>405</h3>
             <p>Example Prompts</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Home = () => {
               <Link to="/taxonomy">
                 <div className="card-icon">📚</div>
                 <h3>Capability Taxonomy</h3>
-                <p>Explore 71 AI capabilities organized across 4 major domains, 13 categories, with cognitive skill mappings and 500+ example prompts.</p>
+                <p>Explore 71 AI capabilities organized across 3 major domains, 5 categories, with cognitive skill mappings and 405 copy-to-clipboard example prompts.</p>
                 <span className="card-cta">Browse Taxonomy →</span>
               </Link>
             </div>
