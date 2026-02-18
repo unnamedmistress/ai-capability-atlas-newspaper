@@ -14,28 +14,31 @@ const Quiz = () => {
           id: 1,
           text: "When you think about AI, you mostly see it as:",
           options: [
-            { value: 'A', text: "A chatbot that answers questions" },
-            { value: 'B', text: "A tool that helps me write or brainstorm" },
-            { value: 'C', text: "A system that can perform different types of cognitive work if structured correctly" }
-          ]
+            { value: 'explorer', text: "A chatbot that answers questions", level: 'A' },
+            { value: 'strategist', text: "A system that can perform different types of cognitive work if structured correctly", level: 'C' },
+            { value: 'builder', text: "A tool that helps me write or brainstorm", level: 'B' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 2,
           text: "If AI gives you a weak answer, you usually:",
           options: [
-            { value: 'A', text: "Assume AI isn't good at that task" },
-            { value: 'B', text: "Rephrase your question once" },
-            { value: 'C', text: "Break the task into smaller parts and guide it step-by-step" }
-          ]
+            { value: 'builder', text: "Rephrase your question once", level: 'B' },
+            { value: 'explorer', text: "Assume AI isn't good at that task", level: 'A' },
+            { value: 'strategist', text: "Break the task into smaller parts and guide it step-by-step", level: 'C' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 3,
           text: "Which statement feels most accurate?",
           options: [
-            { value: 'A', text: "AI is smart but unpredictable" },
-            { value: 'B', text: "AI is powerful if prompted clearly" },
-            { value: 'C', text: "AI performs specific cognitive functions depending on structure and constraints" }
-          ]
+            { value: 'strategist', text: "AI performs specific cognitive functions depending on structure and constraints", level: 'C' },
+            { value: 'explorer', text: "AI is smart but unpredictable", level: 'A' },
+            { value: 'builder', text: "AI is powerful if prompted clearly", level: 'B' }
+          ],
+          correctAnswer: 'strategist'
         }
       ]
     },
@@ -46,28 +49,31 @@ const Quiz = () => {
           id: 4,
           text: "You have a messy problem at work. What do you do first?",
           options: [
-            { value: 'A', text: 'Ask AI: "How do I fix this?"' },
-            { value: 'B', text: "Explain the situation in detail and ask for advice" },
-            { value: 'C', text: "Identify the type of task this is (analysis, generation, classification, planning) before prompting" }
-          ]
+            { value: 'explorer', text: 'Ask AI: "How do I fix this?"', level: 'A' },
+            { value: 'strategist', text: "Identify the type of task this is (analysis, generation, classification, planning) before prompting", level: 'C' },
+            { value: 'builder', text: "Explain the situation in detail and ask for advice", level: 'B' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 5,
           text: "Which of these prompts is strongest?",
           options: [
-            { value: 'A', text: '"Help me with my project."' },
-            { value: 'B', text: '"Create a plan for improving team communication."' },
-            { value: 'C', text: '"Act as an operations analyst. Diagnose breakdown points in our team communication using root cause analysis and propose 3 structured interventions."' }
-          ]
+            { value: 'builder', text: '"Create a plan for improving team communication."', level: 'B' },
+            { value: 'strategist', text: '"Act as an operations analyst. Diagnose breakdown points in our team communication using root cause analysis and propose 3 structured interventions."', level: 'C' },
+            { value: 'explorer', text: '"Help me with my project."', level: 'A' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 6,
           text: "If a task feels complex, you:",
           options: [
-            { value: 'A', text: "Ask AI to do it all at once" },
-            { value: 'B', text: "Ask AI for steps" },
-            { value: 'C', text: "Decompose the problem yourself before involving AI" }
-          ]
+            { value: 'strategist', text: "Decompose the problem yourself before involving AI", level: 'C' },
+            { value: 'builder', text: "Ask AI for steps", level: 'B' },
+            { value: 'explorer', text: "Ask AI to do it all at once", level: 'A' }
+          ],
+          correctAnswer: 'strategist'
         }
       ]
     },
@@ -78,28 +84,31 @@ const Quiz = () => {
           id: 7,
           text: "When should you NOT rely on AI?",
           options: [
-            { value: 'A', text: "When it seems unsure" },
-            { value: 'B', text: "When accuracy matters" },
-            { value: 'C', text: "When the task requires domain verification, external validation, or ethical judgment" }
-          ]
+            { value: 'builder', text: "When accuracy matters", level: 'B' },
+            { value: 'explorer', text: "When it seems unsure", level: 'A' },
+            { value: 'strategist', text: "When the task requires domain verification, external validation, or ethical judgment", level: 'C' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 8,
           text: "What improves AI output most?",
           options: [
-            { value: 'A', text: "Longer prompts" },
-            { value: 'B', text: "Clearer prompts" },
-            { value: 'C', text: "Clear structure, constraints, role definition, and output format" }
-          ]
+            { value: 'strategist', text: "Clear structure, constraints, role definition, and output format", level: 'C' },
+            { value: 'explorer', text: "Longer prompts", level: 'A' },
+            { value: 'builder', text: "Clearer prompts", level: 'B' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 9,
           text: "Which mindset fits you best?",
           options: [
-            { value: 'A', text: '"AI, surprise me."' },
-            { value: 'B', text: '"AI, help me think."' },
-            { value: 'C', text: '"AI, operate within this framework."' }
-          ]
+            { value: 'explorer', text: '"AI, surprise me."', level: 'A' },
+            { value: 'strategist', text: '"AI, operate within this framework."', level: 'C' },
+            { value: 'builder', text: '"AI, help me think."', level: 'B' }
+          ],
+          correctAnswer: 'strategist'
         }
       ]
     },
@@ -110,28 +119,31 @@ const Quiz = () => {
           id: 10,
           text: "You want AI to help you design a new training program. What is your first move?",
           options: [
-            { value: 'A', text: 'Ask: "Create a training program about AI."' },
-            { value: 'B', text: "Provide audience details and ask for a curriculum" },
-            { value: 'C', text: "Define learning outcomes, cognitive level, delivery constraints, and evaluation metrics before prompting" }
-          ]
+            { value: 'builder', text: "Provide audience details and ask for a curriculum", level: 'B' },
+            { value: 'explorer', text: 'Ask: "Create a training program about AI."', level: 'A' },
+            { value: 'strategist', text: "Define learning outcomes, cognitive level, delivery constraints, and evaluation metrics before prompting", level: 'C' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 11,
           text: "AI gives you a confident but wrong answer. You:",
           options: [
-            { value: 'A', text: "Feel frustrated" },
-            { value: 'B', text: "Ask it to double-check" },
-            { value: 'C', text: "Cross-validate with another source or tool" }
-          ]
+            { value: 'strategist', text: "Cross-validate with another source or tool", level: 'C' },
+            { value: 'builder', text: "Ask it to double-check", level: 'B' },
+            { value: 'explorer', text: "Feel frustrated", level: 'A' }
+          ],
+          correctAnswer: 'strategist'
         },
         {
           id: 12,
           text: "When using AI regularly, your goal is:",
           options: [
-            { value: 'A', text: "Save time" },
-            { value: 'B', text: "Improve quality" },
-            { value: 'C', text: "Develop a repeatable thinking system" }
-          ]
+            { value: 'explorer', text: "Save time", level: 'A' },
+            { value: 'strategist', text: "Develop a repeatable thinking system", level: 'C' },
+            { value: 'builder', text: "Improve quality", level: 'B' }
+          ],
+          correctAnswer: 'strategist'
         }
       ]
     }
@@ -142,7 +154,7 @@ const Quiz = () => {
   }
 
   const calculateResults = () => {
-    const counts = { A: 0, B: 0, C: 0 }
+    const counts = { explorer: 0, builder: 0, strategist: 0 }
     Object.values(answers).forEach(answer => {
       counts[answer] = (counts[answer] || 0) + 1
     })
@@ -151,10 +163,10 @@ const Quiz = () => {
 
   const getResult = () => {
     const counts = calculateResults()
-    const max = Math.max(counts.A, counts.B, counts.C)
+    const max = Math.max(counts.explorer, counts.builder, counts.strategist)
     
-    if (counts.C === max) return 'strategist'
-    if (counts.B === max) return 'builder'
+    if (counts.strategist === max) return 'strategist'
+    if (counts.builder === max) return 'builder'
     return 'explorer'
   }
 
@@ -243,25 +255,25 @@ const Quiz = () => {
               <h3>Your Score Breakdown</h3>
               <div className="score-bars">
                 <div className="score-bar">
-                  <span className="score-label">A (Explorer):</span>
+                  <span className="score-label">🌱 Explorer:</span>
                   <div className="bar-container">
-                    <div className="bar-fill" style={{ width: `${(counts.A / 12) * 100}%`, background: '#10b981' }}></div>
+                    <div className="bar-fill" style={{ width: `${(counts.explorer / 12) * 100}%`, background: '#10b981' }}></div>
                   </div>
-                  <span className="score-count">{counts.A}</span>
+                  <span className="score-count">{counts.explorer}</span>
                 </div>
                 <div className="score-bar">
-                  <span className="score-label">B (Builder):</span>
+                  <span className="score-label">🧠 Builder:</span>
                   <div className="bar-container">
-                    <div className="bar-fill" style={{ width: `${(counts.B / 12) * 100}%`, background: '#3b82f6' }}></div>
+                    <div className="bar-fill" style={{ width: `${(counts.builder / 12) * 100}%`, background: '#3b82f6' }}></div>
                   </div>
-                  <span className="score-count">{counts.B}</span>
+                  <span className="score-count">{counts.builder}</span>
                 </div>
                 <div className="score-bar">
-                  <span className="score-label">C (Strategist):</span>
+                  <span className="score-label">🧭 Strategist:</span>
                   <div className="bar-container">
-                    <div className="bar-fill" style={{ width: `${(counts.C / 12) * 100}%`, background: '#8b5cf6' }}></div>
+                    <div className="bar-fill" style={{ width: `${(counts.strategist / 12) * 100}%`, background: '#8b5cf6' }}></div>
                   </div>
-                  <span className="score-count">{counts.C}</span>
+                  <span className="score-count">{counts.strategist}</span>
                 </div>
               </div>
             </div>
@@ -305,9 +317,9 @@ const Quiz = () => {
                     <span className="question-number">{question.id}.</span> {question.text}
                   </p>
                   <div className="options-group">
-                    {question.options.map((option) => (
+                    {question.options.map((option, index) => (
                       <label
-                        key={option.value}
+                        key={index}
                         className={`option-label ${answers[question.id] === option.value ? 'selected' : ''}`}
                       >
                         <input
@@ -317,7 +329,7 @@ const Quiz = () => {
                           checked={answers[question.id] === option.value}
                           onChange={() => handleAnswerChange(question.id, option.value)}
                         />
-                        <span className="option-value">{option.value}</span>
+                        <span className="option-value">{option.level}</span>
                         <span className="option-text">{option.text}</span>
                       </label>
                     ))}
