@@ -1,60 +1,64 @@
 {
   "version": "2.0",
-  "created_at": "2026-02-16T15:31:00Z",
-  "updated_at": "2026-02-16T15:31:00Z",
-  "description": "Investigative articles for AI Capability Atlas newspaper - Round 9 Complete",
+  "created_at": "2026-02-18T13:00:00Z",
+  "updated_at": "2026-02-18T13:00:00Z",
+  "description": "Investigative articles for AI Capability Atlas newspaper - OpenClaw Orchestration Complete",
   "articles": [
     {
       "id": "why_people_dont_know",
-      "title": "Why People Don't Know What AI Can Do",
+      "title": "Why the AI Revolution Feels Like a Secret: Unpacking the Knowledge Gap",
+      "slug": "why-people-dont-know-what-ai-can-do",
       "status": "published",
       "description": "Investigate the gap between AI capabilities and public understanding",
-      "estimated_length": "2000 words",
-      "actual_length": "~1500 words",
-      "topics": ["Misinformation", "Complexity barriers", "Hype cycles", "Educational gaps", "Structural solutions"],
-      "published_date": "2026-02-16",
-      "source_file": "/public/docs/ARTICLES.md#article-1",
-      "summary": "Analyzes the structural barriers preventing public understanding of AI capabilities and presents the Atlas approach as a solution through coherent taxonomy and cognitive framing."
+      "word_count": 1829,
+      "topics": ["Knowledge Gap", "Complexity barriers", "Hype cycles", "Educational gaps", "Structural solutions"],
+      "published_date": "2026-02-18",
+      "source_file": "/articles/why-people-dont-know-what-ai-can-do.md",
+      "summary": "The widespread lack of understanding regarding AI's true capabilities stems from a complex interplay of rapid technological evolution, abstract concepts, and sensationalized narratives, hindering individuals from leveraging AI for practical problem-solving.",
+      "key_thesis": "The widespread lack of understanding regarding AI's true capabilities stems from a complex interplay of rapid technological evolution, abstract concepts, and sensationalized narratives, hindering individuals from leveraging AI for practical problem-solving."
     },
     {
       "id": "skill_gap_thinking",
       "title": "The Skill Gap Isn't Prompting — It's Thinking",
+      "slug": "the-skill-gap-is-thinking",
       "status": "published",
       "description": "Argue that AI literacy is about structured thinking, not prompt formulas",
-      "estimated_length": "1800 words",
-      "actual_length": "~1400 words",
-      "topics": ["Cognitive skills", "Problem decomposition", "Meta-cognition", "Learning frameworks", "Mental models"],
-      "published_date": "2026-02-16",
-      "source_file": "/public/docs/ARTICLES.md#article-2",
-      "summary": "Presents evidence that true AI literacy requires structured thinking skills rather than prompt formulas, based on cognitive model analysis from the Atlas project."
+      "word_count": 1865,
+      "topics": ["Cognitive skills", "Problem decomposition", "Structured thinking", "Learning frameworks", "Mental models"],
+      "published_date": "2026-02-18",
+      "source_file": "/articles/the-skill-gap-is-thinking.md",
+      "summary": "The true skill gap in the age of AI is not in prompting, but in thinking—specifically, in the structured cognitive processes that enable individuals to effectively translate real-world problems into solvable AI tasks.",
+      "key_thesis": "The true skill gap in the age of AI is not in prompting, but in thinking—specifically, in the structured cognitive processes that enable individuals to effectively translate real-world problems into solvable AI tasks."
     },
     {
       "id": "cognitive_amplifier",
       "title": "AI as Cognitive Amplifier, Not Replacement",
+      "slug": "ai-as-cognitive-amplifier",
       "status": "published",
       "description": "Frame AI as tool for augmenting human intelligence",
-      "estimated_length": "2200 words",
-      "actual_length": "~1600 words",
-      "topics": ["Human-AI collaboration", "Augmentation ethics", "Capability mapping", "Future of work", "Cognitive amplification"],
-      "published_date": "2026-02-16",
-      "source_file": "/public/docs/ARTICLES.md#article-3",
-      "summary": "Reframes AI as cognitive amplifier rather than replacement, with evidence from the Atlas taxonomy showing specific amplification patterns and ethical considerations."
+      "word_count": 1687,
+      "topics": ["Human-AI collaboration", "Augmentation", "Capability mapping", "Future of work", "Cognitive amplification"],
+      "published_date": "2026-02-18",
+      "source_file": "/articles/ai-as-cognitive-amplifier.md",
+      "summary": "AI functions not as a replacement for human cognition, but as an amplifier of it, extending the reach of human thinking while requiring judgment, context, creativity, and strategic thinking.",
+      "key_thesis": "AI doesn't replace thinking—it changes the nature of the thinking work we do, functioning as a cognitive amplifier that requires orchestration rather than execution."
     },
     {
       "id": "overwhelm_to_decomposition",
-      "title": "From Overwhelm to Decomposition",
+      "title": "From Overwhelm to Decomposition: Navigating the AI Frontier with Structured Thinking",
+      "slug": "from-overwhelm-to-decomposition",
       "status": "published",
       "description": "Teach problem decomposition as core AI literacy skill",
-      "estimated_length": "1900 words",
-      "actual_length": "~1500 words",
-      "topics": ["Step-by-step methodology", "Case studies", "Practice exercises", "Confidence building", "Problem-solving"],
-      "published_date": "2026-02-16",
-      "source_file": "/public/docs/ARTICLES.md#article-4",
-      "summary": "Identifies problem decomposition as the fundamental skill of AI literacy and provides systematic methodologies from the Atlas for turning overwhelm into actionable steps."
+      "word_count": 1866,
+      "topics": ["Problem decomposition", "Case studies", "Practice exercises", "Confidence building", "Structured thinking"],
+      "published_date": "2026-02-18",
+      "source_file": "/articles/from-overwhelm-to-decomposition.md",
+      "summary": "By embracing structured thinking and the strategic decomposition of complex problems, general users can transform their experience with AI from one of paralyzing overwhelm to confident, iterative experimentation.",
+      "key_thesis": "By embracing structured thinking and the strategic decomposition of complex problems, general users can transform their experience with AI from one of paralyzing overwhelm to confident, iterative experimentation."
     }
   ],
-  "note": "Articles completed in Round 9 (Investigative Editor) and published in ARTICLES.md. All four articles written in serious investigative journalism style, evidence-based, with actionable insights.",
+  "note": "Articles completed in Phase 8 (Content Creation) via OpenClaw orchestration. All four articles written in serious investigative journalism style, evidence-based, with actionable insights.",
   "total_articles": 4,
-  "total_word_count": "~6000 words",
-  "publication_status": "Complete - Ready for integration into interactive newspaper"
+  "total_word_count": 7247,
+  "publication_status": "Complete - Ready for deployment"
 }
