@@ -1,9 +1,209 @@
-.page.decisionengine {
+.page.decision-engine {
   padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.page.decisionengine h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.decision-visual {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.decision-visual img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.caption {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.breadcrumb-path {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid #0066cc;
+}
+
+.breadcrumb-path h4 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+}
+
+.path-step {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.decision-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.decision-card h2 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+  font-size: 1.8rem;
+}
+
+.node-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.option-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  border-color: #0066cc;
+  background: #f0f8ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,102,204,0.15);
+}
+
+.result-view {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.capabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.capability-result {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #0066cc;
+}
+
+.capability-result h4 {
+  margin: 0 0 0.8rem 0;
+  color: #0066cc;
+  font-size: 1.3rem;
+}
+
+.capability-result p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.example-prompts {
+  margin-top: 1rem;
+}
+
+.example-prompts strong {
+  color: #1a1a1a;
+}
+
+.example-prompts ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.example-prompts li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.nav-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn {
+  background: #f0f0f0;
   color: #333;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+.reset-btn {
+  background: #0066cc;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #0052a3;
+}
+
+.engine-info {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+}
+
+.engine-info h3 {
+  margin-top: 0;
+  color: #1a1a1a;
+}
+
+.engine-info p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
 }

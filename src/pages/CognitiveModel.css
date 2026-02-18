@@ -1,9 +1,307 @@
-.page.cognitivemodel {
+.page.cognitive-model {
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.page.cognitivemodel h1 {
-  font-size: 2.5rem;
+.intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.visual-section {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.visual-section img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.caption {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.mental-models-section {
+  margin: 4rem 0;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.model-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.model-card h3 {
+  margin: 0 0 1rem 0;
+  color: #0066cc;
+  font-size: 1.5rem;
+}
+
+.model-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
   margin-bottom: 1.5rem;
-  color: #333;
+}
+
+.model-section {
+  margin: 1.5rem 0;
+}
+
+.model-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+}
+
+.model-section ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.model-section li {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+.skill-ladder-section {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.visual-ladder {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.visual-ladder img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.ladder-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stage {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stage.novice {
+  border-left: 6px solid #4caf50;
+}
+
+.stage.competent {
+  border-left: 6px solid #2196f3;
+}
+
+.stage.proficient {
+  border-left: 6px solid #9c27b0;
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stage-header h3 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.8rem;
+}
+
+.stage-badge {
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.stage-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stage-goal, .stage-skills, .stage-capabilities {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.stage-goal h4, .stage-skills h4, .stage-capabilities h4 {
+  margin: 0 0 0.8rem 0;
+  color: #0066cc;
+  font-size: 1.1rem;
+}
+
+.stage-goal p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.stage-skills ul, .stage-capabilities ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.stage-skills li, .stage-capabilities li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+.ai-vs-human-section {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.ai-vs-human-section img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 2rem;
+}
+
+.thinking-frameworks {
+  margin: 4rem 0;
+}
+
+.framework-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.framework-card h3 {
+  margin: 0 0 1rem 0;
+  color: #0066cc;
+  font-size: 1.5rem;
+}
+
+.framework-card p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.framework-card ol, .framework-card ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.framework-card li {
+  margin: 0.8rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.framework-card img {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.next-steps {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+}
+
+.next-steps h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.next-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.next-step-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.next-step-card h4 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+  font-size: 1.2rem;
+}
+
+.next-step-card p {
+  margin: 0 0 1rem 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.next-step-card a {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.next-step-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stage-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .next-steps-grid {
+    grid-template-columns: 1fr;
+  }
 }
