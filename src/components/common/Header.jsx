@@ -19,6 +19,7 @@ const Header = () => {
             <li><Link to="/cognitive-model">Cognitive Model</Link></li>
             <li><Link to="/field-experiments">Field Experiments</Link></li>
             <li><Link to="/articles">Investigative Articles</Link></li>
+            <li><Link to="/quiz">Skill Quiz</Link></li>
           </ul>
         </nav>
       </div>

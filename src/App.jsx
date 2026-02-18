@@ -7,6 +7,7 @@ import DecompositionLab from './pages/DecompositionLab'
 import CognitiveModel from './pages/CognitiveModel'
 import FieldExperiments from './pages/FieldExperiments'
 import Articles from './pages/Articles'
+import Quiz from './pages/Quiz'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/cognitive-model" element={<CognitiveModel />} />
         <Route path="/field-experiments" element={<FieldExperiments />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </Layout>
   )
