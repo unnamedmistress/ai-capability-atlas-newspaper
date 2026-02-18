@@ -4,7 +4,6 @@ import { useState } from 'react'
 const Quiz = () => {
   const [answers, setAnswers] = useState({})
   const [showResults, setShowResults] = useState(false)
-  const [bonusAnswer, setBonusAnswer] = useState('')
 
   const questions = [
     {
@@ -15,8 +14,8 @@ const Quiz = () => {
           text: "When you think about AI, you mostly see it as:",
           options: [
             { value: 'explorer', text: "A chatbot that answers questions", level: 'A' },
-            { value: 'strategist', text: "A system that can perform different types of cognitive work if structured correctly", level: 'C' },
-            { value: 'builder', text: "A tool that helps me write or brainstorm", level: 'B' }
+            { value: 'strategist', text: "A system that can perform different types of cognitive work if structured correctly", level: 'B' },
+            { value: 'builder', text: "A tool that helps me write or brainstorm", level: 'C' }
           ],
           correctAnswer: 'strategist'
         },
@@ -24,8 +23,8 @@ const Quiz = () => {
           id: 2,
           text: "If AI gives you a weak answer, you usually:",
           options: [
-            { value: 'builder', text: "Rephrase your question once", level: 'B' },
-            { value: 'explorer', text: "Assume AI isn't good at that task", level: 'A' },
+            { value: 'builder', text: "Rephrase your question once", level: 'A' },
+            { value: 'explorer', text: "Assume AI isn't good at that task", level: 'B' },
             { value: 'strategist', text: "Break the task into smaller parts and guide it step-by-step", level: 'C' }
           ],
           correctAnswer: 'strategist'
@@ -34,9 +33,9 @@ const Quiz = () => {
           id: 3,
           text: "Which statement feels most accurate?",
           options: [
-            { value: 'strategist', text: "AI performs specific cognitive functions depending on structure and constraints", level: 'C' },
-            { value: 'explorer', text: "AI is smart but unpredictable", level: 'A' },
-            { value: 'builder', text: "AI is powerful if prompted clearly", level: 'B' }
+            { value: 'strategist', text: "AI performs specific cognitive functions depending on structure and constraints", level: 'A' },
+            { value: 'explorer', text: "AI is smart but unpredictable", level: 'B' },
+            { value: 'builder', text: "AI is powerful if prompted clearly", level: 'C' }
           ],
           correctAnswer: 'strategist'
         }
@@ -50,8 +49,8 @@ const Quiz = () => {
           text: "You have a messy problem at work. What do you do first?",
           options: [
             { value: 'explorer', text: 'Ask AI: "How do I fix this?"', level: 'A' },
-            { value: 'strategist', text: "Identify the type of task this is (analysis, generation, classification, planning) before prompting", level: 'C' },
-            { value: 'builder', text: "Explain the situation in detail and ask for advice", level: 'B' }
+            { value: 'strategist', text: "Identify the type of task this is (analysis, generation, classification, planning) before prompting", level: 'B' },
+            { value: 'builder', text: "Explain the situation in detail and ask for advice", level: 'C' }
           ],
           correctAnswer: 'strategist'
         },
@@ -59,9 +58,9 @@ const Quiz = () => {
           id: 5,
           text: "Which of these prompts is strongest?",
           options: [
-            { value: 'builder', text: '"Create a plan for improving team communication."', level: 'B' },
-            { value: 'strategist', text: '"Act as an operations analyst. Diagnose breakdown points in our team communication using root cause analysis and propose 3 structured interventions."', level: 'C' },
-            { value: 'explorer', text: '"Help me with my project."', level: 'A' }
+            { value: 'builder', text: '"Create a plan for improving team communication."', level: 'A' },
+            { value: 'strategist', text: '"Act as an operations analyst. Diagnose breakdown points in our team communication using root cause analysis and propose 3 structured interventions."', level: 'B' },
+            { value: 'explorer', text: '"Help me with my project."', level: 'C' }
           ],
           correctAnswer: 'strategist'
         },
@@ -69,9 +68,9 @@ const Quiz = () => {
           id: 6,
           text: "If a task feels complex, you:",
           options: [
-            { value: 'strategist', text: "Decompose the problem yourself before involving AI", level: 'C' },
+            { value: 'strategist', text: "Decompose the problem yourself before involving AI", level: 'A' },
             { value: 'builder', text: "Ask AI for steps", level: 'B' },
-            { value: 'explorer', text: "Ask AI to do it all at once", level: 'A' }
+            { value: 'explorer', text: "Ask AI to do it all at once", level: 'C' }
           ],
           correctAnswer: 'strategist'
         }
@@ -84,8 +83,8 @@ const Quiz = () => {
           id: 7,
           text: "When should you NOT rely on AI?",
           options: [
-            { value: 'builder', text: "When accuracy matters", level: 'B' },
-            { value: 'explorer', text: "When it seems unsure", level: 'A' },
+            { value: 'builder', text: "When accuracy matters", level: 'A' },
+            { value: 'explorer', text: "When it seems unsure", level: 'B' },
             { value: 'strategist', text: "When the task requires domain verification, external validation, or ethical judgment", level: 'C' }
           ],
           correctAnswer: 'strategist'
@@ -94,9 +93,9 @@ const Quiz = () => {
           id: 8,
           text: "What improves AI output most?",
           options: [
-            { value: 'strategist', text: "Clear structure, constraints, role definition, and output format", level: 'C' },
-            { value: 'explorer', text: "Longer prompts", level: 'A' },
-            { value: 'builder', text: "Clearer prompts", level: 'B' }
+            { value: 'strategist', text: "Clear structure, constraints, role definition, and output format", level: 'A' },
+            { value: 'explorer', text: "Longer prompts", level: 'B' },
+            { value: 'builder', text: "Clearer prompts", level: 'C' }
           ],
           correctAnswer: 'strategist'
         },
@@ -105,8 +104,8 @@ const Quiz = () => {
           text: "Which mindset fits you best?",
           options: [
             { value: 'explorer', text: '"AI, surprise me."', level: 'A' },
-            { value: 'strategist', text: '"AI, operate within this framework."', level: 'C' },
-            { value: 'builder', text: '"AI, help me think."', level: 'B' }
+            { value: 'strategist', text: '"AI, operate within this framework."', level: 'B' },
+            { value: 'builder', text: '"AI, help me think."', level: 'C' }
           ],
           correctAnswer: 'strategist'
         }
@@ -119,8 +118,8 @@ const Quiz = () => {
           id: 10,
           text: "You want AI to help you design a new training program. What is your first move?",
           options: [
-            { value: 'builder', text: "Provide audience details and ask for a curriculum", level: 'B' },
-            { value: 'explorer', text: 'Ask: "Create a training program about AI."', level: 'A' },
+            { value: 'builder', text: "Provide audience details and ask for a curriculum", level: 'A' },
+            { value: 'explorer', text: 'Ask: "Create a training program about AI."', level: 'B' },
             { value: 'strategist', text: "Define learning outcomes, cognitive level, delivery constraints, and evaluation metrics before prompting", level: 'C' }
           ],
           correctAnswer: 'strategist'
@@ -129,9 +128,9 @@ const Quiz = () => {
           id: 11,
           text: "AI gives you a confident but wrong answer. You:",
           options: [
-            { value: 'strategist', text: "Cross-validate with another source or tool", level: 'C' },
+            { value: 'strategist', text: "Cross-validate with another source or tool", level: 'A' },
             { value: 'builder', text: "Ask it to double-check", level: 'B' },
-            { value: 'explorer', text: "Feel frustrated", level: 'A' }
+            { value: 'explorer', text: "Feel frustrated", level: 'C' }
           ],
           correctAnswer: 'strategist'
         },
@@ -140,8 +139,8 @@ const Quiz = () => {
           text: "When using AI regularly, your goal is:",
           options: [
             { value: 'explorer', text: "Save time", level: 'A' },
-            { value: 'strategist', text: "Develop a repeatable thinking system", level: 'C' },
-            { value: 'builder', text: "Improve quality", level: 'B' }
+            { value: 'strategist', text: "Develop a repeatable thinking system", level: 'B' },
+            { value: 'builder', text: "Improve quality", level: 'C' }
           ],
           correctAnswer: 'strategist'
         }
@@ -182,7 +181,6 @@ const Quiz = () => {
   const resetQuiz = () => {
     setAnswers({})
     setShowResults(false)
-    setBonusAnswer('')
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -190,37 +188,132 @@ const Quiz = () => {
     explorer: {
       emoji: '🌱',
       title: 'Explorer',
-      subtitle: 'You use AI as a tool.',
-      description: "You're experimenting but not structuring yet.",
-      strength: 'Curiosity',
+      subtitle: 'Curious Experimenter',
+      description: "You're experimenting with AI but haven't developed structured approaches yet. You see AI as a tool to try out, but you're still learning how to get consistent, high-quality results.",
+      strength: 'Curiosity and willingness to experiment',
       growthEdge: 'Learn decomposition and task typing',
-      nextLevel: 'Understand capability categories',
-      color: '#10b981'
+      nextLevel: 'Understand capability categories and how to structure prompts',
+      color: '#10b981',
+      image: '/assets/images/quiz-explorer.png',
+      skillsToWorkOn: [
+        {
+          skill: 'Task Decomposition',
+          description: 'Break complex problems into smaller, manageable parts',
+          practicePrompts: [
+            'Take a complex task like "improve customer satisfaction" and break it into 5 specific sub-tasks',
+            'Identify the type of each sub-task (analysis, generation, classification, etc.)',
+            'Create a step-by-step workflow for a multi-stage project'
+          ]
+        },
+        {
+          skill: 'Capability Recognition',
+          description: 'Understand what AI can and cannot do well',
+          practicePrompts: [
+            'List 5 tasks AI excels at and 5 tasks where human judgment is essential',
+            'Identify which AI capability category fits your current project (Knowledge, Creation, Analysis, etc.)',
+            'Explore the Capability Taxonomy to discover new use cases'
+          ]
+        },
+        {
+          skill: 'Iterative Refinement',
+          description: 'Learn to guide AI through multiple rounds of improvement',
+          practicePrompts: [
+            'Start with a basic prompt, then add context in 3 iterations to improve the output',
+            'When AI gives a weak answer, identify what information was missing and add it',
+            'Practice the pattern: Initial prompt → Review output → Add constraints → Refine'
+          ]
+        }
+      ]
     },
     builder: {
       emoji: '🧠',
       title: 'Builder',
-      subtitle: 'You understand prompting matters.',
-      description: 'You give context and refine outputs.',
-      strength: 'Applied usage',
-      growthEdge: 'Develop structured frameworks',
-      nextLevel: 'Design systems, not prompts',
-      color: '#3b82f6'
+      subtitle: 'Applied Practitioner',
+      description: 'You understand that prompting matters and actively work to improve your results. You provide context, refine outputs, and see AI as a collaborative partner in your work.',
+      strength: 'Applied usage and contextual thinking',
+      growthEdge: 'Develop structured frameworks and systematic approaches',
+      nextLevel: 'Design systems and frameworks, not just individual prompts',
+      color: '#3b82f6',
+      image: '/assets/images/quiz-builder.png',
+      skillsToWorkOn: [
+        {
+          skill: 'Framework Design',
+          description: 'Create reusable templates and structured approaches',
+          practicePrompts: [
+            'Design a prompt template for your most common work task that you can reuse',
+            'Create a checklist of elements every good prompt should include (role, context, constraints, format)',
+            'Build a decision tree for when to use different AI capabilities'
+          ]
+        },
+        {
+          skill: 'Constraint Definition',
+          description: 'Learn to set clear boundaries and output specifications',
+          practicePrompts: [
+            'Rewrite a vague prompt by adding 3 specific constraints (length, tone, format)',
+            'Define the exact output format you want before prompting (bullet points, table, narrative, etc.)',
+            'Practice specifying what NOT to include in responses'
+          ]
+        },
+        {
+          skill: 'Verification Systems',
+          description: 'Develop methods to validate and cross-check AI outputs',
+          practicePrompts: [
+            'Create a 3-step verification process for AI-generated content in your domain',
+            'Identify which outputs require external validation vs. which can be used directly',
+            'Practice cross-referencing AI outputs with authoritative sources'
+          ]
+        }
+      ]
     },
     strategist: {
       emoji: '🧭',
       title: 'Strategist',
-      subtitle: 'You understand AI as a cognitive engine.',
-      description: 'You control structure, constraints, and verification.',
-      strength: 'Strategic control',
-      growthEdge: 'Scale and teach others',
-      nextLevel: 'System architecture & human-AI collaboration design',
-      color: '#8b5cf6'
+      subtitle: 'Cognitive Architect',
+      description: 'You understand AI as a cognitive engine and control structure, constraints, and verification. You design systems for human-AI collaboration and think strategically about capability deployment.',
+      strength: 'Strategic control and systematic thinking',
+      growthEdge: 'Scale your approach and teach others',
+      nextLevel: 'System architecture and organizational AI capability development',
+      color: '#8b5cf6',
+      image: '/assets/images/quiz-strategist.png',
+      skillsToWorkOn: [
+        {
+          skill: 'System Architecture',
+          description: 'Design multi-agent workflows and complex AI systems',
+          practicePrompts: [
+            'Map out a multi-stage AI workflow for a complex project with 5+ steps',
+            'Design a system where multiple AI capabilities work together (analysis → generation → verification)',
+            'Create an architecture diagram showing how AI fits into your team\'s processes'
+          ]
+        },
+        {
+          skill: 'Knowledge Transfer',
+          description: 'Document and teach your AI frameworks to others',
+          practicePrompts: [
+            'Write a one-page guide teaching someone your framework for a specific task',
+            'Create a training module on task decomposition for your team',
+            'Document your best prompt templates with explanations of why each element matters'
+          ]
+        },
+        {
+          skill: 'Capability Orchestration',
+          description: 'Coordinate multiple AI tools and capabilities strategically',
+          practicePrompts: [
+            'Design a workflow that uses 3 different AI capabilities in sequence',
+            'Create a decision matrix for when to use which AI tool or approach',
+            'Build a governance framework for AI use in your organization (when to use, when not to, verification requirements)'
+          ]
+        }
+      ]
     }
   }
 
   const currentResult = showResults ? results[getResult()] : null
   const counts = showResults ? calculateResults() : null
+
+  const copyPrompt = (prompt) => {
+    navigator.clipboard.writeText(prompt)
+    alert('Prompt copied to clipboard!')
+  }
 
   return (
     <div className="page quiz-page">
@@ -234,9 +327,16 @@ const Quiz = () => {
       {showResults ? (
         <div className="quiz-results">
           <div className="result-card" style={{ borderColor: currentResult.color }}>
-            <div className="result-emoji">{currentResult.emoji}</div>
-            <h2 className="result-title">{currentResult.title}</h2>
-            <p className="result-subtitle">{currentResult.subtitle}</p>
+            <img src={currentResult.image} alt={currentResult.title} className="result-image" />
+            
+            <div className="result-header">
+              <div className="result-emoji">{currentResult.emoji}</div>
+              <div>
+                <h2 className="result-title">{currentResult.title}</h2>
+                <p className="result-subtitle">{currentResult.subtitle}</p>
+              </div>
+            </div>
+            
             <p className="result-description">{currentResult.description}</p>
             
             <div className="result-details">
@@ -278,27 +378,33 @@ const Quiz = () => {
               </div>
             </div>
 
-            <div className="bonus-section">
-              <h3>🎁 Bonus Question (Reveals True Depth)</h3>
-              <p className="bonus-prompt">
-                Describe how you would decompose:<br />
-                <em>"Improve my organization's internal knowledge sharing."</em>
-              </p>
-              <textarea
-                className="bonus-textarea"
-                value={bonusAnswer}
-                onChange={(e) => setBonusAnswer(e.target.value)}
-                placeholder="Type your approach here..."
-                rows="6"
-              />
-              <div className="bonus-guide">
-                <p><strong>Interpretation Guide:</strong></p>
-                <ul>
-                  <li><strong>🌱 Explorer:</strong> Ask AI directly</li>
-                  <li><strong>🧠 Builder:</strong> Provide context and ask for ideas</li>
-                  <li><strong>🧭 Strategist:</strong> Break it into capability categories (analysis, taxonomy, workflow design, feedback loops, governance)</li>
-                </ul>
-              </div>
+            <div className="skills-development">
+              <h3>🎯 Skills to Work On</h3>
+              <p className="skills-intro">Based on your results, here are the key areas to focus on for growth:</p>
+              
+              {currentResult.skillsToWorkOn.map((skillArea, index) => (
+                <div key={index} className="skill-area">
+                  <h4>{skillArea.skill}</h4>
+                  <p className="skill-description">{skillArea.description}</p>
+                  <div className="practice-prompts">
+                    <strong>Practice Prompts:</strong>
+                    <ul>
+                      {skillArea.practicePrompts.map((prompt, pIndex) => (
+                        <li key={pIndex}>
+                          {prompt}
+                          <button 
+                            className="copy-prompt-btn"
+                            onClick={() => copyPrompt(prompt)}
+                            title="Copy to clipboard"
+                          >
+                            📋
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <button className="reset-button" onClick={resetQuiz}>

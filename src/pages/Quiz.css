@@ -171,6 +171,40 @@
   }
 }
 
+.result-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 2rem;
+  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-header .result-emoji {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.result-header .result-title {
+  margin: 0;
+  text-align: left;
+}
+
+.result-header .result-subtitle {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
 .result-card {
   background: white;
   border-radius: 20px;
@@ -203,6 +237,7 @@
   font-size: 1.125rem;
   color: #475569;
   margin-bottom: 2rem;
+  line-height: 1.8;
 }
 
 .result-details {
@@ -285,74 +320,107 @@
   font-size: 1.125rem;
 }
 
-/* Bonus Section */
-.bonus-section {
-  margin: 2rem 0;
+/* Skills Development Section */
+.skills-development {
+  margin-top: 3rem;
   padding: 2rem;
-  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 12px;
+  border-left: 4px solid #8b5cf6;
   text-align: left;
 }
 
-.bonus-section h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #92400e;
-  margin-bottom: 1rem;
+.skills-development h3 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 
-.bonus-prompt {
-  font-size: 1.125rem;
-  color: #78350f;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.skills-intro {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
 }
 
-.bonus-prompt em {
-  font-weight: 600;
-  font-style: italic;
-}
-
-.bonus-textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid #fbbf24;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: inherit;
-  resize: vertical;
-  margin-bottom: 1rem;
-}
-
-.bonus-textarea:focus {
-  outline: none;
-  border-color: #f59e0b;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
-}
-
-.bonus-guide {
+.skill-area {
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
-  border: 2px solid #fbbf24;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.bonus-guide p {
-  font-weight: 600;
-  color: #92400e;
+.skill-area:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-area h4 {
+  color: #8b5cf6;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.skill-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.practice-prompts {
+  margin-top: 1rem;
+}
+
+.practice-prompts strong {
+  color: #1f2937;
+  display: block;
   margin-bottom: 0.75rem;
+  font-size: 1.05rem;
 }
 
-.bonus-guide ul {
+.practice-prompts ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.bonus-guide li {
-  padding: 0.5rem 0;
-  color: #78350f;
-  line-height: 1.6;
+.practice-prompts li {
+  background: #f9fafb;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid #8b5cf6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.practice-prompts li:hover {
+  background: #f3f4f6;
+}
+
+.copy-prompt-btn {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-prompt-btn:hover {
+  background: #7c3aed;
+  transform: scale(1.1);
+}
+
+.copy-prompt-btn:active {
+  transform: scale(0.95);
 }
 
 /* Reset Button */
@@ -402,6 +470,16 @@
     font-size: 2rem;
   }
 
+  .result-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .result-header .result-title,
+  .result-header .result-subtitle {
+    text-align: center;
+  }
+
   .score-label {
     min-width: 100px;
     font-size: 0.75rem;
@@ -414,5 +492,18 @@
   .submit-button {
     padding: 1rem 2rem;
     font-size: 1.125rem;
+  }
+
+  .skills-development {
+    padding: 1.5rem;
+  }
+
+  .practice-prompts li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copy-prompt-btn {
+    align-self: flex-end;
   }
 }
