@@ -7,12 +7,14 @@ const Taxonomy = () => {
   const [selectedCategory, setSelectedCategory] = useState(null)
   const [selectedCapability, setSelectedCapability] = useState(null)
   const [selectedUseCase, setSelectedUseCase] = useState(null)
+  const [viewAllPrompts, setViewAllPrompts] = useState(false)
 
   const resetSelection = () => {
     setSelectedDomain(null)
     setSelectedCategory(null)
     setSelectedCapability(null)
     setSelectedUseCase(null)
+    setViewAllPrompts(false)
   }
 
   const handleDomainClick = (domain) => {
@@ -64,6 +66,76 @@ const Taxonomy = () => {
     }, 0)
   }, 0)
 
+  // Collect all prompts for "View All" mode
+  const getAllPrompts = () => {
+    const allPrompts = []
+    taxonomyData.domains.forEach(domain => {
+      domain.categories.forEach(category => {
+        category.capabilities.forEach(capability => {
+          capability.use_cases.forEach(useCase => {
+            if (useCase.example_prompts && useCase.example_prompts.length > 0) {
+              useCase.example_prompts.forEach(prompt => {
+                allPrompts.push({
+                  prompt,
+                  domain: domain.name,
+                  category: category.name,
+                  capability: capability.name,
+                  useCase: useCase.name
+                })
+              })
+            }
+          })
+        })
+      })
+    })
+    return allPrompts
+  }
+
+  // View All Prompts mode
+  if (viewAllPrompts) {
+    const allPrompts = getAllPrompts()
+    return (
+      <div className="page taxonomy all-prompts-view">
+        <div className="breadcrumb">
+          <span onClick={resetSelection} className="breadcrumb-item clickable">Taxonomy</span>
+          <span className="separator">›</span>
+          <span className="breadcrumb-item">All Prompts</span>
+        </div>
+
+        <h1>All {allPrompts.length} Example Prompts</h1>
+        <p className="intro">
+          Browse all example prompts from the entire taxonomy. Each prompt includes its context 
+          (domain, category, capability, use case) and a copy button for easy use.
+        </p>
+
+        <div className="all-prompts-list">
+          {allPrompts.map((item, idx) => (
+            <div key={idx} className="prompt-item-full">
+              <div className="prompt-header">
+                <span className="prompt-number">#{idx + 1}</span>
+                <div className="prompt-context">
+                  <span className="context-tag domain-tag">{item.domain}</span>
+                  <span className="context-separator">›</span>
+                  <span className="context-tag category-tag">{item.category}</span>
+                  <span className="context-separator">›</span>
+                  <span className="context-tag capability-tag">{item.capability}</span>
+                  <span className="context-separator">›</span>
+                  <span className="context-tag usecase-tag">{item.useCase}</span>
+                </div>
+              </div>
+              <div className="prompt-content">
+                <span className="prompt-text">"{item.prompt}"</span>
+                <button className="copy-btn" onClick={() => navigator.clipboard.writeText(item.prompt)}>
+                  Copy
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   // Overview mode - no selection
   if (!selectedDomain) {
     return (
@@ -101,6 +173,12 @@ const Taxonomy = () => {
         <div className="taxonomy-visual">
           <img src="/ai-capability-atlas-newspaper/assets/images/taxonomy-map.png" alt="Taxonomy Map Visualization" />
           <p className="caption">Visual map of the complete 6-layer taxonomy structure</p>
+        </div>
+
+        <div className="quick-actions">
+          <button className="view-all-prompts-btn" onClick={() => setViewAllPrompts(true)}>
+            📝 View All {totalPrompts} Prompts
+          </button>
         </div>
 
         <div className="domain-grid">
