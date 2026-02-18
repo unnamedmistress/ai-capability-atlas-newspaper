@@ -1,0 +1,206 @@
+{
+  "project_name": "The AI Capability Atlas",
+  "project_description": "An investigative digital newspaper exploring what AI can actually do for everyday people",
+  "github_repo_name": "ai-capability-atlas-newspaper",
+  "github_owner": "unnamedmistress",
+  "visibility": "private",
+  
+  "content_requirements": {
+    "target_audience": "General users of AI chat tools and consumer AI applications",
+    "scope": "What general users can do in modern AI chat tools and consumer AI applications",
+    "exclusions": [
+      "APIs",
+      "Developer workflows",
+      "Coding examples",
+      "Enterprise integrations",
+      "Special system access"
+    ],
+    "depth_layers": 6,
+    "page_equivalent": 20,
+    "focus": "Translating real-world problems into AI tasks, structured thinking skills, reducing overwhelm, building experimentation confidence"
+  },
+  
+  "critique_settings": {
+    "level": 4,
+    "min_objections_per_round": 3,
+    "min_critique_cycles": 2,
+    "max_total_rounds": 9,
+    "current_round": 6
+  },
+  
+  "research_limits": {
+    "total_lookups": 5,
+    "used": 0,
+    "per_agent": {
+      "Educational Psychologist": 2,
+      "Content Architect": 1,
+      "Repo Publisher": 1,
+      "Investigative Editor": 1,
+      "Use Case Designer": 0,
+      "Skeptical Analyst": 0,
+      "Decision Architect": 0,
+      "Visual Systems Designer": 0,
+      "Interaction Designer": 0
+    }
+  },
+  
+  "visual_requirements": {
+    "style": "serious investigative newspaper aesthetic",
+    "aesthetic": "clean typography, minimalist but authoritative, editorial infographics, no cartoon style",
+    "no_cartoon": true,
+    "required_visuals": [
+      "AI vs Human Strength Chart",
+      "Heatmap of AI Strengths",
+      "Capability taxonomy map",
+      "Decision tree diagram",
+      "Cognitive model diagrams",
+      "Problem decomposition flowcharts",
+      "Menu-style grid visuals",
+      "Layered ecosystem maps",
+      "Skill ladder visual"
+    ],
+    "generated_visuals": 9
+  },
+  
+  "interactivity_requirements": [
+    "Static rich articles",
+    "Expandable accordion sections",
+    "Clickable capability explorer",
+    "Decision wizard",
+    "Scenario-based problem selector",
+    "Guided onboarding journey",
+    "Progressive reveal sections",
+    "Interactive decomposition trainer"
+  ],
+  
+  "technical_stack": {
+    "framework": "React + Vite",
+    "backend": "none (fully client-side)",
+    "styling": "CSS modules",
+    "deployment": "GitHub Pages"
+  },
+  
+  "website_structure": {
+    "sections": [
+      {
+        "id": "front_page",
+        "title": "Front Page",
+        "status": "partial",
+        "components": [
+          "Headline: 'The AI Capability Atlas'",
+          "Investigative intro article",
+          "Infographic: AI vs Human Strength Chart",
+          "Infographic: Heatmap of AI Strengths",
+          "Start Here interactive entry point"
+        ]
+      },
+      {
+        "id": "taxonomy",
+        "title": "The Capability Taxonomy",
+        "status": "partial",
+        "components": [
+          "Full hierarchical breakdown (6 layers complete)",
+          "Expandable interactive explorer",
+          "Menu-style grid visuals",
+          "Layered ecosystem map infographic"
+        ]
+      },
+      {
+        "id": "decision_engine",
+        "title": "Decision Engine",
+        "status": "partial",
+        "components": [
+          "Interactive branching decision wizard",
+          "Visual decision tree diagram",
+          "Problem-to-capability mapping tool"
+        ]
+      },
+      {
+        "id": "decomposition_lab",
+        "title": "The Decomposition Lab",
+        "status": "partial",
+        "components": [
+          "Flowcharts for problem decomposition",
+          "Step-by-step breakdown trainer",
+          "Scenario-based exercises",
+          "Before/After AI task transformation examples"
+        ]
+      },
+      {
+        "id": "cognitive_model",
+        "title": "The Cognitive Model",
+        "status": "complete",
+        "components": [
+          "Skill ladder visual",
+          "Cognitive model diagrams",
+          "Mental models for AI use",
+          "Structured thinking framework",
+          "Misconceptions analysis"
+        ]
+      },
+      {
+        "id": "field_experiments",
+        "title": "Field Experiments",
+        "status": "partial",
+        "components": [
+          "Clickable micro experiments",
+          "Prompt drills",
+          "Try this now sections",
+          "Sandbox simulation scenarios"
+        ]
+      },
+      {
+        "id": "investigative_articles",
+        "title": "Investigative Articles",
+        "status": "incomplete",
+        "components": [
+          "Long-form editorial pieces (serious investigative journalism tone)"
+        ]
+      }
+    ]
+  },
+  
+  "article_topics": [
+    "Why People Don't Know What AI Can Do",
+    "The Skill Gap Isn't Prompting — It's Thinking",
+    "AI as Cognitive Amplifier, Not Replacement",
+    "From Overwhelm to Decomposition"
+  ],
+  
+  "confidence_objectives": [
+    "Reduce overwhelm",
+    "Increase clarity",
+    "Encourage experimentation",
+    "Teach decomposition",
+    "Reinforce structured thinking"
+  ],
+  
+  "completed_phases": [
+    "Phase 0: Project Setup",
+    "Phase 1: Initial Architecture (TAXONOMY_v0)",
+    "Phase 2: Adversarial Critique Round 1 (CRITIQUE_round1)",
+    "Phase 3: Revision (TAXONOMY_v1)",
+    "Phase 4: Cognitive Optimization (TAXONOMY_v2, COGNITIVE_MODEL)",
+    "Phase 5: Decision & Navigation Design (DECISION_TREE_v2)"
+  ],
+  
+  "remaining_phases": [
+    "Phase 6: Adversarial Critique Round 2",
+    "Phase 7: Visual & Interaction Design (complete implementation)",
+    "Phase 8: Content Creation (investigative articles)",
+    "Phase 9: Synthesis & Publication (final build and deployment)"
+  ],
+  
+  "success_checklist": [
+    "✅ 6-layer taxonomy complete",
+    "✅ Cognitive model integrated",
+    "✅ Decision tree v2 created",
+    "✅ 9 infographics generated",
+    "⏳ Adversarial critique round 2",
+    "⏳ 20-page equivalent content delivered",
+    "⏳ Full interactive functionality implemented",
+    "⏳ 4 investigative articles written",
+    "⏳ Process transparency complete",
+    "⏳ Final build and deployment"
+  ]
+}
